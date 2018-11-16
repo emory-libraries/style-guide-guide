@@ -1,0 +1,22 @@
+{
+  "title": "Emory Libraries Style Guide",
+  "name": "style-guide-guide",
+  "version": "1.0.0",
+  "description": "A style guide for Emory Libraries",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emory-libraries/style-guide-guide.git"
+  },
+  "keywords": [
+    "style-guide",
+    "design-system",
+    "style-guide-guide"
+  ],
+  "author": "Lauren Hamel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emory-libraries/style-guide-guide/issues"
+  },
+  "homepage": "https://github.com/emory-libraries/style-guide-guide#readme"
+}
