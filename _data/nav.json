@@ -1,0 +1,74 @@
+[
+  {
+    "label": "Getting Started",
+    "slug": "getting-started",
+    "subnav": false
+  },
+  {
+    "label": "Design Principles",
+    "slug": "design-principles",
+    "subnav": false
+  },
+  {
+    "label": "Writing Styles",
+    "slug": "writing-styles",
+    "subnav": false
+  },
+  {
+    "label": "Content Guidelines",
+    "slug": "content-guidelines",
+    "subnav": false
+  },
+  {
+    "label": "Content Governance",
+    "slug": "content-governance",
+    "subnav": false
+  },
+  {
+    "label": "Visual Language",
+    "slug": "visual-language",
+    "subnav": false
+  },
+  {
+    "label": "User Interface",
+    "slug": "user-interface",
+    "subnav": [
+      {
+        "label": "Atoms",
+        "slug": "atoms"
+      },
+      {
+        "label": "Molecules",
+        "slug": "molecules"
+      },
+      {
+        "label": "Organisms",
+        "slug": "organisms"
+      },
+      {
+        "label": "Templates",
+        "slug": "templates"
+      }
+    ]
+  },
+  {
+    "label": "Contributions",
+    "slug": "contributions",
+    "subnav": false
+  },
+  {
+    "label": "Support",
+    "slug": "support",
+    "subnav": false
+  },
+  {
+    "label": "Resources",
+    "slug": "resources",
+    "button": true
+  },
+  {
+    "label": "Downloads",
+    "slug": "downloads",
+    "button": true
+  }
+]
