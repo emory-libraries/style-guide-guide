@@ -13,3 +13,7 @@ github_username:  emory-libraries
 markdown: kramdown
 sass:
   sass_dir: _scss
+  
+# Define dependencies
+plugins:
+  - jekyll-last-modified-at

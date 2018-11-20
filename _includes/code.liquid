@@ -1,0 +1,27 @@
+<pre class="highlight pattern-code-block"><!--
+  
+  --><code class="language-{{tab.name | downcase}}" id="pattern-code-{{parentloop.index}}"><!--
+  
+    -->{% if lang == 'html' %}{% highlight html %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'sass' %}{% highlight sass %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'scss' %}{% highlight scss %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'css' %}{% highlight css %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'php' %}{% highlight php %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'js' %}{% highlight js %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'json' %}{% highlight json %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'yaml' %}{% highlight yaml %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'yml' %}{% highlight yml %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'handlebars' %}{% highlight handlebars %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'hbs' %}{% highlight hbs %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'mustache' %}{% highlight mustache %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'twig' %}{% highlight twig %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'liquid' %}{% highlight liquid %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'markdown' %}{% highlight markdown %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'md' %}{% highlight md %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'http' %}{% highlight http %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'xml' %}{% highlight xml %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+    -->{% if lang == 'sql' %}{% highlight sql %}{% include {{markup}} %}{% endhighlight %}{% endif %}<!--
+  
+  --></code><!--
+
+--></pre>

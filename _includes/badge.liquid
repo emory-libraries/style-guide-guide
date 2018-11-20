@@ -1,0 +1,17 @@
+{% if page.status %}
+
+  {% assign status = page.status %}
+
+{% elsif pattern_page.status %}
+
+  {% assign status = pattern_page.status %}
+
+{% endif %}
+
+{% if status %}
+
+  {% assign state = site.data.patterns.config.patternStateCascade | where: 'state', {{status}} %}
+
+  <span class="c-badge c-badge--{{state.state}}" style="background-color: {{state.color}}">{{status}}</span>
+
+{% endif %}

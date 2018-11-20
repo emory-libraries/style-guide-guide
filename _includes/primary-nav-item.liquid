@@ -1,0 +1,87 @@
+<li class="c-primary-nav__item {% if page.url contains nav_item.slug %}is-active{% endif %}">
+  
+  {% assign children = site.pages | where: 'group', nav_item.slug %}
+  {% assign count_children = children | size %}
+
+  {% unless nav_item.button %}
+  
+    <a class="c-primary-nav__link {% if count_children > 0 %}c-primary-nav__link--has-children js-nav-dropdown-trigger{% endif %} {% if page.url contains nav_item.slug %}is-active is-current{% endif %}" 
+       href="{{nav_item.slug | relative_url}}">
+
+      <span class="c-primary-nav__text">{{nav_item.label}}</span>
+
+      {% if count_children > 0 %}
+      
+        <svg class="c-icon c-primary-nav__icon" aria-hidden="true">
+
+          <use href="{{site.baseurl}}/icons.svg#chevron-right"></use>
+
+        </svg>
+      
+      {% endif %}
+
+    </a>
+
+    <ul class="c-primary-nav__sublist js-nav-dropdown{% if page.url contains nav_item.slug %}is-active{% endif %}">
+
+      {% for site_page in site.pages %}
+
+        {% if site_page.group == nav_item.slug %}
+      
+          {% unless site_page.subgroup %}
+
+            <li class="c-primary-nav__item">
+
+              <a class="c-primary-nav__link {% if site_page.url == page.url %}is-active is-current{% endif %}" 
+                 href="{{site_page.url | relative_url}}">
+
+                {% if site_page.title == nav_item.label %}
+
+                  <span class="c-primary-nav__text">Overview</span>
+
+                {% else %}
+
+                  {{ site_page.title }}
+
+                {% endif %}
+
+              </a>
+
+            </li>
+      
+            {% if nav_item.subnav %}
+
+              {% for nav_subitem in nav_item.subnav %}
+
+                {% include primary-nav-subitem.liquid %}
+
+              {% endfor %}
+
+            {% endif %}
+      
+          {% endunless %}
+
+        {% endif %}
+
+      {% endfor %}
+
+    </ul>
+  
+  {% else %}
+  
+    <a class="c-primary-nav__button {% if page.url contains nav_item.slug %}is-active is-current{% endif %}" 
+       href="{{nav_item.slug | relative_url}}">
+
+      <span class="c-primary-nav__text">{{nav_item.label}}</span>
+
+      <svg class="c-icon c-primary-nav__icon" aria-hidden="true">
+
+        <use href="{{site.baseurl}}/icons.svg#chevron-right"></use>
+
+      </svg>
+
+    </a>
+  
+  {% endunless %}
+
+</li>

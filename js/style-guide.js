@@ -155,6 +155,9 @@
 			}
 		});
 	}
+  
+    // Set copyright year
+    $('.c-footer-copyright__date').text((new Date()).getFullYear());
 
 })();
 
@@ -371,10 +374,10 @@
 	 * 2) Add the aria-current attribute
 	 */
 
-	 	var navLink = document.querySelectorAll('.is-current'); /* 1 */
+    var navLink = document.querySelectorAll('.is-current'); /* 1 */
 
-	 	for (i=0; i<navLink.length; i++) { /* 1 */
-			navLink[i].setAttribute('aria-current', 'page'); /* 2 */
-		}
+    for (i=0; i<navLink.length; i++) { /* 1 */
+        navLink[i].setAttribute('aria-current', 'page'); /* 2 */
+    }
 
 })();

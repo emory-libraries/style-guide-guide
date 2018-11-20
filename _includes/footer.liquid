@@ -1,0 +1,23 @@
+<footer class="c-footer" role="contentinfo">
+
+  <div class="c-footer-version">
+    
+    {{site.title}} <a href="{{site.baseurl}}/getting-started/whats-new" class="c-footer__link">v{{site.data.package.version}}</a>
+  
+  </div>
+  
+  <div class="c-footer-modified">
+    
+    {% capture modified %}{% last_modified_at '%B %e, %Y' %}{% endcapture %}
+    
+    Last updated on {{modified | replace: "'", ''}}
+  
+  </div>
+  
+  <div class="c-footer-copyright">
+  
+    Copyright &copy; <span class="c-footer-copyright__date">{{'now' | date: '%Y'}}</span> <a href="http://www.emory.edu" class="c-footer__link">Emory University</a>
+  
+  </div>
+
+</footer>

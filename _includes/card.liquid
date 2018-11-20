@@ -1,0 +1,27 @@
+<a href="{{site_page.permalink | relative_url}}" class="c-card ">
+
+  <div class="c-card__body">
+
+    {% if site_page.kicker %}
+      
+      <div class="c-card__kicker">{{site_page.kicker}}</div>
+		
+    {% endif %}
+
+    <h2 class="c-card__title">
+      
+      <span class="c-card__title-text">{{site_page.title}}</span>
+      
+      <svg class="c-icon c-card__icon">
+
+        <use href="{{site.baseurl}}/icons.svg#chevron-right"></use>
+
+      </svg>
+      
+    </h2>
+
+    <p class="c-card__desc">{{site_page.description}}</p>
+
+  </div>
+
+</a>

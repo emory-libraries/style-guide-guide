@@ -103,15 +103,16 @@
   cursor: pointer;
   font-weight: bold;
   margin: .5rem;
-  background: $color-gray-73;
+  border: 2px solid $color-gray-73;
   border-radius: $border-radius;
-  color: $color-white;
+  color: $color-gray-73;
   transition: all $fade-quick ease-out;
+  box-sizing: border-box;
 
   &:hover,
   &:focus {
-    background: $color-black;
-    color: $color-white;
+    background: $color-white;
+    color: $color-gray-73;
   }
 }
 
@@ -119,13 +120,13 @@
  * Active primary navigation button
  */
 .c-primary-nav__button.is-active {
-  background: $color-gray-07;
-  color: $color-black;
+  background: $color-gray-73;
+  color: $color-gray-07;
 
   &:hover,
   &:focus {
-    background: $color-white;
-    color: $color-black;
+    background: $color-black;
+    color: $color-gray-07;
   }
 }
 
@@ -133,13 +134,13 @@
  * Current primary navigation button
  */
 .c-primary-nav__button.is-current {
-  background: $color-gray-07;
-  color: $color-black;
+  background: $color-gray-73;
+  color: $color-gray-07;
 
   &:hover,
   &:focus {
-    background: $color-white;
-    color: $color-black;
+    background: $color-black;
+    color: $color-gray-07;
   }
 }
 
@@ -322,7 +323,7 @@
 	 * Primary navigation icon within button
 	 */
   .c-primary-nav__button & {
-    fill: $color-white;
+    fill: $color-gray-73;
     display: block;
     float: right;
     margin-top: .25rem;
@@ -341,7 +342,8 @@
 	 * Primary navigation icon within active button
 	 */
   .c-primary-nav__button.is-active & {
-    fill: $color-black;
+    fill: $color-gray-07;
+    transform: none;
   }
 
   /**
@@ -350,6 +352,14 @@
   .c-header--vertical .c-primary-nav__item.is-active & {
     fill: $color-gray-73;
     transform: rotate(90deg);
+  }
+  
+  /**
+	 * Primary navigation icon within active button within vertical header
+	 */
+  .c-header--vertical .c-primary-nav__button.is-active & {
+    fill: $color-gray-07;
+    transform: none;
   }
 
   /**

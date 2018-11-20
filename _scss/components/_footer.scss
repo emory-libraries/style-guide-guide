@@ -6,10 +6,25 @@
  * 1) Global block at the bottom of each page that contains a navigation and other information
  */
 .c-footer {
-	text-align: center;
-	display: flex;
-	flex-shrink: 0;
-    border-top: 1px solid $color-gray-07;
-    padding: 1rem 0;
-    margin-top: 1rem;
+  text-align: left;
+  font-size: .8rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  border-top: 1px solid $color-gray-07;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/**
+ * Footer link
+ */
+.c-footer__link {
+  display: inline-block;
+  color: $color-gray-60;
+
+  &:hover,
+  &:focus {
+    color: $color-gray-73;
+  }
 }

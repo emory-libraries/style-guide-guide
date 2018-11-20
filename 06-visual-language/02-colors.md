@@ -1,0 +1,13 @@
+---
+
+layout: page
+type: detail
+group: visual-language
+permalink: /visual-language/colors
+
+title: Colors
+description: Color styles define how color is used in the design system.
+
+---
+
+For inspiration, check out [Material Design's color styles page](https://material.io/guidelines/style/color.html).

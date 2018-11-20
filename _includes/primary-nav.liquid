@@ -1,0 +1,15 @@
+<nav class="c-primary-nav" role="navigation">
+
+  <ul class="c-primary-nav__list c-primary-nav__list--flush js-nav-panel" 
+      role="tablist" a
+      ria-multiselectable="true">
+    
+    {% for nav_item in site.data.nav %}
+   
+      {% include primary-nav-item.liquid %}
+    
+    {% endfor %}
+
+  </ul>
+
+</nav>

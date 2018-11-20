@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html>
 
-	{% include head.html %}
+  {% include head.liquid %}
 
-	<body>
+  <body>
 
-        <div class="l-page-layout l-page-layout--two-column-fixed">
+    <div class="l-page-layout l-page-layout--two-column-fixed">
 
-            <div class="l-page-layout__secondary">
+      <div class="l-page-layout__secondary">
 
-                {% include header.html %}
+        {% include header.liquid %}
 
-            </div><!--end l-page-layout__secondary-->
+      </div>
 
-            <div class="l-page-layout__main">
+      <div class="l-page-layout__main">
 
-                <main role="main">
-                	<div class="l-container">
+        <main role="main">
+                	
+          <div class="l-container">
 
-                        {{ content }}
+            {{ content }}
 
-	                </div><!--end l-container-->
-				</main><!--end role=main-->
+	       </div>
+				
+        </main>
 
-                {% include footer.html %}
+        {% include footer.liquid %}
 
-            </div><!--end l-page-layout__main-->
+      </div>
 
-        </div><!--end l--two-column-fixed-->
+    </div>
+    
+    {% include foot.liquid %}
 
-	</body>
+  </body>
 
 </html>

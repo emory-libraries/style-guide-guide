@@ -2,51 +2,62 @@
 layout: default
 ---
 
-{% include page-header.html %}
+{% include page-header.liquid %}
 
 <section class="c-section">
-	<ul class="c-card-list l-grid l-grid--3up ">
+	
+  <ul class="c-card-list l-grid l-grid--3up ">
 
-		{% for componentPage in site.pages %}
-    		{% if componentPage.group == page.group %}
-        		{% if componentPage.subgroup == page.subgroup %}
-            		{% if componentPage.layout != "component-category" and componentPage.layout != "component-category2" and componentPage.status != "Planned" %}
+    {% for pattern_page in site.pages %}
+    
+      {% if pattern_page.group == page.group %}
+        		
+        {% if pattern_page.subgroup == page.subgroup %}
+            		
+          {% if pattern_page.layout != "pattern-category" and pattern_page.status != site.data.patterns.config.patternStateCascade[0].state %}
 
-					<li class="c-card-list__item l-grid__item">
-						<a href="{{ componentPage.permalink | prepend: site.baseurl }}" class="c-card ">
+		    <li class="c-card-list__item l-grid__item">
+		
+              <a href="{{site.baseurl}}{{pattern_page.permalink}}" class="c-card ">
 
-							<div class="c-card__header">
-								{{ componentPage.subgroup | replace: '-', ' ' | capitalize }}
-							</div>
+				<div class="c-card__header">{{pattern_page.subgroup | replace: '-', ' ' | capitalize}}</div>
 
-							<div class="c-card__body">
+				<div class="c-card__body">
 
-								<h2 class="c-card__title">
-									<span class="c-card__title-text">{{ componentPage.title }}</span>
-									{% if componentPage.status %}
-									{% include badge.html %}
-									{% endif %}
-									<svg class="c-icon c-card__icon">
-										<use href="{{ "/icons.svg#chevron-right" | prepend: site.baseurl }}"></use>
-									</svg>
-								</h2><!-- end c-card__title -->
+				  <h2 class="c-card__title">
+									
+                    <span class="c-card__title-text">{{pattern_page.title}}</span>
+									
+                    {% if pattern_page.status %}
+									
+                      {% include badge.liquid %}
+									
+                    {% endif %}
+									
+                    <svg class="c-icon c-card__icon">
+										
+                      <use href="{{baseurl}}/icons.svg#chevron-right"></use>
+									
+                    </svg>
+								
+                  </h2>
+								
+                  <p class="c-card__desc">{{pattern_page.description}}</p>
 
-								<p class="c-card__desc">{{ componentPage.description }}</p>
+				</div>
 
-							</div><!-- end c-card__body -->
+              </a>
+					
+            </li>
 
+          {% endif %}
 
-						</a><!-- end c-card -->
-					</li>
+        {% endif %}
 
-					{% endif %}
+      {% endif %}
 
-				{% endif %}
+    {% endfor %}
 
-			{% endif %}
-
-		{% endfor %}
-
-	</ul><!-- end c-card-list -->
+  </ul>
 
 </section>

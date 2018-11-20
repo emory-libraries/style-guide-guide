@@ -1,0 +1,41 @@
+<ul class="c-primary-nav__sublist js-nav-dropdown {% if page.subgroup == nav_subitem.slug %} is-active{% endif %}">
+
+  {% for site_page in site.pages %}
+
+    {% if site_page.subgroup == nav_subitem.slug and site_page.layout == 'pattern-category' %}
+
+      <li class="c-primary-nav__subitem {% if page.subgroup == nav_subitem.slug %}is-active{% endif %}">
+
+        <a class="c-primary-nav__sublink {% if site_page.url == page.url %}is-active is-current{% endif %}" 
+           href="{{site_page.permalink | relative_url}}">
+          
+            Overview
+          
+        </a>
+
+      </li>
+
+    {% endif %}
+
+  {% endfor %}
+
+  {% for site_page in site.pages %}
+
+    {% if site_page.subgroup == nav_subitem.slug and site_page.layout != 'pattern-category' and site_page.status != site.data.patterns.config.patternStateCascade[0].state %}
+
+      <li class="c-primary-nav__subitem {% if page.subgroup == nav_subitem.slug %}is-active{% endif %}">
+
+        <a class="c-primary-nav__sublink {% if site_page.url == page.url %}is-active is-current{% endif %}" 
+           href="{{site_page.url | relative_url}}">
+          
+		  {{site_page.title}}
+          
+        </a>
+
+      </li>
+  
+    {% endif %}
+
+  {% endfor %}
+  
+</ul>

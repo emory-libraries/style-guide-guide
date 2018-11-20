@@ -1,0 +1,29 @@
+{
+  "numbering": {
+    "atoms": 10,
+    "molecules": 20,
+    "organisms": 30,
+    "templates": 40
+  },
+  "tabs": [
+    {"name": "HTML", "ext": ".html"},
+    {"name": "Handlebars", "ext": ".handlebars"},
+    {"name": "SCSS", "ext": ".scss"},
+    {"name": "JS", "ext": ".js"}
+  ],
+  "config": {
+    "patternStateCascade": [
+      {"state": "specification", "color": "#708090"},
+      {"state": "construction", "color": "#F2C900"},
+      {"state": "review", "color": "#FFAB4A"},
+      {"state": "complete", "color": "#61BD4F"},
+      {"state": "reconsideration", "color": "#0079BF"},
+      {"state": "deprecated", "color": "#EB5A46"}
+    ],
+    "outputFileSuffixes": {
+      "rendered": "",
+      "rawTemplate": "",
+      "markupOnly": ".markup-only"
+    }
+  }
+}

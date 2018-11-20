@@ -2,12 +2,14 @@
 layout: default
 ---
 
-{% include page-header.html %}
+{% include page-header.liquid %}
 
 <div class="l-linelength-container">
 
-	<div class="c-text-passage">
-		{{ content | markdownify }}
-	</div><!--end c-text-passage-->
+  <div class="c-text-passage">
+		
+    {{content | markdownify}}
 
-</div><!--l-linelength-container-->
+  </div>
+
+</div>

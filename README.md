@@ -7,7 +7,7 @@ This style guide expresses the Emory Libraries' design system and includes patte
 
 ## Prerequisites
 
-This style guide was built using Brad Frost's [Style Guide Guide](https://github.com/bradfrost/style-guide-guide), which requires [Jekyll](https://jekyllrb.com/), a static site generator. Jekyll is built on top of [Ruby](https://www.ruby-lang.org/en/) and requires that Ruby 2.2.5 or greater be installed on your system and has been preloaded for use with [RubyGems](https://rubygems.org/).
+This style guide was built using Brad Frost's [Style Guide Guide](https://github.com/bradfrost/style-guide-guide), which requires [Jekyll](https://jekyllrb.com/), a static site generator. Jekyll is built on top of [Ruby](https://www.ruby-lang.org/en/) and requires that Ruby 2.2.5 or greater be installed on your system and has been preloaded for use with [RubyGems](https://rubygems.org/). Additionally, this project requires [Bundler](https://bundler.io/) version 1.17.1 or greater for managing RubyGem dependencies.
 
 
 ## Installation
@@ -20,10 +20,16 @@ Prior to installation, ensure that all prerequisites have been met. Then, to ins
 git clone https://github.com/emory-libraries/style-guide-guide
 ```
 
-2. Then `cd` to your project's folder in a terminal and start the Jekyll server:
+2. Then `cd` to your project's folder in a terminal, and install all depdencies:
 
 ```
-jekyll serve
+bundle install
+```
+
+3. Initialize the dependencies and start the Jekyll server:
+
+```
+bundle exec jekyll serve
 ```
 
 > The Jekyll server will build the static site and watch for changes. To view the style guide and see live changes, visit `http://127.0.0.1:4000/` in your browser.
@@ -35,7 +41,7 @@ Use Jekyll's command line tools to generate the static site and make changes to 
 
 - `jekyll build` - Builds the style guide and outputs it to a `_site` directory
 
-- `jekyll serve` - Builds the style guide and starts a live server at `http://127.0.0.1:4000/`, where it watches for changes in real-time.
+- `jekyll serve` - Builds the style guide and starts a live server at `http://127.0.0.1:4000/`, then watches for changes made to the source files.
 
 
 ## Using Jekyll

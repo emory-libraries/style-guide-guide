@@ -2,22 +2,52 @@
 layout: default
 ---
 
-{% include page-header.html %}
+{% include page-header.liquid %}
 
 <div class="c-text-passage">
-	{{ content | markdownify }}
-</div><!--end c-text-passage-->
+  
+  {{content | markdownify}}
+  
+</div>
 
 <ul class="c-card-list l-grid l-grid--3up ">
 
-	{% assign the_group = page.group %}
+  {% for site_page in site.pages %}
 
-	{% for my_page in site.pages %}
-		{% if my_page.group == the_group and my_page.layout != "landing" %}
-		<li class="c-card-list__item l-grid__item">
-			{% include card.html %}
-		</li>
-		{% endif %}
-	{% endfor %}
+    {% if site_page.group == page.group and site_page.layout != "landing" %}
+  
+      {% assign use_card = false %}
+  
+      {% if site_page.subgroup and site_page.subgroup == page.subgroup %}
+  
+        {% assign use_card = true %}
+  
+      {% elsif site_page.subgroup and site_page.layout == 'pattern-category' %}
 
-</ul><!--end c-card-list-->
+        {% assign use_card = true %}
+  
+      {% elsif site_page.subgroup and site_page.layout == 'landing' %}
+
+        {% assign use_card = true %}
+  
+      {% elsif site_page.subgroup == nil %}
+  
+        {% assign use_card = true %}
+  
+      {% endif %}
+
+      {% if use_card == true %}
+
+        <li class="c-card-list__item l-grid__item">
+
+          {% include card.liquid %}
+
+        </li>
+  
+      {% endif %}
+
+    {% endif %}
+
+  {% endfor %}
+
+</ul>

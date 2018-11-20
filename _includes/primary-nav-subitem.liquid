@@ -1,0 +1,25 @@
+{% assign subchildren = site.pages | where: 'group', nav_item.slug | where: 'subgroup': nav_subitem.slug %}
+{% assign count_subchildren = subchildren | size %}
+
+{% if count_subchildren > 0 %}
+
+  <li class="c-primary-nav__subitem {% if page.subgroup == nav_subitem.slug %}is-active{% endif %}">
+
+    <a class="c-primary-nav__sublink {% if nav_subitem.slug %}c-primary-nav__sublink--has-children js-nav-dropdown-trigger{% endif %} {% if page.url == include.path %}is-active is-current{% endif %} {% if page.subgroup == nav_subitem.slug %}is-active{% endif %}" 
+       href="{% if nav_subitem.slug %}#{% else %}{{site.baseurl}}{{include.path}}{% endif %}">
+
+      <span class="c-primary-nav__text">{{nav_subitem.label}}</span>
+
+        <svg class="c-icon c-primary-nav__subicon" aria-hidden="true">
+
+          <use href="{{site.baseurl}}/icons.svg#chevron-right"></use>
+
+        </svg>
+
+    </a>
+
+    {% include primary-nav-submenu.liquid %}
+
+  </li>
+
+{% endif %}
