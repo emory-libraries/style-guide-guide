@@ -34,12 +34,20 @@
     "slug": "user-interface",
     "subnav": [
       {
+        "label": "Tokens",
+        "slug": "tokens"
+      },
+      {
         "label": "Atoms",
         "slug": "atoms"
       },
       {
         "label": "Molecules",
         "slug": "molecules"
+      },
+      {
+        "label": "Compounds",
+        "slug": "compounds"
       },
       {
         "label": "Organisms",

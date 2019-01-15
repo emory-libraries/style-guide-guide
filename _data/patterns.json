@@ -1,10 +1,16 @@
 {
   "numbering": {
-    "atoms": 10,
-    "molecules": 20,
-    "organisms": 30,
-    "templates": 40
+    "meta": 0,
+    "tokens": 10,
+    "atoms": 20,
+    "molecules": 30,
+    "compounds": 40,
+    "organisms": 50,
+    "templates": 60
   },
+  "hide": [
+    "meta"
+  ],
   "tabs": [
     {"name": "HTML", "ext": ".html"},
     {"name": "Handlebars", "ext": ".hbs"},

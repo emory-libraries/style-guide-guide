@@ -18,15 +18,19 @@ layout: default
   
       {% assign use_card = false %}
   
-      {% if site_page.subgroup and site_page.subgroup == page.subgroup %}
+      {% if site_page.subgroup and site_page.subgroup == page.subgroup %} 
   
         {% assign use_card = true %}
   
-      {% elsif site_page.subgroup and site_page.layout == 'pattern-category' %}
+      {% elsif site_page.subgroup and site_page.layout == 'pattern-category' %} 
+  
+        {% unless site.data.patterns.hide contains site_page.subgroup %}
 
-        {% assign use_card = true %}
+          {% assign use_card = true %}
   
-      {% elsif site_page.subgroup and site_page.layout == 'landing' %}
+        {% endunless %}
+  
+      {% elsif site_page.subgroup and site_page.layout == 'landing' %} 
 
         {% assign use_card = true %}
   
