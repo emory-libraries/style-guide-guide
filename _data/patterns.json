@@ -7,7 +7,7 @@
   },
   "tabs": [
     {"name": "HTML", "ext": ".html"},
-    {"name": "Handlebars", "ext": ".handlebars"},
+    {"name": "Handlebars", "ext": ".hbs"},
     {"name": "SCSS", "ext": ".scss"},
     {"name": "JS", "ext": ".js"}
   ],
