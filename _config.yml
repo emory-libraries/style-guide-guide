@@ -9,11 +9,20 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 github_username:  emory-libraries
 
+exclude: [_includes/patterns]
+
 # Build settings
 markdown: kramdown
+
 sass:
   sass_dir: _scss
   
+kramdown:
+  input: GFM
+  hard_wrap: false
+  html_to_native: true
+
 # Define dependencies
 plugins:
   - jekyll-last-modified-at
+  - jekyll-titleize
