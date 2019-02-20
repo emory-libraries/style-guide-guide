@@ -4,6 +4,11 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-# Define dependencies
+# Use latest version of jekyll.
+gem "jekyll"
 
-gem "jekyll-last-modified-at", ">= 1.0.1", :github => "gjtorikian/jekyll-last-modified-at"
+# Define dependencies
+group :jekyll_plugins do
+  gem "jekyll-last-modified-at"
+  gem "jekyll-titleize"
+end
