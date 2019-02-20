@@ -6,7 +6,7 @@
       
       <a href="{{page.group | relative_url}}"
          class="c-breadcrumbs__link">
-        {{page.group | replace: '-', ' ' | capitalize}}
+        {{page.group | replace: '-', ' ' | titleize}}
       </a>
       
     </li>
@@ -17,7 +17,7 @@
         
         <a href="{{site.baseurl}}/{{page.group}}/{{page.subgroup}}" 
            class="c-breadcrumbs__link">
-          {{page.subgroup | replace: '-', ' ' | capitalize}}
+          {{page.subgroup | replace: '-', ' ' | titleize}}
         </a>
         
       </li>

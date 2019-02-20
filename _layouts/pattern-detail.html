@@ -12,88 +12,62 @@ layout: default
 
     <ul class="c-tabs__list">
       
-      {% for variation in page.variations %}
-      
-		<li class="c-tabs__item">
-          
-		  <a href="#tab-{{variation.title | downcase | replace: ' ', '-'}}" 
-             class="c-tabs__link js-tab" 
-             data-code-tabs="tab-{{variation.title | downcase | replace: ' ', '-'}}">
-            {% if variation.title %}{{variation.title}}{% endif %}
-          </a>
-			
-        </li>
+      <li class="c-tabs__item">
 
-      {% endfor %}
+        <a href="#tab-pattern" 
+           class="c-tabs__link js-tab" 
+           data-code-tabs="tab-pattern">
+          Pattern
+        </a>
+
+      </li>
       
       {% if page.codepen.user and page.codepen.id %}
       
-        <li class="c-tabs__item">
-          
-		  <a href="#tab-codepen" 
-             class="c-tabs__link js-tab" 
-             data-code-tabs="tab-codepen">
-            CodePen
-          </a>
-			
-        </li>
+      <li class="c-tabs__item">
+
+        <a href="#tab-codepen" 
+           class="c-tabs__link js-tab" 
+           data-code-tabs="tab-codepen">
+          CodePen
+        </a>
+
+      </li>
       
       {% endif %}
 
     </ul>
 
     <div class="c-tabs__body">
+      
+      <div class="c-tabs__panel js-tabs-panel" id="tab-pattern">
+      
+        <section class="c-section">
+          
+          <header class="c-section__header">
+        
+            <h5 class="c-section__title">
+              {{page.title}}
+              {%if page.class %}<code class="u-font-size-med">{{page.class}}</code>{% endif %}
+            </h5>
 
-      {% for variation in page.variations %}
-			
-        <div class="c-tabs__panel js-tabs-panel" id="tab-{{variation.title | downcase | replace: ' ', '-'}}">
+            {% if page.description %}
 
-		  <section class="c-section">
-					
-            <header class="c-section__header">
-						
-              {% if variation.title %}
-              
-                <h5 class="c-section__title">
-                  {{variation.title}}
-                  {% if variation.class %}<code class="u-font-size-med">{{variation.class}}</code>{% endif %}
-                </h5>
-              
-              {% endif %}
-						
-              {% if variation.description %}
-              
-                <div>{{variation.description | markdownify}}</div>
-              
-              {% endif %}
-					
-            </header>
-            
-            {% if variation.group and variation.subgroup and variation.name %}
-              
-              {% assign num = site.data.patterns.numbering[variation.group] | downcase %}
+            <div>{{page.description | markdownify}}</div>
 
-              {% capture src %}{{num}}-{{variation.group}}-{{variation.subgroup}}-{{variation.name}}{% endcapture %}
-
-              {% assign suffix = site.data.patterns.config.outputFileSuffixes.rendered | default: '' %}
-
-              {% capture path %}/patterns/{{src}}/{{src}}{{suffix}}.html{% endcapture %}
-
-              {% capture exists %}{% file_exists {{path}} %}{% endcapture %}
-     
-              {% if exists == 'true' %}
-            
-                {% include iframe.liquid src=path %}
-            
-              {% endif %}
-            
             {% endif %}
+            
+          </header>
 
-		  </section>
+            {% assign suffix = site.data.patterns.config.outputFileSuffixes.rendered | default: '' %}
 
-		</div>
-		
-      {% endfor %}
+            {% capture path %}/patterns/{{page.id}}/{{page.id}}{{suffix}}.html{% endcapture %}
+
+            {% include iframe.liquid src=path %}
+        
+        </section>
+        
+      </div>
 
       {% if page.codepen.user and page.codepen.id %}
       
@@ -126,148 +100,72 @@ layout: default
   </div>
   
   <ul class="c-tabs-list js-tabs-list">
-		
-    {% for variation in page.variations %}
-
-      {% if variation.group and variation.subgroup and variation.name %}
-
-		{% assign num = site.data.patterns.numbering[variation.group] | downcase %}
-
-		{% capture src %}{{num}}-{{variation.group}}-{{variation.subgroup}}-{{variation.name}}{% endcapture %}
     
-        {% assign suffix = site.data.patterns.config.outputFileSuffixes.rendered | default: '' %}
+    {% assign suffix = site.data.patterns.config.outputFileSuffixes.rendered | default: '' %}
 
-        {% capture path %}/patterns/{{src}}/{{src}}{{suffix}}.html{% endcapture %}
-
-      {% endif %}
+    {% capture path %}/patterns/{{page.id}}/{{page.id}}{{suffix}}.html{% endcapture %}
     
-      {% assign parentloop = forloop %}
-		
-      <li class="c-tabs-list__item js-tabs-list-item" data-code-tabs="tab-{{variation.title | downcase | replace: ' ', '-'}}">
-
-		{% if variation.group and variation.subgroup and variation.name %}
+    <li class="c-tabs-list__item js-tabs-list-item" data-code-tabs="tab-pattern">
         
-		  <div class="c-tabs test-tabs  js-tabs">
+        <div class="c-tabs test-tabs js-tabs">
 
-            <ul class="c-tabs__list">
+          <ul class="c-tabs__list">
 
-              {% for tab in site.data.patterns.tabs %}
-              
-                {% assign lang = tab.name | downcase %}
+            {% for tab in site.data.patterns.tabs %}
 
-                {% capture suffix %}{% if lang == 'html' %}{{site.data.patterns.config.outputFileSuffixes.markupOnly}}{% else %}{% endif %}{% endcapture %}
+              {% assign lang = tab.name | downcase %}
 
-                {% capture markup %}/patterns/{{src}}/{{src}}{{suffix}}{{tab.ext}}{% endcapture %}
+              {% capture suffix %}{% if lang == 'html' %}{{site.data.patterns.config.outputFileSuffixes.markupOnly}}{% else %}{% endif %}{% endcapture %}
 
-                {% capture exists %}{% file_exists {{markup}} %}{% endcapture %}
-     
-                {% if exists == 'true' %}
+              {% capture markup %}/patterns/{{page.id}}/{{page.id}}{{suffix}}{{tab.ext}}{% endcapture %}
 
-                  <li class="c-tabs__item">
+              <li class="c-tabs__item">
 
-                    <a href="#{{tab.name | downcase}}-{{parentloop.index}}" class="c-tabs__link js-tab">{{tab.name}}</a>
+                <a href="#{{tab.name | downcase}}-{{forloop.index}}" class="c-tabs__link js-tab">{{tab.name}}</a>
 
-                  </li>
-              
-                {% endif %}
+              </li>
 
-              {% endfor %}
+            {% endfor %}
 
-            </ul>
+          </ul>
 
-            <div class="c-tabs__body ">
+          <div class="c-tabs__body ">
 
-              {% for tab in site.data.patterns.tabs %}
-              
-                {% assign lang = tab.name | downcase %}
-              
-                {% capture suffix %}{% if lang == 'html' %}{{site.data.patterns.config.outputFileSuffixes.markupOnly}}{% else %}{% endif %}{% endcapture %}
-              
-                {% capture markup %}/patterns/{{src}}/{{src}}{{suffix}}{{tab.ext}}{% endcapture %}
-              
-                {% capture exists %}{% file_exists {{markup}} %}{% endcapture %}
-     
-                {% if exists == 'true' %}
+            {% for tab in site.data.patterns.tabs %}
 
-                  <div class="c-tabs__panel js-tabs-panel" id="{{tab.name | downcase}}-{{parentloop.index}}">
+              {% assign lang = tab.name | downcase %}
 
-                    <div class="pattern-code">
+              {% capture suffix %}{% if lang == 'html' %}{{site.data.patterns.config.outputFileSuffixes.markupOnly}}{% else %}{% endif %}{% endcapture %}
 
-                      <button class="c-btn pattern-code-copy-btn"  data-clipboard-target="#pattern-code-{{parentloop.index}}">Copy</button>
+              {% capture markup %}/patterns/{{page.id}}/{{page.id}}{{suffix}}{{tab.ext}}{% endcapture %}
 
-                      {% include code.liquid %}
+                <div class="c-tabs__panel js-tabs-panel" id="{{tab.name | downcase}}-{{forloop.index}}">
 
-                    </div>
+                  <div class="pattern-code">
+
+                    <button class="c-btn pattern-code-copy-btn"  data-clipboard-target="#{{tab.name | downcase}}-{{forloop.index}}">Copy</button>
+
+                    {% include code.liquid %}
 
                   </div>
-              
-                {% endif %}
 
-              {% endfor %}
+                </div>
 
-            </div>
+            {% endfor %}
 
-		  </div>
-			
-        {% endif %}
+          </div>
 
-      </li>
-
-    {% endfor %}
+        </div>
+      
+    </li>
 
   </ul>
 
 </section>
 
 <section class="c-section">
-
-  <div class="c-section-header ">
-
-    <h1 class="c-section-header__title">Usage</h1>
-
-  </div>
-
-  <div class="c-text-passage l-linelength-container">
-    
-    {% include definition-list.liquid %}
-
-  </div>
-
-  <div class="c-table-container">
-
-    <table class="c-table ">
-
-      <thead class="c-table__header">
-        
-        <tr class="c-table__header-row">
-            
-          <th scope="col" class="c-table__header-cell ">Class Name</th>
-          <th scope="col" class="c-table__header-cell ">Description</th>
-        
-        </tr>
-        
-      </thead>
-
-      <tbody class="c-table__body ">
-				
-        {% for class in page.classes %}
-        
-          {% assign class.description = class.description | default: '' %}
-
-		  <tr class="c-table__row ">
-
-		    <td class="c-table__cell ">{{class.name}}</td>
-            <td class="c-table__cell ">{{class.description | markdownify}}</td>
-
-		  </tr>
-				
-        {% endfor %}
-
-      </tbody>
-
-    </table>
-
-  </div>
+  
+  {{page.content | markdownify}}
 
 </section>
 
@@ -295,6 +193,6 @@ layout: default
     
   </div>
 
-  <a href="#" class="c-btn">Discuss this component</a>
+  <a href="#" class="c-btn">Discuss this Pattern</a>
 
 </section>
