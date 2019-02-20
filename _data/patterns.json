@@ -12,10 +12,12 @@
     "meta"
   ],
   "tabs": [
+    {"name": "Handlebars", "ext": ".liquid"},
     {"name": "HTML", "ext": ".html"},
-    {"name": "Handlebars", "ext": ".hbs"},
     {"name": "SCSS", "ext": ".scss"},
-    {"name": "JS", "ext": ".js"}
+    {"name": "CSS", "ext": ".css"},
+    {"name": "JS", "ext": ".js"},
+    {"name": "JSON", "ext": ".json"}
   ],
   "config": {
     "patternStateCascade": [
