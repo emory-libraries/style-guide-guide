@@ -13,7 +13,12 @@
 
 	var iframeInterval = setInterval(function(){
 		//Iframe resize height functionality
-		$('.iffframe__iframe').iFrameResize({heightCalculationMethod:'max',resizeFrom:'child'});
+		$('.iffframe__iframe').iFrameResize({
+          heightCalculationMethod: 'max',
+          resizeFrom: 'child',
+          scrolling: true,
+          sizeHeight: true
+        });
 		counter++;
 
 	    if (counter >= 20) {
