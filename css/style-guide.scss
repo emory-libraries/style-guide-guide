@@ -255,8 +255,42 @@ code[class*="language-"], pre[class*="language-"] {
 }
 
 
+/*------------------------------------*\
+  #FLAGS
+\*------------------------------------*/
+.c-status {
+  font-family: sans-serif;
+  color: $color-gray-dark;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  padding: 5px 10px;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: .8rem;
+  
+  &.done { background-color: #e7f4e4 }
+  &.in-progress { background-color: #fff1d2; }
+  &.to-do {  background-color: #e1f3f8; }
+  
+}
 
-
+.c-flag {
+  font-family: sans-serif;
+  font-size: .8rem;
+  vertical-align: middle;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  color: $color-gray-dark;
+  padding: 5px 10px;
+  
+  &.dark {
+    color: $color-white;
+    background-color: $color-gray-dark;
+  }
+  
+}
 
 /*------------------------------------*\
   #BADGES
@@ -299,4 +333,8 @@ code[class*="language-"], pre[class*="language-"] {
   &.is-active {
     display: block;
   }
+}
+
+.l-linelength-container {
+  max-width: none;
 }
