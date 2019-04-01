@@ -10,4 +10,10 @@ description: This support page provides information about where users should go 
 
 ---
 
-Provide links or contact information to where users can go to request features and enhancements. This may include Github issues pages, ticketing systems, or something else.
+To request a new feature or enhancement to the [Pattern Library][Pattern Library], [Style Guide][Style Guide], or [SassDocs][SassDocs] please open a new issue via GitHub. For all other web-related feature and enhancement requests, please submit a ticket via [Service Now][Service Now].
+
+
+[Style Guide]: https://github.com/emory-libraries/style-guide-guide/issues
+[SassDocs]: https://github.com/emory-libraries/template-sass/issues
+[Pattern Library]: https://github.com/emory-libraries/Pattern-Library/issues
+[Service Now]: https://emory.service-now.com/sp
