@@ -1,0 +1,15 @@
+<div class="panel">
+  {{> atoms-input-toggle classes="panel-switch" id=(default id (dashcase (lowercase title))) checked=(default (eq state 'open') false)}}
+  <label class="panel-toggle" for="{{default id (dashcase (lowercase title))}}" tabindex="0">
+    <span class="panel-title">{{title}}</span>
+    <div class="panel-indicator">{{> tokens-icon id='material-keyboard_arrow_up'}}</div>
+  </label>
+  <div class="panel-content">
+    {{> tokens-text markdown=(default markdown false) text=content}}
+    {{#if buttons}}
+    <div class="button-group">
+      {{#each buttons}}{{> atoms-button-link}}{{/each}}
+    </div>
+    {{/if}}
+  </div>
+</div>

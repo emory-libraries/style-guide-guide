@@ -1,0 +1,39 @@
+<div class="copyright">
+  <span class="copyright-notice">
+    <span class="copyright-signature">
+      Copyright &copy; <span class="copyright-year">{{year}}</span>
+      <span class="copyright-owner">{{default owner "Emory University"}}</span> 
+    </span>
+    <span class="copyright-rights">{{default rights "All Rights Reserved."}}</span>
+    {{#if policies}}
+    <span class="copyright-policies">
+      {{#each policies}}
+        {{> atoms-link classes="copyright-policy" }}
+      {{/each}}
+    </span>
+    {{/if}}
+  </span>
+  <span class="copyright-address">
+    {{#make 'defaultAddress' this}}
+      {
+        street: "201 Dowman Drive",
+        city: "Atlanta",
+        state: "Georgia",
+        zip: 30322
+      }
+    {{/make}}
+    {{#if format }}
+    {{formatAddress (default address defaultAddress) (default format.address '{street}, {city}, {state.long} {zip}')}}
+    {{else}}
+    {{formatAddress (default address defaultAddress) '{street}, {city}, {state.long} {zip}'}}
+    {{/if}}
+    {{unset 'defaultAddress' this}}
+  </span>
+  <span class="copyright-phone">
+    {{#if format}}
+    {{formatPhone (default phone 4047276123) (default format.phone 'xxx.xxx.xxxx')}}
+    {{else}}
+    {{formatPhone (default phone 4047276123) 'xxx.xxx.xxxx'}}
+    {{/if}}
+  </span>
+</div>

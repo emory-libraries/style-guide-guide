@@ -1,0 +1,52 @@
+.image {
+  display: block;
+}
+
+.image.-w-quarter {
+  width: 25%;
+}
+.image.-w-third {
+  width: 33.333%;
+}
+.image.-w-half {
+  width: 50%;
+}
+.image.-w-two-third {
+  width: 66.667%;
+}
+.image.-w-three-quarter {
+  width: 75%;
+}
+.image.-w-full {
+  width: 100%;
+}
+.image.-w-auto {
+  width: auto;
+}
+.image.-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.image.-left {
+  float: left;
+  margin-right: 1em;
+}
+.image.-right {
+  float: right;
+  margin-left: 1em;
+}
+.image.-left, .image.-right {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.image.-left::after::after, .image.-right::after::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.image.-left:last-child, .image.-right:last-child {
+  margin-bottom: 0;
+}
+.image.-left:first-child, .image.-right:first-child {
+  margin-top: 0;
+}

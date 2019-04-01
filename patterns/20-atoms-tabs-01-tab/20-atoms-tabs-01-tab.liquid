@@ -1,0 +1,26 @@
+{% raw %}<eul-tab inline-template :defaults="{
+                            isDisabled: {{default disabled false}},
+                            isActive: {{default active false}},
+                            isHover: {{default hover false}},
+                            isFocus: {{default focus false}}
+                          }">
+
+  <button @click="click"
+          @keypress.enter="click"
+          @focus.native="isFocus = true"
+          @blur.native="isFocus = false"
+          @mouseover.native="isHover = true"
+          @mouseleave.native="isHover = false"
+          class="tab"
+          :class="{
+            'is-disabled': isDisabled,
+            'is-active': isActive,
+            'is-hover': isHover,
+            'is-focus': isFocus
+          }"
+          :disabled="isDisabled"class="tab">
+    {{label}}
+  </button>
+
+</eul-tab>
+{% endraw %}

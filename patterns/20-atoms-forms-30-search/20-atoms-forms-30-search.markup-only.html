@@ -1,0 +1,181 @@
+<eul-search inline-template
+            :services="[{&quot;label&quot;:&quot;Google&quot;,&quot;placeholder&quot;:&quot;Search Google&quot;,&quot;id&quot;:&quot;google&quot;,&quot;src&quot;:&quot;https://www.google.com/search?q&#x3D;:query&quot;,&quot;default&quot;:true},{&quot;label&quot;:&quot;Bing&quot;,&quot;placeholder&quot;:&quot;Search Bing&quot;,&quot;id&quot;:&quot;bing&quot;,&quot;src&quot;:&quot;https://www.bing.com/search?q&#x3D;:query&quot;},{&quot;label&quot;:&quot;Yahoo&quot;,&quot;placeholder&quot;:&quot;Search Yahoo&quot;,&quot;id&quot;:&quot;yahoo&quot;,&quot;src&quot;:&quot;https://search.yahoo.com/search?p&#x3D;:query&quot;}]"
+            :param="':query'"
+            :defaults="{
+              button: {
+                isDisabled: true,
+                isActive: false,
+                isHover: false,
+                isFocus: false
+              },
+              input: {
+                isDisabled: false,
+                isHover: false,
+                isFocus: false
+              }
+            }">
+
+  <div class="search">
+
+    <input type="search"
+           v-model="query"
+           autocomplete="off"
+           :placeholder="placeholder"
+           @input="button.isDisabled = !valid"
+           @focus.native="input.isFocus = true"
+           @blur.native="input.isFocus = false"
+           @mouseover.native="input.isHover = true"
+           @mouseleave.native="input.isHover = false"
+           class="input -search search-box"
+           :class="{
+            'is-disabled': input.isDisabled,
+            'is-hover': input.isHover,
+            'is-focus': input.isFocus,
+           }"
+           :disabled="input.isDisabled">
+
+    <a :href="href"
+       target="_self"
+       @click="validate"
+       @keypress.enter="validate"
+       @mousedown.native="button.isActive = true"
+       @mouseup.native="button.isActive = false"
+       @keydown.enter="button.isActive = true"
+       @keyup.enter="button.isActive = false"
+       @focus.native="button.isFocus = true"
+       @blur.native="button.isFocus = false"
+       @mouseover.native="button.isHover = true"
+       @mouseleave.native="button.isHover = false"
+       class="button search-button"
+       :class="{
+          'is-disabled': button.isDisabled,
+          'is-active': button.isActive,
+          'is-hover': button.isHover,
+          'is-focus': button.isFocus,
+        }"
+       :disabled="button.isDisabled">
+        
+        Search
+    </a>
+
+  </div>
+
+</eul-search>
+
+<noscript>
+
+  <div class="search -form">
+
+    <input type="radio" name="search" id="search-google" class="search-toggle" checked>
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form is-default"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="Google">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search Google">
+        <input type="hidden"
+               name="service[id]"
+               value="google">
+        <input type="hidden"
+               name="service[src]"
+               value="https://www.google.com/search?q&#x3D;:query">
+        <input type="hidden"
+               name="service[default]"
+               value="true">
+
+      <input type="search"
+             name="query"
+             placeholder="Search Google"
+             class="input -search search-box"
+             >
+
+      <input type="submit"
+             value="Search"
+             class="button search-button"
+             >
+
+    </form>
+
+
+    <input type="radio" name="search" id="search-bing" class="search-toggle">
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="Bing">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search Bing">
+        <input type="hidden"
+               name="service[id]"
+               value="bing">
+        <input type="hidden"
+               name="service[src]"
+               value="https://www.bing.com/search?q&#x3D;:query">
+
+      <input type="search"
+             name="query"
+             placeholder="Search Bing"
+             class="input -search search-box"
+             >
+
+      <input type="submit"
+             value="Search"
+             class="button search-button"
+             >
+
+    </form>
+
+
+    <input type="radio" name="search" id="search-yahoo" class="search-toggle">
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="Yahoo">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search Yahoo">
+        <input type="hidden"
+               name="service[id]"
+               value="yahoo">
+        <input type="hidden"
+               name="service[src]"
+               value="https://search.yahoo.com/search?p&#x3D;:query">
+
+      <input type="search"
+             name="query"
+             placeholder="Search Yahoo"
+             class="input -search search-box"
+             >
+
+      <input type="submit"
+             value="Search"
+             class="button search-button"
+             >
+
+    </form>
+
+  </div>
+
+</noscript>

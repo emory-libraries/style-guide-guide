@@ -1,0 +1,5 @@
+{
+  "label": "Print",
+  "href": "javascript:print()",
+  "icon": "material-print"
+}

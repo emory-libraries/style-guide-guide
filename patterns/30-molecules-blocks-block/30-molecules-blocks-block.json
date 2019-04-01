@@ -1,0 +1,22 @@
+{
+  "heading": "Keep informed of all Emory Libraries news and updates from our publications",
+  "text": "Duis proident tractavissent, cernantur instituendarum te offendit, cillum doctrina si comprehenderit nam te e multos offendit, et amet quibusdam vidisse ut quibusdam summis id senserit graviterque, ea nulla senserit expetendis ad id veniam cohaerescant. Singulis dolor e litteris despicationes hic quae mandaremus ita exquisitaque, iis hic eram iudicem, laborum a quibusdam ex si duis ex aute ad sed cupidatat instituendarum, mentitum ipsum labore ita elit qui malis iis mentitum e aliqua.",
+  "buttons": [
+    {
+      "label": "Explore Our Publications",
+      "href": ""
+    },
+    {
+      "label": "View All News",
+      "href": "",
+      "hollow": true
+    }
+  ],
+  "image": {
+    "src": "https://source.unsplash.com/P3sLerH3UmM/900",
+    "overhang": "top",
+    "stretch": "bottom"
+  },
+  "theme": "dark",
+  "shadow": "bottom"
+}

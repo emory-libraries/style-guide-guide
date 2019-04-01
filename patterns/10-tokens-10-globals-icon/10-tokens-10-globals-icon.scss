@@ -1,0 +1,8 @@
+.icon {
+  @include absolute-center-contents(true);
+
+  svg {
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,41 @@
+{% raw %}<div class="map-frame{{#if (and size size.fixed)}} -h-fixed{{/if}}"{{#if (and size (or size.width size.height))}} style="{{#if size.width}}--width: {{size.width}};{{/if}}{{#if size.height}}--height: {{size.height}};{{/if}}"{{/if}}>
+  
+  {{#if mapId }}
+  {{#with (lookup (filterWhere map 'id' mapId) 0) as |place|}}
+  
+    {{#unless (eq (lowercase ../source) 'google')}}
+    <eul-map inline-template :defaults="{
+                                          location: '{{place.name}}',
+                                          coordinates: [{{place.geometry.location.lat}}, {{place.geometry.location.lng}}],
+                                          zoom: {{default ../zoom 18}}
+                                        }">
+      <div class="map"></div>
+    </eul-map>
+    {{/unless}}
+  
+    {{#unless (eq (lowercase ../source) 'google')}}<noscript>{{/unless}}
+    <iframe class="map" src="{{googleMapEmbedUrl place (default ../zoom 18)}}"></iframe>
+    {{#unless (eq (lowercase ../source) 'google')}}</noscript>{{/unless}}
+  
+  {{/with}}
+  {{else}}
+
+    {{#unless (eq (lowercase source) 'google')}}
+    <eul-map inline-template :defaults="{
+                                          location: '{{name}}',
+                                          coordinates: [{{coordinates}}],
+                                          zoom: {{default zoom 18}},
+                                        }">
+      <div class="map"></div>
+    </eul-map>
+    {{/unless}}
+  
+    {{#unless (eq (lowercase source) 'google')}}<noscript>{{/unless}}
+      <iframe class="map" src="https://www.google.com/maps?output=embed&iwloc=near&q={{plusify name}}&ll={{coordinates}}&z={{zoom}}"></iframe>
+    {{#unless (eq (lowercase source) 'google')}}</noscript>{{/unless}}
+  
+  {{/if}}
+
+</div>
+
+{% endraw %}

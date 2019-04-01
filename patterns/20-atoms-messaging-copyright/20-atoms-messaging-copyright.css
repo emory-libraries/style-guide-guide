@@ -1,0 +1,203 @@
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 601px) and (max-width: 774px) {
+  .copyright {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (min-width: 775px) {
+  .copyright {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+.copyright-notice + .copyright-notice::before,
+.copyright-notice + .copyright-address::before,
+.copyright-notice + .copyright-phone::before, .copyright-address + .copyright-notice::before,
+.copyright-address + .copyright-address::before,
+.copyright-address + .copyright-phone::before, .copyright-phone + .copyright-notice::before,
+.copyright-phone + .copyright-address::before,
+.copyright-phone + .copyright-phone::before {
+  display: block;
+  position: absolute;
+  display: block;
+  top: 50%;
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
+  left: 0;
+}
+.copyright-notice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 601px) and (max-width: 774px) {
+  .copyright-notice {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+@media (min-width: 775px) {
+  .copyright-notice {
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
+  }
+}
+@media (min-width: 601px) and (max-width: 774px) {
+  .copyright-notice {
+    display: block;
+  }
+}
+@media (min-width: 775px) {
+  .copyright-notice {
+    display: block;
+  }
+}
+.copyright-notice .copyright-signature {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+@media (min-width: 601px) and (max-width: 774px) {
+  .copyright-notice .copyright-signature {
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
+  }
+}
+@media (min-width: 775px) {
+  .copyright-notice .copyright-signature {
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
+  }
+}
+@media (min-width: 601px) and (max-width: 774px) {
+  .copyright-notice .copyright-rights::before {
+    content: " - ";
+  }
+}
+@media (min-width: 775px) {
+  .copyright-notice .copyright-rights::before {
+    content: " - ";
+  }
+}
+.copyright-address {
+  grid-area: address;
+}
+.copyright-phone {
+  grid-area: phone;
+}
+
+.copyright {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: #D0DEFD;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.7692;
+  font-size: 12px;
+}
+@media (min-width: 601px) and (max-width: 774px) {
+  .copyright {
+    font-size: 12.5px;
+  }
+}
+@media (min-width: 775px) {
+  .copyright {
+    font-size: 13px;
+  }
+}
+.copyright-notice, .copyright-address, .copyright-phone {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+@media (min-width: 601px) and (max-width: 774px) {
+  .copyright-notice + .copyright-notice:last-child::before,
+.copyright-notice + .copyright-address:last-child::before,
+.copyright-notice + .copyright-phone:last-child::before, .copyright-address + .copyright-notice:last-child::before,
+.copyright-address + .copyright-address:last-child::before,
+.copyright-address + .copyright-phone:last-child::before, .copyright-phone + .copyright-notice:last-child::before,
+.copyright-phone + .copyright-address:last-child::before,
+.copyright-phone + .copyright-phone:last-child::before {
+    content: "|";
+  }
+}
+@media (min-width: 775px) {
+  .copyright-notice + .copyright-notice::before,
+.copyright-notice + .copyright-address::before,
+.copyright-notice + .copyright-phone::before, .copyright-address + .copyright-notice::before,
+.copyright-address + .copyright-address::before,
+.copyright-address + .copyright-phone::before, .copyright-phone + .copyright-notice::before,
+.copyright-phone + .copyright-address::before,
+.copyright-phone + .copyright-phone::before {
+    content: "|";
+  }
+}
+@media (min-width: 601px) and (max-width: 774px) {
+  .copyright-notice:first-child, .copyright-address:first-child, .copyright-phone:first-child {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .copyright-notice:nth-child(2), .copyright-address:nth-child(2), .copyright-phone:nth-child(2) {
+    padding-left: 0;
+  }
+  .copyright-notice:last-child, .copyright-address:last-child, .copyright-phone:last-child {
+    padding-right: 0;
+  }
+}
+@media (min-width: 775px) {
+  .copyright-notice:first-child, .copyright-address:first-child, .copyright-phone:first-child {
+    padding-left: 0;
+  }
+  .copyright-notice:last-child, .copyright-address:last-child, .copyright-phone:last-child {
+    padding-right: 0;
+  }
+}
+.copyright-notice .copyright-policies .copyright-policy {
+  color: inherit;
+  margin-left: 10px;
+}
+.copyright-notice .copyright-policies .copyright-policy, .copyright-notice .copyright-policies .copyright-policy:hover, .copyright-notice .copyright-policies .copyright-policy:focus, .copyright-notice .copyright-policies .copyright-policy:active, .copyright-notice .copyright-policies .copyright-policy.is-hover, .copyright-notice .copyright-policies .copyright-policy.is-focus, .copyright-notice .copyright-policies .copyright-policy.is-active {
+  font-weight: inherit;
+  text-decoration: underline;
+}
+.copyright-notice .copyright-policies .copyright-policy:hover, .copyright-notice .copyright-policies .copyright-policy:focus, .copyright-notice .copyright-policies .copyright-policy.is-hover, .copyright-notice .copyright-policies .copyright-policy.is-focus {
+  color: #5387F7;
+}
+.copyright-notice .copyright-policies .copyright-policy:active, .copyright-notice .copyright-policies .copyright-policy.is-active {
+  color: #D0DEFD;
+}
+.copyright-phone {
+  font-weight: bold;
+}

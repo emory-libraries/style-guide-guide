@@ -1,0 +1,142 @@
+.panel {
+  display: grid;
+  grid-template-areas: "toggle" "content";
+  grid-template-columns: 1fr;
+}
+.panel-switch {
+  display: none;
+}
+.panel-toggle {
+  grid-area: toggle;
+  display: grid;
+  grid-template-areas: "title indicator";
+  cursor: pointer;
+}
+.panel-toggle .panel-title,
+.panel-toggle .panel-indicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.panel-toggle .panel-title {
+  grid-area: title;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.panel-toggle .panel-indicator {
+  grid-area: indicator;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.panel-toggle .panel-indicator .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.panel-content {
+  grid-area: content;
+}
+
+.panel {
+  grid-template-rows: 100px 1fr;
+  border-top: 1px solid #B6BDCC;
+  border-bottom: 1px solid #B6BDCC;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.panel-switch:checked ~ .panel-content {
+  clip: auto;
+  width: auto;
+  height: auto;
+  margin: auto;
+  overflow: auto;
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  opacity: 1;
+}
+.panel-switch:not(:checked) ~ .panel-content {
+  border: 0;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: absolute;
+  padding-top: 0;
+  padding-bottom: 0;
+  opacity: 0;
+}
+.panel-switch:checked ~ .panel-toggle > .panel-indicator .icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.panel-switch:not(:checked) ~ .panel-toggle > .panel-indicator .icon {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.panel-switch:checked ~ .panel-toggle, .panel-switch:checked ~ .panel-content {
+  background-color: rgba(231, 234, 241, 0.5);
+}
+.panel-switch:not(:checked) ~ .panel-toggle, .panel-switch:not(:checked) ~ .panel-content {
+  background-color: transparent;
+}
+.panel-toggle {
+  grid-template-columns: 1fr minmax(50px, auto);
+  grid-template-rows: 100px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.panel-toggle .panel-title {
+  padding: 25px;
+}
+.panel-toggle .panel-title {
+  font-family: "Cardo", serif;
+  font-size: 28px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #091C44;
+}
+.panel-toggle .panel-indicator {
+  padding: 25px;
+}
+.panel-toggle .panel-indicator .icon {
+  width: 25px;
+  height: 25px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.panel-toggle .panel-indicator .icon svg {
+  fill: #336BE6;
+}
+.panel-content {
+  padding: 25px;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative !important;
+  width: 100% !important;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.panel-content {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}

@@ -1,0 +1,42 @@
+{{#each iconsets}}
+
+  <div class="pl-iconset">
+
+    <h3 class="pl-iconset-name">{{name}}</h3>
+
+    <div class="pl-iconset-icons pl-grid" style="--columns-s: 2; --columns-m: 3; --columns-l: 4;">
+
+      {{#each (sortBy icons 'id')}}
+
+        <div class="pl-grid-item ">
+
+          {{#if name}}<strong class="pl-grid-item-id">{{name}}</strong>{{/if}}
+
+          <div class="pl-iconset-icon -{{downcase ../name}} pl-grid-item-info" title="{{id}}">
+
+            {{> tokens-icon }}
+
+          </div>
+
+
+          {{#if meta}}{{#each meta}}
+
+            <div class="pl-grid-item-meta">
+
+                <strong class="pl-grid-item-meta-label">{{@key}}</strong>
+
+                <span class="pl-grid-item-meta-data copy" data-clipboard-text="{{.}}">{{.}}</span>
+
+            </div>
+
+          {{/each}}{{/if}}
+
+        </div>
+
+      {{/each}}
+
+    </div>
+
+  </div>
+
+{{/each}}

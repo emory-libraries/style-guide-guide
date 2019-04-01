@@ -1,0 +1,80 @@
+.heading.-h1 {
+  font-family: "Cardo", serif;
+  font-size: 72px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #091C44;
+}
+.heading.-h1-alt {
+  font-family: "Cardo", serif;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #091C44;
+}
+.heading.-h2 {
+  font-family: "Cardo", serif;
+  font-size: 48px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0833;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #091C44;
+}
+.heading.-h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.7083;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #605858;
+}
+.heading.-h4 {
+  font-family: "Cardo", serif;
+  font-size: 28px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #605858;
+}
+.heading.-h5 {
+  font-family: "Cardo", serif;
+  font-size: 26px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #605858;
+}
+.heading.-h5-alt {
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6364;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #605858;
+}
+.heading.-h6 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6667;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #605858;
+}

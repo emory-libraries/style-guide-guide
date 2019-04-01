@@ -1,0 +1,10 @@
+{% raw %}<div class="input-field">
+  <select class="input -select{{#isnt multiple}}{{#if open}} is-open{{/if}}{{#if closed}} is-closed{{/if}}{{/isnt}}{{#is multiple}}{{#if focus}} is-focus{{/if}}{{#if blur}} is-blur{{/if}}{{/is}}"{{#if disabled}} disabled{{/if}}{{#if multiple}} multiple{{/if}}
+          id="{{id}}">
+    {{#each options as |option|}}
+    <option{{#if option.value}} value="{{value}}"{{/if}}{{#if option.selected}} selected{{/if}}{{#if option.disabled}} disabled{{/if}}>{{#if option.label}}{{option.label}}{{else}}{{option}}{{/if}}</option>
+    {{/each}}
+  </select>
+  <label class="input-label" for="{{id}}">{{label}}</label>
+</div>
+{% endraw %}

@@ -1,0 +1,18 @@
+{
+  "logos": [
+    {
+      "name": "Emory University Badge",
+      "id": "emory-badge",
+      "meta": {
+        "id": "emory-badge"
+      }
+    },
+    {
+      "name": "Emory Libraries Logo",
+      "id": "emory-libraries",
+      "meta": {
+        "id": "emory-libraries"
+      }
+    }
+  ]
+}

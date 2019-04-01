@@ -1,0 +1,6 @@
+{% raw %}<div class="input-group">
+  {{#each options as |option|}}
+  {{> atoms-input-radio group=../group id=(default id (combine ../group '-' (plus @index 1))) }}
+  {{/each}}
+</div>
+{% endraw %}

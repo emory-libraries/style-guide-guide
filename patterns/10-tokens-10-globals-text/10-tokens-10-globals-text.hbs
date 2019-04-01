@@ -1,0 +1,3 @@
+<{{#if markdown}}div{{else}}p{{/if}} class="text -{{default type 'body'}}{{#and alternate (eq type 'body')}}-alt{{/and}}">
+  {{#if markdown}}{{#markdown}}{{text}}{{/markdown}}{{else}}{{text}}{{/if}}
+<{{#if markdown}}div{{else}}p{{/if}}>

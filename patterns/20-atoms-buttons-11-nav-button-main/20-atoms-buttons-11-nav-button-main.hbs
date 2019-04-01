@@ -1,0 +1,13 @@
+{{#unless librarian}}
+  <label id="{{default id (append 'nav-button--' (hyphenate (lowercase label)))}}"
+         for="{{default for (append 'nav-menu--' (hyphenate (lowercase label)))}}"
+         class="nav-button{{#if utility}} -utility{{/if}}{{#if flyout}} -flyout{{/if}}{{#if search}} -search{{/if}}{{#if toggle}} -toggle{{/if}}{{#if (or hover focus)}} is-hover{{/if}}{{#if active}} is-active{{/if}}{{#if disabled}} is-disabled{{/if}}"{{#if disabled}} disabled{{/if}} tabindex="0">
+    {{#if (or (and (or flyout toggle) icon) search) }}{{> tokens-icon id=icon}}{{/if}}
+    <span class="nav-button-label">{{label}}</span>
+  </label>
+{{else}}
+  <a href="{{href}}" target="{{default target '_self'}}" class="nav-button -librarian{{#if (or hover focus)}} is-hover{{/if}}{{#if active}} is-active{{/if}}{{#if disabled}} is-disabled{{/if}}"{{#if disabled}} disabled{{/if}}>
+    {{#if icon }}{{> tokens-icon id=icon}}{{/if}}
+    <span class="nav-button-label">{{label}}</span>
+  </a>
+{{/unless}}

@@ -1,0 +1,29 @@
+<eul-subnav-viewall inline-template :defaults="{
+                                      isDisabled: false,
+                                      isActive: false,
+                                      isHover: false,
+                                      isFocus: false,
+                                      isDismissable: false,
+                                    }">
+
+  <label @click="click"
+         @keypress.enter="simclick"
+         @focus.native="isFocus = true"
+         @blur.native="isFocus = false"
+         @mouseover.native="isHover = true"
+         @mouseleave.native="isHover = false"
+         class="subnav-button -viewall has-overflow"
+         :class="{
+          'is-disabled': isDisabled,
+          'is-active': isActive,
+          'is-hover': isHover,
+          'is-focus': isFocus,
+          'is-dismissed': isDismissable && !isShowing
+         }"
+         :disabled="isDisabled"
+         for="pl-overflow-example"
+         tabindex="0">
+    View All Services
+  </label>
+
+</eul-subnav-viewall>

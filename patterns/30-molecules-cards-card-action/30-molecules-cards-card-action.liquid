@@ -1,0 +1,16 @@
+{% raw %}<div class="card-action">
+  <div class="card-action-image">
+    {{#with image}}{{> atoms-image decorative=true}}{{/with}}
+  </div>
+  <span class="card-action-text">{{text}}</span>
+  {{#with button}}
+    {{#if (eq type 'action')}}
+      {{> atoms-button-action classes="card-action-action"}}
+    {{else if (eq type 'toggle')}}
+      {{> atoms-button-toggle classes="card-action-action"}}
+    {{else}}
+      {{> atoms-button-link classes="card-action-action"}}
+    {{/if}}
+  {{/with}}
+</div>
+{% endraw %}

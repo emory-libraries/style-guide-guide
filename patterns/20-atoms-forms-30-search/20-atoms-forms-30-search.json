@@ -1,0 +1,28 @@
+{
+  "id": "search",
+  "services": [
+    {
+      "label": "Google",
+      "placeholder": "Search Google",
+      "id": "google",
+      "src": "https://www.google.com/search?q=:query",
+      "default": true
+    },
+    {
+      "label": "Bing",
+      "placeholder": "Search Bing",
+      "id": "bing",
+      "src": "https://www.bing.com/search?q=:query"
+    },
+    {
+      "label": "Yahoo",
+      "placeholder": "Search Yahoo",
+      "id": "yahoo",
+      "src": "https://search.yahoo.com/search?p=:query"
+    }
+  ],
+  "button": {
+    "label": "Search"
+  },
+  "processor": "/php/example-search.php"
+}

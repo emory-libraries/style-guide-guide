@@ -1,0 +1,5 @@
+<label class="button{{#if hollow}} -hollow{{/if}}{{#if pill}} -pill{{/if}}{{#if uncapitalize}} -uncapitalize{{/if}}{{#if (or hover focus)}} is-hover{{/if}}{{#if active}} is-active{{/if}}{{#if disabled}} is-disabled{{/if}}{{#if classes}} {{classes}}{{/if}}"{{#if disabled}} disabled{{/if}}{{#if id}} id="button-toggle--{{hyphenate (lowercase id)}}"{{/if}} for="{{for}}">
+  {{#if (or (and icon icon.id (eq icon.position 'left')) (and icon icon.id (not icon.position)))}}{{> tokens-icon id=icon.id classes='-left' }}{{/if}}
+  {{label}}
+  {{#if (and icon icon.id (eq icon.position 'right'))}}{{> tokens-icon id=icon.id classes='-right' }}{{/if}}
+</label>

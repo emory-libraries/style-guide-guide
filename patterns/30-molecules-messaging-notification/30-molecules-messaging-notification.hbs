@@ -1,0 +1,23 @@
+<eul-notification inline-template :uid="'{{uid}}'" :defaults="{
+                                                      isDismissible: {{default dismissible true}}
+                                                    }">
+
+  <transition name="fade">
+
+    <div class="notification -{{default type 'caution'}}{{#unless (eq dismissible false)}} is-dismissible{{/unless}}"
+         data-label="{{default label 'Alert'}}"
+         v-show="showing"
+         v-cloak>
+      <p class="notification-message">{{message}}</p>
+      {{#unless (eq dismissible false)}}
+      <button class="notification-dismiss"
+              @click="dismiss"
+              @keypress.native.enter="dismiss">
+        {{> tokens-icon id='material-close'}}
+      </button>
+      {{/unless}}
+    </div>
+
+  </transition>
+
+</eul-notification>

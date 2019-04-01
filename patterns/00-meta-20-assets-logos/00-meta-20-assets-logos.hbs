@@ -1,0 +1,32 @@
+<div class="pl-grid" style="--columns-s: 1; --columns-m: 3; --columns-l: 5;">
+
+  {{#each logos}}
+
+    <div class="pl-grid-item">
+
+      {{#if name}}<strong class="pl-grid-item-id">{{name}}</strong>{{/if}}
+
+      <div class="pl-grid-item-info" title="{{id}}">
+
+        {{> tokens-logo hyperlink=false }}
+
+      </div>
+
+
+      {{#if meta}}{{#each meta}}
+
+        <div class="pl-grid-item-meta">
+
+            <strong class="pl-grid-item-meta-label">{{@key}}</strong>
+
+            <span class="pl-grid-item-meta-data copy" data-clipboard-text="{{.}}">{{.}}</span>
+
+        </div>
+
+      {{/each}}{{/if}}
+
+    </div>
+
+  {{/each}}
+
+</div>

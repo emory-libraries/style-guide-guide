@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="">
+  <head>
+    <title></title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="">
+
+    <link rel="stylesheet" href="../../css/patternlab.css?1554131365337" media="all">
+    <link rel="stylesheet" href="../../css/style.css?1554131365337" media="all">
+
+    <!-- DO NOT REMOVE -->
+    <!-- never cache patterns -->
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1554131365337" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1554131365337" media="all" />
+
+
+  </head>
+  <body class="">
+
+<div class="rule"></div>
+
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<h2>Getting Started</h2>\n<p>Rules are used show visible line, dividers, and/or separators between different types of content.</p>\n<h6>EXPORT VIA GRUNT</h6>\n<pre><code>grunt export:atoms-rule\n</code></pre>\n<h3>Description</h3>\n<p>The rule atom allows you to include a horizontal rule within another pattern. Rules can be used as dividers and/or separators to help distinguish between different sets of content.</p>\n<h3>Best Practices</h3>\n<ul>\n<li>Use your best judgment to determine if a rule is appropriate</li>\n<li>Avoid using too many rule styles in any single area</li>\n<li>Use the same rule style when separating similar types of content</li>\n</ul>\n<h2>Schema</h2>\n<table>\n<thead>\n<tr>\n<th>Name</th>\n<th>Type</th>\n<th>Description</th>\n<th>Value(s)</th>\n<th>Default</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>style</td>\n<td><code>String</code></td>\n<td>Indicates an alternative rule style to be used.</td>\n<td><code>light</code>, <code>dark</code>, <code>dotted</code>, <code>thick</code>, <code>heading</code>, or <code>feed</code></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n<h2>Classes</h2>\n<h3>Variations</h3>\n<table>\n<thead>\n<tr>\n<th>Class</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>-light</code></td>\n<td>Uses a light rule style.</td>\n</tr>\n<tr>\n<td><code>-dark</code></td>\n<td>Uses a dark rule style.</td>\n</tr>\n<tr>\n<td><code>-dotted</code></td>\n<td>Uses a dotted rule style.</td>\n</tr>\n<tr>\n<td><code>-thick</code></td>\n<td>Uses a thick rule style.</td>\n</tr>\n<tr>\n<td><code>-heading</code></td>\n<td>Uses a heading rule style, intended for use only underneath major section headings.</td>\n</tr>\n<tr>\n<td><code>-feed</code></td>\n<td>Uses a feed rule style, intended for use only underneath feed headings.</td>\n</tr>\n</tbody>\n</table>\n","patternBreadcrumb":{"patternType":"atoms","patternSubtype":"globals"},"patternExtension":"hbs","patternName":"Rule","patternPartial":"atoms-rule","patternState":"review","patternEngineName":"handlebars","extraOutput":{"created":"03/07/2019","updated":"03/18/2019","js":false,"php":false}}
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+  
+  var scriptLoader = {
+    
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+    
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1554131365337">
+  (function() {
+    if (self != top) {
+      var cb = '1554131365337';
+      var js = [];
+      if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+        js.push('styleguide/bower_components/classList.min.js');
+      }
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+<script id="pl-js-insert-1554131365337">
+  (function() {
+    if (self != top) {
+      var cb = '1554131365337';
+      var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
+      scriptLoader.run(js,cb,'pl-js-insert');
+    }
+  })();
+</script>
+
+
+  <script src="../../js/bundle.js?1554131365337"></script>
+  <script src="../../js/pattern-library.js?1554131365337"></script>
+
+  </body>
+</html>

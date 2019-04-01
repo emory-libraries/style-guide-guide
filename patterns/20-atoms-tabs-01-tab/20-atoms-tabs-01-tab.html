@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="">
+  <head>
+    <title></title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="">
+
+    <link rel="stylesheet" href="../../css/patternlab.css?1554131365337" media="all">
+    <link rel="stylesheet" href="../../css/style.css?1554131365337" media="all">
+
+    <!-- DO NOT REMOVE -->
+    <!-- never cache patterns -->
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1554131365337" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1554131365337" media="all" />
+
+
+  </head>
+  <body class="">
+
+<eul-tab inline-template :defaults="{
+                            isDisabled: false,
+                            isActive: false,
+                            isHover: false,
+                            isFocus: false
+                          }">
+
+  <button @click="click"
+          @keypress.enter="click"
+          @focus.native="isFocus = true"
+          @blur.native="isFocus = false"
+          @mouseover.native="isHover = true"
+          @mouseleave.native="isHover = false"
+          class="tab"
+          :class="{
+            'is-disabled': isDisabled,
+            'is-active': isActive,
+            'is-hover': isHover,
+            'is-focus': isFocus
+          }"
+          :disabled="isDisabled"class="tab">
+    Library Catalog
+  </button>
+
+</eul-tab>
+
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<h2>Getting Started</h2>\n<p>Tabs help indicate to the user that some additional content is available but not immediately shown. When used correctly, tabs can be a useful tool for revealing content on demand.</p>\n<h6>EXPORT VIA GRUNT</h6>\n<pre><code>grunt export:atoms-tab\n</code></pre>\n<h3>Description</h3>\n<p>The tab atom allows you to include a single tab within a tab menu. This tab is a <a href=\"https://vuejs.org\">Vue.js</a> component, so it requires JavaScript to be enabled in the browser. Use this tab trigger some on-page action(s).</p>\n<h3>Best Practices</h3>\n<ul>\n<li>Always label tabs with a clear message that indicates its purpose</li>\n<li>Avoid lengthy labels by using short, concise ones instead</li>\n<li>Be cautious when using this tab as it requires JavaScript\n<ul>\n<li>Whenever possible, provide a <code>&lt;noscript&gt;</code> fallback for when the tab fails</li>\n</ul>\n</li>\n</ul>\n<h2>Schema</h2>\n<table>\n<thead>\n<tr>\n<th>Name</th>\n<th>Type</th>\n<th>Description</th>\n<th>Value(s)</th>\n<th>Default</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>label</td>\n<td><code>String</code></td>\n<td>The text to be displayed on the tab.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>active</td>\n<td><code>Boolean</code></td>\n<td>Whether the tab state is <strong>active</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>hover</td>\n<td><code>Boolean</code></td>\n<td>Whether the tab state is <strong>hovered</strong> or <strong>focused</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>focus</td>\n<td><code>Boolean</code></td>\n<td>Whether the tab state is <strong>hovered</strong> or <strong>focused</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>disabled</td>\n<td><code>Boolean</code></td>\n<td>Whether the tab state is <strong>disabled</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n</tbody>\n</table>\n<h2>Classes</h2>\n<p>Optionally, build a table to identify any pattern classes that are pertinent for developers to be aware of. For clarity, it could be useful to group classes into different tables based on their purpose, such as <em>Style Variations</em> or <em>State Changes</em>. Some sample class tables are given below.</p>\n<h3>Variations</h3>\n<h3>States</h3>\n<table>\n<thead>\n<tr>\n<th>Class</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>is-active</code></td>\n<td>Indicates that the tab is <strong>active</strong>.</td>\n</tr>\n<tr>\n<td><code>is-hover</code></td>\n<td>Indicates that the tab is being <strong>hovered</strong> or <strong>focused</strong>.</td>\n</tr>\n<tr>\n<td><code>is-focus</code></td>\n<td>Indicates that the tab is being <strong>hovered</strong> or <strong>focused</strong>.</td>\n</tr>\n<tr>\n<td><code>is-disabled</code></td>\n<td>Indicates that the tab is <strong>disabled</strong>.</td>\n</tr>\n</tbody>\n</table>\n","patternBreadcrumb":{"patternType":"atoms","patternSubtype":"tabs"},"patternExtension":"hbs","patternName":"Tab","patternPartial":"atoms-tab","patternState":"review","patternEngineName":"handlebars","extraOutput":{"created":"03/04/2019","updated":"03/18/2019","js":true,"php":false}}
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+  
+  var scriptLoader = {
+    
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+    
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1554131365337">
+  (function() {
+    if (self != top) {
+      var cb = '1554131365337';
+      var js = [];
+      if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+        js.push('styleguide/bower_components/classList.min.js');
+      }
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+<script id="pl-js-insert-1554131365337">
+  (function() {
+    if (self != top) {
+      var cb = '1554131365337';
+      var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
+      scriptLoader.run(js,cb,'pl-js-insert');
+    }
+  })();
+</script>
+
+
+  <script src="../../js/bundle.js?1554131365337"></script>
+  <script src="../../js/pattern-library.js?1554131365337"></script>
+
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<eul-tab inline-template :defaults="{
+                            isDisabled: false,
+                            isActive: false,
+                            isHover: false,
+                            isFocus: false
+                          }">
+
+  <button @click="click"
+          @keypress.enter="click"
+          @focus.native="isFocus = true"
+          @blur.native="isFocus = false"
+          @mouseover.native="isHover = true"
+          @mouseleave.native="isHover = false"
+          class="tab"
+          :class="{
+            'is-disabled': isDisabled,
+            'is-active': isActive,
+            'is-hover': isHover,
+            'is-focus': isFocus
+          }"
+          :disabled="isDisabled"class="tab">
+    Library Catalog
+  </button>
+
+</eul-tab>

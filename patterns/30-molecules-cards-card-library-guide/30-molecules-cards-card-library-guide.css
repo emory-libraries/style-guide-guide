@@ -1,0 +1,102 @@
+.card-library-guide-title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.card-library-guide-title .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-library-guide {
+  display: block;
+}
+.card-library-guide-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.card-library-guide {
+  background-color: #FFFFFF;
+  padding: 50px 25px;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E7EAF1;
+  border-top: 4px solid #5387F7;
+}
+.card-library-guide-title {
+  font-family: "Cardo", serif;
+  font-size: 26px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #605858;
+}
+.card-library-guide-title {
+  font-weight: normal;
+  font-style: normal;
+  color: #082B73;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.card-library-guide-title .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.card-library-guide-title .icon svg {
+  fill: #082B73;
+}
+.card-library-guide-title:hover, .card-library-guide-title.is-hover, .card-library-guide-title:focus, .card-library-guide-title.is-focus {
+  color: #336BE6;
+}
+.card-library-guide-title:hover .icon svg, .card-library-guide-title.is-hover .icon svg, .card-library-guide-title:focus .icon svg, .card-library-guide-title.is-focus .icon svg {
+  fill: #336BE6;
+}
+.card-library-guide-title:active, .card-library-guide-title.is-active {
+  color: #336BE6;
+}
+.card-library-guide-title:active .icon svg, .card-library-guide-title.is-active .icon svg {
+  fill: #336BE6;
+}
+.card-library-guide-title.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.card-library-guide-title.-popular:hover, .card-library-guide-title.-popular.is-hover, .card-library-guide-title.-popular:focus, .card-library-guide-title.-popular.is-focus {
+  color: #336BE6;
+}
+.card-library-guide-title.-popular:active, .card-library-guide-title.-popular.is-active {
+  color: #336BE6;
+}
+.card-library-guide-title.-underline {
+  text-decoration: underline;
+}

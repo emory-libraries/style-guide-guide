@@ -1,0 +1,131 @@
+.text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.text.-body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.text.-body-alt {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6429;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.text.-lead {
+  font-family: "Cardo", serif;
+  font-size: 28px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #004990;
+}
+.text.-blockquote {
+  font-family: "Cardo", serif;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: center;
+  color: #004990;
+}
+.text.-button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6364;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #605858;
+}
+.text.-badge {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6667;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #605858;
+}
+.text.-listing {
+  font-family: "Cardo", serif;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6364;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.text.-accent {
+  font-family: "Cardo", serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6111;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.text.-label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #091C44;
+}
+.text.-data {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6667;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.text.-caption {
+  font-family: "Cardo", serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.5;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}

@@ -1,0 +1,8 @@
+<div class="input-field{{#if (or (eq type 'radio') (eq type 'checkbox'))}} -inline{{/if}}">
+  <input type="{{#isnt (eq type 'text')}}{{type}}{{else}}text{{/isnt}}"
+         class="input{{#isnt (eq type 'text')}} -{{type}}{{/isnt}}{{#if focus}} is-focused{{/if}}{{#if valid}} is-valid{{/if}}{{#if invalid}} is-invalid{{/if}}{{#if disabled}} is-disabled{{/if}}{{#if (and (or (eq type 'checkbox') (eq type 'radio')) checked) }} is-checked{{/if}}{{#if classes}} {{classes}}{{/if}}"{{#if disabled}} disabled{{/if}}{{#if (and (or (eq type 'checkbox') (eq type 'radio')) checked) }} checked{{/if}}
+         {{#if (or (not type) (and type (or (eq type 'text') (eq type 'search'))))}}placeholder="{{placeholder}}"{{/if}}
+         {{#if (eq type 'radio')}}name="{{group}}"{{/if}}
+         id="{{id}}">
+  {{#unless (and type (eq type 'search'))}}<label class="input-label" for="{{id}}">{{label}}</label>{{/unless}}
+</div>

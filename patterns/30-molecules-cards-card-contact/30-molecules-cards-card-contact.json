@@ -1,0 +1,12 @@
+{
+  "image": {
+    "src": "//source.unsplash.com/mEZ3PoFGs_k/500x500"
+  },
+  "link": {
+    "href": "//example.com/staff/jane-doe"
+  },
+  "name": "Jane Doe, PhD",
+  "title": "Services, Robert W. Woodruff Library",
+  "email": "jane.doe@emory.edu",
+  "gender": "female"
+}

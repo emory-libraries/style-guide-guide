@@ -1,0 +1,302 @@
+.alert {
+  display: grid;
+  grid-template-areas: "title" "message";
+  grid-template-columns: 1fr;
+}
+.alert-title {
+  margin: 0;
+}
+.alert-message {
+  margin: 0;
+}
+.alert-dismiss {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  right: 0;
+  position: absolute;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  cursor: pointer;
+}
+.alert:not(.is-dismissible) .alert-dismiss {
+  display: none;
+}
+.is-dismissible.alert .alert-dismiss {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.alert-dismiss {
+  background: none;
+  border: none;
+}
+[disabled].alert-dismiss, .is-disabled.alert-dismiss {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.alert {
+  background-color: #dfdede;
+  -webkit-box-shadow: 0 0 0 1px rgba(160, 155, 155, 0.3), 0 0 0 25px #dfdede;
+          box-shadow: 0 0 0 1px rgba(160, 155, 155, 0.3), 0 0 0 25px #dfdede;
+  margin: 25px;
+  padding: 25px;
+  grid-gap: 10px;
+}
+.alert-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6667;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #605858;
+}
+.alert-message {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6429;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.alert-dismiss {
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  color: #a09b9b;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.alert-dismiss svg {
+  fill: #a09b9b;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.alert-dismiss:hover, .alert-dismiss:focus, .alert-dismiss.is-hover, .alert-dismiss.is-focus {
+  color: #807a7a;
+}
+.alert-dismiss:hover svg, .alert-dismiss:focus svg, .alert-dismiss.is-hover svg, .alert-dismiss.is-focus svg {
+  fill: #807a7a;
+}
+.alert-dismiss:active, .alert-dismiss.is-active {
+  color: #807a7a;
+}
+.alert-dismiss:active svg, .alert-dismiss.is-active svg {
+  fill: #807a7a;
+}
+.alert.-default {
+  background-color: #dfdede;
+  -webkit-box-shadow: 0 0 0 1px rgba(160, 155, 155, 0.3), 0 0 0 25px #dfdede;
+          box-shadow: 0 0 0 1px rgba(160, 155, 155, 0.3), 0 0 0 25px #dfdede;
+}
+.alert.-default .alert-title {
+  color: #605858;
+}
+.alert.-default .alert-message {
+  color: #605858;
+}
+.alert.-default .alert-dismiss {
+  color: #a09b9b;
+}
+.alert.-default .alert-dismiss svg {
+  fill: #a09b9b;
+}
+.alert.-default .alert-dismiss:hover, .alert.-default .alert-dismiss:focus, .alert.-default .alert-dismiss.is-hover, .alert.-default .alert-dismiss.is-focus {
+  color: #807a7a;
+}
+.alert.-default .alert-dismiss:hover svg, .alert.-default .alert-dismiss:focus svg, .alert.-default .alert-dismiss.is-hover svg, .alert.-default .alert-dismiss.is-focus svg {
+  fill: #807a7a;
+}
+.alert.-default .alert-dismiss:active, .alert.-default .alert-dismiss.is-active {
+  color: #807a7a;
+}
+.alert.-default .alert-dismiss:active svg, .alert.-default .alert-dismiss.is-active svg {
+  fill: #807a7a;
+}
+.alert.-info {
+  background-color: #D0DEFD;
+  -webkit-box-shadow: 0 0 0 1px rgba(83, 135, 247, 0.3), 0 0 0 25px #D0DEFD;
+          box-shadow: 0 0 0 1px rgba(83, 135, 247, 0.3), 0 0 0 25px #D0DEFD;
+}
+.alert.-info .alert-title {
+  color: #082B73;
+}
+.alert.-info .alert-message {
+  color: #082B73;
+}
+.alert.-info .alert-dismiss {
+  color: #5387F7;
+}
+.alert.-info .alert-dismiss svg {
+  fill: #5387F7;
+}
+.alert.-info .alert-dismiss:hover, .alert.-info .alert-dismiss:focus, .alert.-info .alert-dismiss.is-hover, .alert.-info .alert-dismiss.is-focus {
+  color: #004990;
+}
+.alert.-info .alert-dismiss:hover svg, .alert.-info .alert-dismiss:focus svg, .alert.-info .alert-dismiss.is-hover svg, .alert.-info .alert-dismiss.is-focus svg {
+  fill: #004990;
+}
+.alert.-info .alert-dismiss:active, .alert.-info .alert-dismiss.is-active {
+  color: #004990;
+}
+.alert.-info .alert-dismiss:active svg, .alert.-info .alert-dismiss.is-active svg {
+  fill: #004990;
+}
+.alert.-success {
+  background-color: #E0F6DA;
+  -webkit-box-shadow: 0 0 0 1px rgba(110, 237, 87, 0.3), 0 0 0 25px #E0F6DA;
+          box-shadow: 0 0 0 1px rgba(110, 237, 87, 0.3), 0 0 0 25px #E0F6DA;
+}
+.alert.-success .alert-title {
+  color: #257611;
+}
+.alert.-success .alert-message {
+  color: #257611;
+}
+.alert.-success .alert-dismiss {
+  color: #6EED57;
+}
+.alert.-success .alert-dismiss svg {
+  fill: #6EED57;
+}
+.alert.-success .alert-dismiss:hover, .alert.-success .alert-dismiss:focus, .alert.-success .alert-dismiss.is-hover, .alert.-success .alert-dismiss.is-focus {
+  color: #1DB003;
+}
+.alert.-success .alert-dismiss:hover svg, .alert.-success .alert-dismiss:focus svg, .alert.-success .alert-dismiss.is-hover svg, .alert.-success .alert-dismiss.is-focus svg {
+  fill: #1DB003;
+}
+.alert.-success .alert-dismiss:active, .alert.-success .alert-dismiss.is-active {
+  color: #1DB003;
+}
+.alert.-success .alert-dismiss:active svg, .alert.-success .alert-dismiss.is-active svg {
+  fill: #1DB003;
+}
+.alert.-caution {
+  background-color: #F6E4C1;
+  -webkit-box-shadow: 0 0 0 1px rgba(233, 191, 85, 0.3), 0 0 0 25px #F6E4C1;
+          box-shadow: 0 0 0 1px rgba(233, 191, 85, 0.3), 0 0 0 25px #F6E4C1;
+}
+.alert.-caution .alert-title {
+  color: #AB750C;
+}
+.alert.-caution .alert-message {
+  color: #AB750C;
+}
+.alert.-caution .alert-dismiss {
+  color: #E9BF55;
+}
+.alert.-caution .alert-dismiss svg {
+  fill: #E9BF55;
+}
+.alert.-caution .alert-dismiss:hover, .alert.-caution .alert-dismiss:focus, .alert.-caution .alert-dismiss.is-hover, .alert.-caution .alert-dismiss.is-focus {
+  color: #D69A03;
+}
+.alert.-caution .alert-dismiss:hover svg, .alert.-caution .alert-dismiss:focus svg, .alert.-caution .alert-dismiss.is-hover svg, .alert.-caution .alert-dismiss.is-focus svg {
+  fill: #D69A03;
+}
+.alert.-caution .alert-dismiss:active, .alert.-caution .alert-dismiss.is-active {
+  color: #D69A03;
+}
+.alert.-caution .alert-dismiss:active svg, .alert.-caution .alert-dismiss.is-active svg {
+  fill: #D69A03;
+}
+.alert.-error {
+  background-color: #EABDB9;
+  -webkit-box-shadow: 0 0 0 1px rgba(250, 85, 85, 0.3), 0 0 0 25px #EABDB9;
+          box-shadow: 0 0 0 1px rgba(250, 85, 85, 0.3), 0 0 0 25px #EABDB9;
+}
+.alert.-error .alert-title {
+  color: #B82216;
+}
+.alert.-error .alert-message {
+  color: #B82216;
+}
+.alert.-error .alert-dismiss {
+  color: #FA5555;
+}
+.alert.-error .alert-dismiss svg {
+  fill: #FA5555;
+}
+.alert.-error .alert-dismiss:hover, .alert.-error .alert-dismiss:focus, .alert.-error .alert-dismiss.is-hover, .alert.-error .alert-dismiss.is-focus {
+  color: #E61D03;
+}
+.alert.-error .alert-dismiss:hover svg, .alert.-error .alert-dismiss:focus svg, .alert.-error .alert-dismiss.is-hover svg, .alert.-error .alert-dismiss.is-focus svg {
+  fill: #E61D03;
+}
+.alert.-error .alert-dismiss:active, .alert.-error .alert-dismiss.is-active {
+  color: #E61D03;
+}
+.alert.-error .alert-dismiss:active svg, .alert.-error .alert-dismiss.is-active svg {
+  fill: #E61D03;
+}
+.alert.-light {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 0 0 1px rgba(207, 205, 205, 0.3), 0 0 0 25px #FFFFFF;
+          box-shadow: 0 0 0 1px rgba(207, 205, 205, 0.3), 0 0 0 25px #FFFFFF;
+}
+.alert.-light .alert-title {
+  color: #605858;
+}
+.alert.-light .alert-message {
+  color: #605858;
+}
+.alert.-light .alert-dismiss {
+  color: #cfcdcd;
+}
+.alert.-light .alert-dismiss svg {
+  fill: #cfcdcd;
+}
+.alert.-light .alert-dismiss:hover, .alert.-light .alert-dismiss:focus, .alert.-light .alert-dismiss.is-hover, .alert.-light .alert-dismiss.is-focus {
+  color: #bfbcbc;
+}
+.alert.-light .alert-dismiss:hover svg, .alert.-light .alert-dismiss:focus svg, .alert.-light .alert-dismiss.is-hover svg, .alert.-light .alert-dismiss.is-focus svg {
+  fill: #bfbcbc;
+}
+.alert.-light .alert-dismiss:active, .alert.-light .alert-dismiss.is-active {
+  color: #bfbcbc;
+}
+.alert.-light .alert-dismiss:active svg, .alert.-light .alert-dismiss.is-active svg {
+  fill: #bfbcbc;
+}
+.alert.-dark {
+  background-color: #605858;
+  -webkit-box-shadow: 0 0 0 1px rgba(184, 180, 180, 0.3), 0 0 0 25px #605858;
+          box-shadow: 0 0 0 1px rgba(184, 180, 180, 0.3), 0 0 0 25px #605858;
+}
+.alert.-dark .alert-title {
+  color: #FFFFFF;
+}
+.alert.-dark .alert-message {
+  color: #FFFFFF;
+}
+.alert.-dark .alert-dismiss {
+  color: #b8b4b4;
+}
+.alert.-dark .alert-dismiss svg {
+  fill: #b8b4b4;
+}
+.alert.-dark .alert-dismiss:hover, .alert.-dark .alert-dismiss:focus, .alert.-dark .alert-dismiss.is-hover, .alert.-dark .alert-dismiss.is-focus {
+  color: #a09b9b;
+}
+.alert.-dark .alert-dismiss:hover svg, .alert.-dark .alert-dismiss:focus svg, .alert.-dark .alert-dismiss.is-hover svg, .alert.-dark .alert-dismiss.is-focus svg {
+  fill: #a09b9b;
+}
+.alert.-dark .alert-dismiss:active, .alert.-dark .alert-dismiss.is-active {
+  color: #a09b9b;
+}
+.alert.-dark .alert-dismiss:active svg, .alert.-dark .alert-dismiss.is-active svg {
+  fill: #a09b9b;
+}

@@ -1,0 +1,18 @@
+{
+  "image": {
+    "src": "//source.unsplash.com/6fv1nBklWIU/500x650"
+  },
+  "context": "Confused About Research or an Assignment?",
+  "heading": "Use the expertise of our subject librarians to get help finding sources, conducting research, and understanding an assignment or topic.",
+  "buttons": [
+    {
+      "label": "Continue Reading",
+      "href": ""
+    },
+    {
+      "label": "Consult a Subject Librarian",
+      "href": "",
+      "hollow": true
+    }
+  ]
+}

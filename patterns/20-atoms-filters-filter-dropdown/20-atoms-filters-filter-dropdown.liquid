@@ -1,0 +1,48 @@
+{% raw %}{{#if passthroughs}}
+  {{assign 'index' (passthrough index passthroughs)}}
+{{/if}}
+
+<eul-filter-dropdown inline-template
+                     :index="{{JSONstringify index}}"
+                     :field="'{{key}}'"
+                     :config="{{default (JSONstringify config) '{}'}}"
+                     :defaults="{
+                        selected: '{{default selected ''}}',
+                        isDisabled: {{default disabled false}},
+                        isFocus: {{default focus false}}
+                     }">
+
+  <div class="input-container -row{{#if inline}} -inline{{/if}}"
+       style="--layout: 1fr auto">
+
+    <select v-model="selected"
+            @change="filter"
+            @focus.native="isFocus = true"
+            @blur.native="isFocus = false"
+            class="input -select{{#if inline}} -inline{{/if}}"
+            :class="{
+              'is-disabled': isDisabled,
+              'is-focused': isFocus,
+              'is-blurred': !isFocus
+            }"
+            :disabled="isDisabled">
+      {{#unless (eq viewall false)}}
+      <option value="">{{default label 'View All'}}</option>
+      {{/unless}}
+      {{#each (unique (pluck index key)) as |option|}}
+      <option value="{{option}}">{{option}}</option>
+      {{/each}}
+    </select>
+
+    <a @click="cancel"
+       @keypress.enter="cancel"
+       class="link -underline"
+       v-show="fuzzy.filtering.filtered"
+       tabindex="0">
+      Cancel
+    </a>
+
+  </div>
+
+</eul-filter-dropdown>
+{% endraw %}

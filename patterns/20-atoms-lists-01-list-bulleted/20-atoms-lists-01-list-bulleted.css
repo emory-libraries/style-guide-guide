@@ -1,0 +1,82 @@
+@charset "UTF-8";
+.list {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  list-style-type: none;
+}
+.list:not(.-numbered):not(.-links):not(.-topics):not(.-files) .list-item, .-bulleted.list .list-item {
+  display: block;
+}
+.list:not(.-numbered):not(.-links):not(.-topics):not(.-files) .list-item::before, .-bulleted.list .list-item::before {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+.list:not(.-numbered):not(.-links):not(.-topics):not(.-files) .list-item :first-child, .-bulleted.list .list-item :first-child {
+  margin-top: 0;
+}
+.list:not(.-numbered):not(.-links):not(.-topics):not(.-files) .list-item :last-child, .-bulleted.list .list-item :last-child {
+  margin-bottom: 0;
+}
+.-numbered.list .list-item {
+  display: block;
+}
+.-numbered.list .list-item::before {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+.-numbered.list .list-item :first-child {
+  margin-top: 0;
+}
+.-numbered.list .list-item :last-child {
+  margin-bottom: 0;
+}
+.-links.list .list-item {
+  display: block;
+}
+.-topics.list .list-item {
+  display: inline-block;
+}
+.-files.list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+}
+.-files.list .list-item {
+  display: block;
+}
+
+.list:not(.-numbered):not(.-links):not(.-topics):not(.-files), .list.-bulleted {
+  padding-left: 25px;
+}
+.list:not(.-numbered):not(.-links):not(.-topics):not(.-files) .list-item::before, .list.-bulleted .list-item::before {
+  content: "■";
+  color: #5387F7;
+  left: -25px;
+}
+.list.-numbered {
+  counter-reset: numbered-list-item;
+  padding-left: 25px;
+}
+.list.-numbered .list-item::before {
+  content: counter(numbered-list-item, decimal) ".";
+  counter-increment: numbered-list-item;
+  color: #5387F7;
+  left: -25px;
+  font-family: "Cardo", serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: inherit;
+}
+.list.-topics .list-item:not(:last-child)::after {
+  content: "," " ";
+}
+.list.-files {
+  --rows: 4;
+  grid-template-rows: repeat(var(--rows), auto);
+  grid-gap: 10px;
+}

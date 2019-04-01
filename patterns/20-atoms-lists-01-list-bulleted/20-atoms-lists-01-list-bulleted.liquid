@@ -1,0 +1,15 @@
+{% raw %}<ul class="list -bulleted">
+  {{#each items}}
+  <li class="list-item">
+    {{#if href}}
+      {{#if data}}{{> atoms-link label=data }}{{else}}{{> atoms-link }}{{/if}}
+    {{else if data}}
+      {{#if markdown}}{{{markdown data}}}{{else}}{{data}}{{/if}}
+    {{else}}
+      {{this}}
+    {{/if}}
+    {{#if items}}{{#unless (eq sublist 'numbered')}}{{> atoms-list-bulleted items=items }}{{else}}{{> atoms-list-numbered items=items }}{{/unless}}{{/if}}
+  </li>
+  {{/each}}
+</ul>
+{% endraw %}

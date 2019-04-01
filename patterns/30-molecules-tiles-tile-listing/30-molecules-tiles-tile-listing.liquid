@@ -1,0 +1,11 @@
+{% raw %}<div class="tile-listing{{#if badge}} has-badge{{/if}}{{#if description}} has-description{{/if}}{{#if link.label}} has-action{{/if}}">
+  {{#if badge}}{{> atoms-badge label=badge}}{{/if}}
+  <div class="tile-listing-image{{#if image.align.x}} -align-x-{{image.align.x}}{{/if}}{{#if image.align.y}} -align-y-{{image.align.y}}{{/if}}{{#if image.fit}} -{{image.fit}}{{/if}}">
+    {{#with image}}{{> atoms-image decorative=true}}{{/with}}
+  </div>
+  <span class="tile-listing-date">{{this.date}}</span>
+  {{#with link}}{{> atoms-link label=../title classes='tile-listing-title'}}{{/with}}
+  {{#if description}}<p class="tile-listing-description">{{ellipsis (sanitize description) 150}}</p>{{/if}}
+  {{#if link.label}}{{#with link}}{{> atoms-link classes='tile-listing-action'}}{{/with}}{{/if}}
+</div>
+{% endraw %}

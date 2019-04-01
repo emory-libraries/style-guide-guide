@@ -1,0 +1,25 @@
+{% raw %}<div class="card-multimedia">
+  <div class="card-multimedia-icon">
+    {{#if (eq type 'video')}}
+    {{> tokens-icon id='material-videocam'}}
+    {{else if (eq type 'audio')}}
+    {{> tokens-icon id='material-audiotrack'}}
+    {{else if (or (eq type 'photo') (eq type 'image'))}}
+    {{> tokens-icon id='material-camera_alt'}}
+    {{else if (or (eq type 'text') (eq type 'document'))}}
+    {{> tokens-icon id='material-description'}}
+    {{else if (or (eq type 'chart') (eq type 'diagram'))}}
+    {{> tokens-icon id='material-insert_chart'}}
+    {{else if (or (eq type 'presentation') (eq type 'slideshow'))}}
+    {{> tokens-icon id='material-slideshow'}}
+    {{else if (eq type 'activity')}}
+    {{> tokens-icon id='material-touch_app'}}
+    {{/if}}
+  </div>
+  <span class="card-multimedia-context">{{context}}</span>
+  {{#with link}}{{> atoms-link label=../title classes='card-multimedia-title'}}{{/with}}
+  {{#if (or (eq type 'video') (eq type 'audio') (eq type 'presentation') (eq type 'slideshow'))}}
+  <span class="card-multimedia-duration">{{duration}}</span>
+  {{/if}}
+</div>
+{% endraw %}

@@ -1,0 +1,283 @@
+.notification {
+  display: grid;
+}
+.is-dismissible.notification {
+  grid-template-areas: "label message dismiss";
+  grid-template-columns: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-columns: min-content 1fr min-content;
+}
+.notification:not(.is-dismissible) {
+  grid-template-areas: "label message";
+  grid-template-columns: -webkit-min-content 1fr;
+  grid-template-columns: min-content 1fr;
+}
+.notification::before {
+  grid-area: label;
+}
+.notification-message {
+  grid-area: message;
+  margin: 0;
+}
+.notification-dismiss {
+  grid-area: dismiss;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  cursor: pointer;
+  padding: 0;
+}
+.notification:not(.is-dismissible) .notification-dismiss {
+  display: none;
+}
+.is-dismissible.notification .notification-dismiss {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.notification-dismiss {
+  background: none;
+  border: none;
+}
+[disabled].notification-dismiss, .is-disabled.notification-dismiss {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.notification {
+  padding: 15px 25px;
+  grid-gap: 25px;
+  background-color: #E7EAF1;
+}
+.notification {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.notification::before {
+  content: attr(data-label) ":";
+  line-height: 1.9375rem !important;
+}
+.notification::before {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #082B73;
+}
+.notification-dismiss {
+  width: 25px;
+  height: 25px;
+  color: #082B73;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.notification-dismiss svg {
+  fill: #082B73;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.notification-dismiss:hover, .notification-dismiss:focus, .notification-dismiss.is-hover, .notification-dismiss.is-focus {
+  color: #091C44;
+}
+.notification-dismiss:hover svg, .notification-dismiss:focus svg, .notification-dismiss.is-hover svg, .notification-dismiss.is-focus svg {
+  fill: #091C44;
+}
+.notification-dismiss:active, .notification-dismiss.is-active {
+  color: #091C44;
+}
+.notification-dismiss:active svg, .notification-dismiss.is-active svg {
+  fill: #091C44;
+}
+.notification.-default {
+  background-color: #E7EAF1;
+  color: #605858;
+}
+.notification.-default::before {
+  color: #082B73;
+}
+.notification.-default .notification-dismiss {
+  color: #082B73;
+}
+.notification.-default .notification-dismiss svg {
+  fill: #082B73;
+}
+.notification.-default .notification-dismiss:hover, .notification.-default .notification-dismiss:focus, .notification.-default .notification-dismiss.is-hover, .notification.-default .notification-dismiss.is-focus {
+  color: #091C44;
+}
+.notification.-default .notification-dismiss:hover svg, .notification.-default .notification-dismiss:focus svg, .notification.-default .notification-dismiss.is-hover svg, .notification.-default .notification-dismiss.is-focus svg {
+  fill: #091C44;
+}
+.notification.-default .notification-dismiss:active, .notification.-default .notification-dismiss.is-active {
+  color: #091C44;
+}
+.notification.-default .notification-dismiss:active svg, .notification.-default .notification-dismiss.is-active svg {
+  fill: #091C44;
+}
+.notification.-info {
+  background-color: #082B73;
+  color: #FFFFFF;
+}
+.notification.-info::before {
+  color: #E9BF55;
+}
+.notification.-info .notification-dismiss {
+  color: #E9BF55;
+}
+.notification.-info .notification-dismiss svg {
+  fill: #E9BF55;
+}
+.notification.-info .notification-dismiss:hover, .notification.-info .notification-dismiss:focus, .notification.-info .notification-dismiss.is-hover, .notification.-info .notification-dismiss.is-focus {
+  color: #D69A03;
+}
+.notification.-info .notification-dismiss:hover svg, .notification.-info .notification-dismiss:focus svg, .notification.-info .notification-dismiss.is-hover svg, .notification.-info .notification-dismiss.is-focus svg {
+  fill: #D69A03;
+}
+.notification.-info .notification-dismiss:active, .notification.-info .notification-dismiss.is-active {
+  color: #D69A03;
+}
+.notification.-info .notification-dismiss:active svg, .notification.-info .notification-dismiss.is-active svg {
+  fill: #D69A03;
+}
+.notification.-success {
+  background-color: #1DB003;
+  color: #091C44;
+}
+.notification.-success::before {
+  color: #082B73;
+}
+.notification.-success .notification-dismiss {
+  color: #082B73;
+}
+.notification.-success .notification-dismiss svg {
+  fill: #082B73;
+}
+.notification.-success .notification-dismiss:hover, .notification.-success .notification-dismiss:focus, .notification.-success .notification-dismiss.is-hover, .notification.-success .notification-dismiss.is-focus {
+  color: #091C44;
+}
+.notification.-success .notification-dismiss:hover svg, .notification.-success .notification-dismiss:focus svg, .notification.-success .notification-dismiss.is-hover svg, .notification.-success .notification-dismiss.is-focus svg {
+  fill: #091C44;
+}
+.notification.-success .notification-dismiss:active, .notification.-success .notification-dismiss.is-active {
+  color: #091C44;
+}
+.notification.-success .notification-dismiss:active svg, .notification.-success .notification-dismiss.is-active svg {
+  fill: #091C44;
+}
+.notification.-caution {
+  background-color: #E9BF55;
+  color: #091C44;
+}
+.notification.-caution::before {
+  color: #082B73;
+}
+.notification.-caution .notification-dismiss {
+  color: #082B73;
+}
+.notification.-caution .notification-dismiss svg {
+  fill: #082B73;
+}
+.notification.-caution .notification-dismiss:hover, .notification.-caution .notification-dismiss:focus, .notification.-caution .notification-dismiss.is-hover, .notification.-caution .notification-dismiss.is-focus {
+  color: #091C44;
+}
+.notification.-caution .notification-dismiss:hover svg, .notification.-caution .notification-dismiss:focus svg, .notification.-caution .notification-dismiss.is-hover svg, .notification.-caution .notification-dismiss.is-focus svg {
+  fill: #091C44;
+}
+.notification.-caution .notification-dismiss:active, .notification.-caution .notification-dismiss.is-active {
+  color: #091C44;
+}
+.notification.-caution .notification-dismiss:active svg, .notification.-caution .notification-dismiss.is-active svg {
+  fill: #091C44;
+}
+.notification.-error {
+  background-color: #B82216;
+  color: #FFFFFF;
+}
+.notification.-error::before {
+  color: #E7EAF1;
+}
+.notification.-error .notification-dismiss {
+  color: #E7EAF1;
+}
+.notification.-error .notification-dismiss svg {
+  fill: #E7EAF1;
+}
+.notification.-error .notification-dismiss:hover, .notification.-error .notification-dismiss:focus, .notification.-error .notification-dismiss.is-hover, .notification.-error .notification-dismiss.is-focus {
+  color: #B6BDCC;
+}
+.notification.-error .notification-dismiss:hover svg, .notification.-error .notification-dismiss:focus svg, .notification.-error .notification-dismiss.is-hover svg, .notification.-error .notification-dismiss.is-focus svg {
+  fill: #B6BDCC;
+}
+.notification.-error .notification-dismiss:active, .notification.-error .notification-dismiss.is-active {
+  color: #B6BDCC;
+}
+.notification.-error .notification-dismiss:active svg, .notification.-error .notification-dismiss.is-active svg {
+  fill: #B6BDCC;
+}
+.notification.-light {
+  background-color: #FFFFFF;
+  color: #605858;
+}
+.notification.-light::before {
+  color: #336BE6;
+}
+.notification.-light .notification-dismiss {
+  color: #336BE6;
+}
+.notification.-light .notification-dismiss svg {
+  fill: #336BE6;
+}
+.notification.-light .notification-dismiss:hover, .notification.-light .notification-dismiss:focus, .notification.-light .notification-dismiss.is-hover, .notification.-light .notification-dismiss.is-focus {
+  color: #004990;
+}
+.notification.-light .notification-dismiss:hover svg, .notification.-light .notification-dismiss:focus svg, .notification.-light .notification-dismiss.is-hover svg, .notification.-light .notification-dismiss.is-focus svg {
+  fill: #004990;
+}
+.notification.-light .notification-dismiss:active, .notification.-light .notification-dismiss.is-active {
+  color: #004990;
+}
+.notification.-light .notification-dismiss:active svg, .notification.-light .notification-dismiss.is-active svg {
+  fill: #004990;
+}
+.notification.-dark {
+  background-color: #091C44;
+  color: #FFFFFF;
+}
+.notification.-dark::before {
+  color: #E9BF55;
+}
+.notification.-dark .notification-dismiss {
+  color: #E9BF55;
+}
+.notification.-dark .notification-dismiss svg {
+  fill: #E9BF55;
+}
+.notification.-dark .notification-dismiss:hover, .notification.-dark .notification-dismiss:focus, .notification.-dark .notification-dismiss.is-hover, .notification.-dark .notification-dismiss.is-focus {
+  color: #D69A03;
+}
+.notification.-dark .notification-dismiss:hover svg, .notification.-dark .notification-dismiss:focus svg, .notification.-dark .notification-dismiss.is-hover svg, .notification.-dark .notification-dismiss.is-focus svg {
+  fill: #D69A03;
+}
+.notification.-dark .notification-dismiss:active, .notification.-dark .notification-dismiss.is-active {
+  color: #D69A03;
+}
+.notification.-dark .notification-dismiss:active svg, .notification.-dark .notification-dismiss.is-active svg {
+  fill: #D69A03;
+}

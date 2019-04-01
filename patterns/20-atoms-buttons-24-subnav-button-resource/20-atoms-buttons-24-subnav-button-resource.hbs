@@ -1,0 +1,14 @@
+<label class="subnav-button -resource{{#if hover}} is-hover{{/if}}{{#if focus}} is-focus{{/if}}{{#if active}} is-active{{/if}}{{#if disabled}} is-disabled{{/if}}"{{#if disabled}} disabled{{/if}}>
+  {{label}}
+  {{#if alias}}<span class="subnav-button-alias">({{alias}})</span>{{/if}}
+  <input type="checkbox" class="subnav-button-options-toggle">
+  <div class="subnav-button-options">
+    {{#each options as |option|}}
+    <a href="{{option.href}}" class="subnav-button-option" target="{{default option.target '_self'}}">
+      {{#if (or (and option.icon option.icon.id (eq option.icon.position 'left')) (and option.icon option.icon.id (not option.icon.position)))}}{{> tokens-icon id=option.icon.id classes='-left' }}{{/if}}
+      {{option.label}}
+      {{#if (and option.icon (eq option.icon.position 'right'))}}{{> tokens-icon id=option.icon.id classes='-right' }}{{/if}}
+    </a>
+    {{/each}}
+  </div>
+</label>

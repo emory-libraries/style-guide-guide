@@ -1,0 +1,5 @@
+{% raw %}<figure class="figure">
+  {{#with image}}{{> atoms-image alt=(default alt ../caption) decorative=false classes="figure-image"}}{{/with}}
+  <figcaption class="figure-caption">{{> tokens-text type='caption' text=caption}}</figcaption>
+</figure>
+{% endraw %}

@@ -1,0 +1,13 @@
+.heading {
+
+  $headings: 'h1' 'h1-alt' 'h2' 'h3' 'h4' 'h5' 'h5-alt' 'h6';
+
+  @each $heading in $headings {
+
+    &.-#{$heading} {
+      @include tokens-heading($heading);
+    }
+
+  }
+
+}

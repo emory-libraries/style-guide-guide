@@ -1,0 +1,32 @@
+{
+  "heading": "Sample Heading",
+  "caption": "This is a sample table caption.",
+  "head": [
+    [
+      {"data": "Heading 1"},
+      {"data": "Heading 2"},
+      {"data": "Heading 3"},
+      {"data": "Heading 4"},
+    ]
+  ],
+  "body": [
+    [
+      {"data": "Data 1"},
+      {"data": "Data 2"},
+      {"data": "Data 3"},
+      {"data": "Data 4"}
+    ],
+    [
+      {"data": "Subheading 1", "heading": true},
+      {"data": "Data 5"},
+      {"data": "Data 6"},
+      {"data": "Data 7"}
+    ],
+    [
+      {"data": "Data 8"},
+      {"data": "Data 9"},
+      {"data": "Subheading 2", "heading": true},
+      {"data": "Data 10"}
+    ]
+  ]
+}

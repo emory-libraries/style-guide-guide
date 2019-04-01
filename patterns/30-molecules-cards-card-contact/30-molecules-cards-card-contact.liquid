@@ -1,0 +1,7 @@
+{% raw %}<div class="card-contact">
+  <div class="card-contact-image">{{#with image}}{{> atoms-image src=(default src (combine '/images/avatars/placeholder.' (default ../gender 'male') '.jpg')) alt=../name}}{{/with}}</div>
+  {{#with link}}{{> atoms-link label=../name classes="card-contact-name"}}{{/with}}
+  <span class="card-contact-title">{{title}}</span>
+  {{> atoms-link href=(combine 'mailto:' email) label=email classes="card-contact-email"}}
+</div>
+{% endraw %}

@@ -1,0 +1,11 @@
+<div class="{{default class 'sidebar-list-item'}}{{#if icon}} has-icon{{/if}}">
+  <h6 class="heading -h6 {{combine (default class 'sidebar-list-item') '-context'}}">
+    {{#if icon}}{{> tokens-icon id=icon}}{{/if}}
+    {{context}}
+  </h6>
+  <div class="{{combine (default class 'sidebar-list-item') '-content'}}">
+    {{#block 'sidebar-list-item-content'}}
+      {{#if this.content}}{{this.content}}{{/if}}
+    {{/block}}
+  </div>
+</div>

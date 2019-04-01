@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="">
+  <head>
+    <title></title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="">
+
+    <link rel="stylesheet" href="../../css/patternlab.css?1554131365337" media="all">
+    <link rel="stylesheet" href="../../css/style.css?1554131365337" media="all">
+
+    <!-- DO NOT REMOVE -->
+    <!-- never cache patterns -->
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1554131365337" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1554131365337" media="all" />
+
+
+  </head>
+  <body class="">
+
+
+
+
+  <div class="search -form">
+
+    <input type="radio" name="small-search" id="small-search-catalog" class="search-toggle" checked>
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form is-default"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="Library Catalog">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search the Emory Library Catalog">
+        <input type="hidden"
+               name="service[id]"
+               value="catalog">
+        <input type="hidden"
+               name="service[src]"
+               value="http://discovere.emory.edu/primo_library/libweb/action/dlSearch.do?institution&#x3D;EMORY&amp;vid&#x3D;discovere&amp;query&#x3D;any,contains,:query&amp;libsearch&#x3D;woodruff">
+        <input type="hidden"
+               name="service[default]"
+               value="true">
+
+      <input type="search"
+             name="query"
+             placeholder="Search the Emory Library Catalog"
+             class="input -search -small search-box"
+             >
+
+      <input type="submit"
+             value="Search"
+             class="button search-button"
+             >
+
+    </form>
+
+
+    <input type="radio" name="small-search" id="small-search-databases" class="search-toggle">
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="Databases">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search for a Database">
+        <input type="hidden"
+               name="service[id]"
+               value="databases">
+        <input type="hidden"
+               name="service[src]"
+               value="https://guides.main.library.emory.edu/az.php?q&#x3D;:query">
+
+      <input type="search"
+             name="query"
+             placeholder="Search for a Database"
+             class="input -search -small search-box"
+             >
+
+      <input type="submit"
+             value="Search"
+             class="button search-button"
+             >
+
+    </form>
+
+
+    <input type="radio" name="small-search" id="small-search-ejournals" class="search-toggle">
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="eJournals">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search Journal Titles">
+        <input type="hidden"
+               name="service[id]"
+               value="ejournals">
+        <input type="hidden"
+               name="service[src]"
+               value="http://emory-primoprod.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do?institution&#x3D;01EMORY&amp;vid&#x3D;discovere&amp;loc&#x3D;local%2Cscope%3A%28AZ01EMORY%29&amp;fn&#x3D;goAlmaAz&amp;almaAzSearch&#x3D;true&amp;vl(freeText0)&#x3D;:query&amp;libsearch&#x3D;woodruff">
+
+      <input type="search"
+             name="query"
+             placeholder="Search Journal Titles"
+             class="input -search -small search-box"
+             >
+
+      <input type="submit"
+             value="Search"
+             class="button search-button"
+             >
+
+    </form>
+
+
+    <input type="radio" name="small-search" id="small-search-guides" class="search-toggle">
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="Research &amp; Course Guides">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search Research &amp; Course Guides">
+        <input type="hidden"
+               name="service[id]"
+               value="guides">
+        <input type="hidden"
+               name="service[src]"
+               value="http://guides.main.library.emory.edu/srch.php?q&#x3D;:query&amp;libsearch&#x3D;woodruff">
+
+      <input type="search"
+             name="query"
+             placeholder="Search Research &amp; Course Guides"
+             class="input -search -small search-box"
+             >
+
+      <input type="submit"
+             value="Search"
+             class="button search-button"
+             >
+
+    </form>
+
+
+    <input type="radio" name="small-search" id="small-search-aids" class="search-toggle">
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="Finding Aids">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search Manuscript and Archival Collections">
+        <input type="hidden"
+               name="service[id]"
+               value="aids">
+        <input type="hidden"
+               name="service[src]"
+               value="https://findingaids.library.emory.edu/search/?Submit&#x3D;Search&amp;keywords&#x3D;:query&amp;libsearch&#x3D;woodruff">
+
+      <input type="search"
+             name="query"
+             placeholder="Search Manuscript and Archival Collections"
+             class="input -search -small search-box"
+             >
+
+      <input type="submit"
+             value="Search"
+             class="button search-button"
+             >
+
+    </form>
+
+
+    <input type="radio" name="small-search" id="small-search-site" class="search-toggle">
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="This Site">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search this site on Google">
+        <input type="hidden"
+               name="service[id]"
+               value="site">
+        <input type="hidden"
+               name="service[src]"
+               value="https://www.google.com/search?q&#x3D;:query%20site:web.library.emory.edu">
+
+      <input type="search"
+             name="query"
+             placeholder="Search this site on Google"
+             class="input -search -small search-box"
+             >
+
+      <input type="submit"
+             value="Search"
+             class="button search-button"
+             >
+
+    </form>
+
+  </div>
+
+
+
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"atoms-search","lineagePath":"../../patterns/20-atoms-forms-30-search/20-atoms-forms-30-search.html","lineageState":"review"}],"lineage":[{"lineagePattern":"atoms-search","lineagePath":"../../patterns/20-atoms-forms-30-search/20-atoms-forms-30-search.html","lineageState":"review"}],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":true,"patternDesc":"<h2>Getting Started</h2>\n<p>Search boxes are used to help users quickly locate some information or content within our site or one of our site's related resources. Search boxes enable users to search for a given query or term and retrieve a list of relevant results. Our smalll search boxes are especially useful when needing to place search fields in more discrete places.</p>\n<h6>EXPORT VIA GRUNT</h6>\n<pre><code>grunt export:atoms-search-nav\n</code></pre>\n<h3>Description</h3>\n<p>The search small atom allows you to include a search box within another pattern. This small search pattern accepts a set of services used to indicate the service where the search will be performed once a user interacts with the search box. By default, this search box is built as a <a href=\"https://vuejs.org\">Vue.js</a> component but also includes a <code>&lt;noscript&gt;</code> fallback to a simple HTML form for instances where JavaScript is disabled. Small searches are usually good candidates for use inside menus, sidebars, and footers. Small searches use the <code>small</code> mode setting by default.</p>\n<h3>Best Practices</h3>\n<ul>\n<li>Always position search boxes in a clear and easy-to-find place on the page</li>\n</ul>\n<h2>Schema</h2>\n<table>\n<thead>\n<tr>\n<th>Name</th>\n<th>Type</th>\n<th>Description</th>\n<th>Value(s)</th>\n<th>Default</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>form</td>\n<td><code>Boolean</code></td>\n<td>Indicates whether to use the HTML form structure by default instead of the default <a href=\"https://vuejs.org\">Vue.js</a> component structure.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>id</td>\n<td><code>String</code></td>\n<td>A unique ID for the search box to help distinguish it from other searches that may be on the same page.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>param</td>\n<td><code>String</code></td>\n<td>The replacement parameter used in service URLs (<code>services.n.src</code>) to bind the search query.</td>\n<td></td>\n<td><code>:query</code></td>\n</tr>\n<tr>\n<td>mode</td>\n<td><code>String</code></td>\n<td>Optionally indicates the search box's size mode.</td>\n<td><code>big</code> or <code>small</code></td>\n<td></td>\n</tr>\n<tr>\n<td>layout</td>\n<td><code>String</code></td>\n<td>Optionally indicates the search box and search button's layout arrangement.</td>\n<td><code>contained</code></td>\n<td></td>\n</tr>\n<tr>\n<td>autocomplete</td>\n<td><code>Boolean</code></td>\n<td>Indicated whether autocomplete should be enabled for the search box.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>target</td>\n<td><code>String</code></td>\n<td>Identifies the window in which the search results should be opened, only applicable when JavaScript is enabled.</td>\n<td><code>_self</code>, <code>_blank</code>, <code>_parent</code>, or <code>_top</code></td>\n<td><code>_self</code></td>\n</tr>\n<tr>\n<td>processor</td>\n<td><code>String</code></td>\n<td>A path or URL to a server processing script to handle search form submissions with a <code>GET</code> method.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>services</td>\n<td><code>Array</code></td>\n<td>A set of one or more services to search.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>services.<code>n</code></td>\n<td><code>Object</code></td>\n<td>Some search settings for a service.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>services.<code>n</code>.label</td>\n<td><code>String</code></td>\n<td>Some label, usually a name or title, for the service.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>services.<code>n</code>.placeholder</td>\n<td><code>String</code></td>\n<td>The search box's placeholder text for the service.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>services.<code>n</code>.id</td>\n<td><code>String</code></td>\n<td>A unique ID for the service.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>services.<code>n</code>.src</td>\n<td><code>String</code></td>\n<td>A path or URL to the service's search endpoint, where <code>param</code> is used to indicate where the search query should be inserted.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>services.<code>n</code>.default</td>\n<td><code>Boolean</code></td>\n<td>Indicates which service should be used by default when searching.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>disabled</td>\n<td><code>Boolean</code></td>\n<td>Sets the search box's state to <strong>disabled</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>hover</td>\n<td><code>Boolean</code></td>\n<td>Sets the search box's state to <strong>hovered</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>focus</td>\n<td><code>Boolean</code></td>\n<td>Sets the search box's state to <strong>focused</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>button</td>\n<td><code>Object</code></td>\n<td>Some search button settings.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>button.label</td>\n<td><code>String</code></td>\n<td>The label to be displayed on the search button, only applicable when <code>layout</code> is not set to <code>contained</code>.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>button.icon</td>\n<td><code>String</code></td>\n<td>An optional icon ID to be displayed on the search button, only applicable when <code>layout</code> is not set to <code>contained</code>.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>button.disabled</td>\n<td><code>Boolean</code></td>\n<td>Sets the search button's state to <strong>disabled</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>button.active</td>\n<td><code>Boolean</code></td>\n<td>Sets the search button's state to <strong>active</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>button.hover</td>\n<td><code>Boolean</code></td>\n<td>Sets the search button's state to <strong>hovered</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>button.focus</td>\n<td><code>Boolean</code></td>\n<td>Sets the search button's state to <strong>focused</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n</tbody>\n</table>\n<h2>Classes</h2>\n<h3>Variations</h3>\n<table>\n<thead>\n<tr>\n<th>Class</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>-contained</code></td>\n<td>Indicates that the search button should be inside the search box and uses an icon by default instead of a label.</td>\n</tr>\n<tr>\n<td><code>-form</code></td>\n<td>Indicates that the search should be structured as an HTML form instead of a <a href=\"https://vuejs.org\">Vue.js</a> component.</td>\n</tr>\n<tr>\n<td><code>-big</code></td>\n<td>Indicates that the search box should use a big layout.</td>\n</tr>\n<tr>\n<td><code>-small</code></td>\n<td>Indicates that the search box should use a small layout.</td>\n</tr>\n</tbody>\n</table>\n<h3>State</h3>\n<table>\n<thead>\n<tr>\n<th>Class</th>\n<th></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>is-default</code></td>\n<td>Used only when <code>-form</code> is set, indicates which search form should be used by default, must be placed on <code>search-form</code>.</td>\n</tr>\n<tr>\n<td><code>is-disabled</code></td>\n<td>Indicates that a search box (<code>search-box</code>) and/or search button (<code>search-button</code>) is <strong>disabled</strong>.</td>\n</tr>\n<tr>\n<td><code>is-hover</code></td>\n<td>Indicates that a search box (<code>search-box</code>) and/or search button (<code>search-button</code>) is <strong>hovered</strong>.</td>\n</tr>\n<tr>\n<td><code>is-focus</code></td>\n<td>Indicates that a search box (<code>search-box</code>) and/or search button (<code>search-button</code>) is <strong>focused</strong>.</td>\n</tr>\n<tr>\n<td><code>is-active</code></td>\n<td>Indicates that a search button (<code>search-button</code>) is <strong>active</strong>.</td>\n</tr>\n</tbody>\n</table>\n","patternBreadcrumb":{"patternType":"atoms","patternSubtype":"forms"},"patternExtension":"hbs","patternName":"Search Small","patternPartial":"atoms-search-small","patternState":"review","patternEngineName":"handlebars","extraOutput":{"created":"03/04/2019","updated":"03/18/2019","js":true,"php":true}}
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+  
+  var scriptLoader = {
+    
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+    
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1554131365337">
+  (function() {
+    if (self != top) {
+      var cb = '1554131365337';
+      var js = [];
+      if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+        js.push('styleguide/bower_components/classList.min.js');
+      }
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+<script id="pl-js-insert-1554131365337">
+  (function() {
+    if (self != top) {
+      var cb = '1554131365337';
+      var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
+      scriptLoader.run(js,cb,'pl-js-insert');
+    }
+  })();
+</script>
+
+
+  <script src="../../js/bundle.js?1554131365337"></script>
+  <script src="../../js/pattern-library.js?1554131365337"></script>
+
+  </body>
+</html>

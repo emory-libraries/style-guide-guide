@@ -1,0 +1,69 @@
+
+<eul-filter-search inline-template
+                   :index="[{&quot;service&quot;:&quot;Find a Quiet Study Area&quot;,&quot;category&quot;:&quot;Spaces, Labs, and Workstations&quot;,&quot;keywords&quot;:[&quot;study area&quot;,&quot;quiet space&quot;]},{&quot;service&quot;:&quot;Find a Workstation or Application&quot;,&quot;category&quot;:&quot;Spaces, Labs, and Workstations&quot;},{&quot;service&quot;:&quot;Locate a Graduate Study Lab&quot;,&quot;category&quot;:&quot;Spaces, Labs, and Workstations&quot;},{&quot;service&quot;:&quot;Virtual Reality, 3D Printing and Scanning, New Technologies&quot;,&quot;category&quot;:&quot;Spaces, Labs, and Workstations&quot;},{&quot;service&quot;:&quot;Post-Production, Web Development, and 3D Modeling&quot;,&quot;category&quot;:&quot;Spaces, Labs, and Workstations&quot;},{&quot;service&quot;:&quot;Use the Audio/Video/Image Production Studio&quot;,&quot;category&quot;:&quot;Spaces, Labs, and Workstations&quot;,&quot;keywords&quot;:[&quot;audio studio&quot;,&quot;video studio&quot;,&quot;image studio&quot;,&quot;production lab&quot;]},{&quot;service&quot;:&quot;Play Video Games&quot;,&quot;category&quot;:&quot;Spaces, Labs, and Workstations&quot;},{&quot;service&quot;:&quot;Print, Copy, and Scan&quot;,&quot;category&quot;:&quot;Spaces, Labs and Workstations&quot;,&quot;popular&quot;:true},{&quot;service&quot;:&quot;Request a Purchase&quot;,&quot;category&quot;:&quot;Requests and Submissions&quot;},{&quot;service&quot;:&quot;Reserve a Study or Presentation Room&quot;,&quot;category&quot;:&quot;Requests and Submissions&quot;,&quot;popular&quot;:true},{&quot;service&quot;:&quot;Apply for an Individual Study Room or Carrel (Faculty and Graduate Only)&quot;,&quot;category&quot;:&quot;Requests and Submissions&quot;},{&quot;service&quot;:&quot;Submit an ILL Request (InterLibrary Lending)&quot;,&quot;category&quot;:&quot;Requests and Submissions&quot;},{&quot;service&quot;:&quot;Connect to the Internet (On-Campus)&quot;,&quot;category&quot;:&quot;Hardware and Technology&quot;},{&quot;service&quot;:&quot;Connect from Off Campus (VPNs and Proxies)&quot;,&quot;category&quot;:&quot;Hardware and Technology&quot;},{&quot;service&quot;:&quot;Get Hardware or Software Support&quot;,&quot;category&quot;:&quot;Hardware and Technology&quot;,&quot;keywords&quot;:[&quot;tech support&quot;,&quot;IT support&quot;]},{&quot;service&quot;:&quot;Repair Device or Computer&quot;,&quot;category&quot;:&quot;Hardware and Technology&quot;,&quot;keywords&quot;:[&quot;broken device&quot;,&quot;broken computer&quot;]},{&quot;service&quot;:&quot;Access Course Reserves&quot;,&quot;category&quot;:&quot;Assistance and Support&quot;,&quot;popular&quot;:true},{&quot;service&quot;:&quot;Borrow Equipment or Gadgets&quot;,&quot;category&quot;:&quot;Assistance and Support&quot;,&quot;popular&quot;:true},{&quot;service&quot;:&quot;Request or Recall Materials&quot;,&quot;category&quot;:&quot;Assistance and Support&quot;,&quot;popular&quot;:true},{&quot;service&quot;:&quot;Research and Writing Assistance&quot;,&quot;category&quot;:&quot;Assistance and Support&quot;,&quot;keywords&quot;:[&quot;help with writing&quot;,&quot;help with research&quot;]}]"
+                   :keys="[&quot;service&quot;,&quot;keywords&quot;]"
+                   :config="{&quot;scoring&quot;:true}"
+                   :defaults="{
+                      button: {
+                        isDisabled: true,
+                        isActive: false,
+                        isHover: false,
+                        isFocus: false
+                      },
+                      input: {
+                        isDisabled: false,
+                        isHover: false,
+                        isFocus: false
+                      }
+                   }">
+
+  <div class="search -big -contained">
+
+    <input type="search"
+           v-model="query"
+           autocomplete="off"
+           placeholder="Search for a Service"
+           @input="button.isDisabled = !valid"
+           @focus.native="input.isFocus = true"
+           @blur.native="input.isFocus = false"
+           @mouseover.native="input.isHover = true"
+           @mouseleave.native="input.isHover = false"
+           @keypress.enter="search"
+           class="input -search -big search-box"
+           :class="{
+            'is-disabled': input.isDisabled,
+            'is-hover': input.isHover,
+            'is-focus': input.isFocus,
+           }"
+           :disabled="input.isDisabled">
+
+    <button @click="search"
+            @mousedown.native="button.isActive = true"
+            @mouseup.native="button.isActive = false"
+            @keydown.native.enter="button.isActive = true"
+            @keyup.native.enter="button.isActive = false"
+            @focus.native="button.isFocus = true"
+            @blur.native="button.isFocus = false"
+            @mouseover.native="button.isHover = true"
+            @mouseleave.native="button.isHover = false"
+            class="button search-button"
+            :class="{
+              'is-disabled': button.isDisabled,
+              'is-active': button.isActive,
+              'is-hover': button.isHover,
+              'is-focus': button.isFocus,
+            }"
+            :disabled="button.isDisabled">
+    </button>
+
+    <a @click="cancel"
+       @keypress.enter="cancel"
+       class="link -underline search-cancel"
+       v-show="fuzzy.searching.searched"
+       tabindex="0">
+      Cancel
+    </a>
+
+  </div>
+
+</eul-filter-search>

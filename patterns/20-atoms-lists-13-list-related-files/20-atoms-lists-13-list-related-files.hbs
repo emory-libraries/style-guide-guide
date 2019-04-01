@@ -1,0 +1,5 @@
+<ul class="list -files">
+  {{#each files}}
+  <li class="list-item">{{#if data}}{{> atoms-link label=data}}{{else}}{{> atoms-link }}{{/if}}</li>
+  {{/each}}
+</ul>

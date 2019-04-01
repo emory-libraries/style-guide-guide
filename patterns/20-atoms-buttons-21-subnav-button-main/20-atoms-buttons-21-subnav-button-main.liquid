@@ -1,0 +1,7 @@
+{% raw %}<a href="{{href}}" class="subnav-button{{#if utility}} -utility{{/if}}{{#if viewall}} -viewall{{/if}}{{#if hover}} is-hover{{/if}}{{#if focus}} is-focus{{/if}}{{#if active}} is-active{{/if}}{{#if disabled}} is-disabled{{/if}}"{{#if disabled}} disabled{{/if}}>
+  {{label}}
+  {{#unless viewall}}{{#if alias}}<span class="subnav-button-alias">({{alias}})</span>{{/if}}{{/unless}}
+</a>
+
+
+{% endraw %}

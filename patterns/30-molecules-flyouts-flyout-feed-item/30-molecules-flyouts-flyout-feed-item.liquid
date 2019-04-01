@@ -1,0 +1,8 @@
+{% raw %}<a href="{{link.href}}" class="flyout-feed-item{{#if image}} has-thumbnail{{/if}}" target="{{default link.target '_self'}}">
+  {{#if image}}<div class="flyout-feed-item-thumbnail">{{#with image}}{{> atoms-image decorative=true}}{{/with}}</div>{{/if}}
+  <span class="flyout-feed-item-date">{{this.date}}</span>
+  <span class="flyout-feed-item-heading">{{heading}}</span>
+  {{#if description}}<span class="flyout-feed-item-description">{{{ellipsis (sanitize description) 150}}}</span>{{/if}}
+  {{#if link.label}}<div class="flyout-feed-item-link"><button class="link flyout-feed-item-link">{{link.label}}</button></div>{{/if}}
+</a>
+{% endraw %}

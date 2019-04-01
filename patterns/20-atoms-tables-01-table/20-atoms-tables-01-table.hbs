@@ -1,0 +1,61 @@
+{{#if heading}}<h5 class="table-heading">{{heading}}</h5>{{/if}}
+
+<table class="table">
+
+  {{#if caption}}<caption class="table-caption">{{caption}}</caption>{{/if}}
+
+  {{#if head}}
+  <thead class="table-header">
+
+    {{#each head as |row|}}
+    <tr class="table-row">
+
+      {{#each row as |cell|}}
+      <t{{#unless (eq cell.heading false)}}h{{else}}d{{/unless}} class="table-cell{{#unless (eq cell.heading false)}} -heading{{/unless}}"{{#unless (eq cell.heading false)}} scope="col"{{/unless}}>
+        {{cell.data}}
+      </t{{#unless (eq cell.heading false)}}h{{else}}d{{/unless}}>
+      {{/each}}
+
+    </tr>
+    {{/each}}
+
+  </thead>
+  {{/if}}
+
+  {{#if body}}
+  <tbody class="table-body">
+
+    {{#each body as |row|}}
+    <tr class="table-row">
+
+      {{#each row as |cell|}}
+      <t{{#if cell.heading}}h{{else}}d{{/if}} class="table-cell{{#if cell.heading}} -heading{{/if}}"{{#if cell.heading}} scope="row"{{/if}}>
+        {{cell.data}}
+      </t{{#if cell.heading}}h{{else}}d{{/if}}>
+      {{/each}}
+
+    </tr>
+    {{/each}}
+
+  </tbody>
+  {{/if}}
+
+  {{#if foot}}
+  <tfoot class="table-footer">
+
+    {{#each foot as |row|}}
+    <tr class="table-row">
+
+      {{#each row as |cell|}}
+      <t{{#if cell.heading}}h{{else}}d{{/if}} class="table-cell{{#if cell.heading}} -heading{{/if}}"{{#if cell.heading}} scope="row"{{/if}}>
+        {{cell.data}}
+      </t{{#if cell.heading}}h{{else}}d{{/if}}>
+      {{/each}}
+
+    </tr>
+    {{/each}}
+
+  </tfoot>
+  {{/if}}
+
+</table>

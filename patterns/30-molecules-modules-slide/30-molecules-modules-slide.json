@@ -1,0 +1,14 @@
+{
+  "image": {
+    "src": "//source.unsplash.com/IKHvOlZFCOg",
+    "orientation": "landscape"
+  },
+  "title": "Changes to Database @ Emory coming October 2nd",
+  "buttons": [
+    {
+      "label": "Learn More",
+      "href": "",
+      "hollow": true
+    }
+  ]
+}

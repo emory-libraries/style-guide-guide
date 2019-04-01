@@ -1,0 +1,14 @@
+.text {
+  @include tokens-text;
+
+  $types: remove(map-keys($fonts), 'heading');
+
+  @each $type in $types {
+
+    &.-#{$type} {
+      @include tokens-text($type);
+    }
+
+  }
+
+}

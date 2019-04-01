@@ -1,0 +1,7 @@
+{% raw %}<div class="slide">
+  <div class="slide-context">{{default context 'Featured'}}</div>
+  <div class="slide-image{{#if image.orientation}} -{{image.orientation}}{{/if}}{{#if image.align.x }} -align-x-{{image.align.x}}{{/if}}{{#if image.align.y}} -align-y-{{image.align.y}}{{/if}}">{{#with image}}{{> atoms-image decorative=true}}{{/with}}</div>
+  <div class="slide-title">{{title}}</div>
+  <div class="slide-action button-group">{{#each buttons}}{{> atoms-button-link }}{{/each}}</div>
+</div>
+{% endraw %}

@@ -1,0 +1,207 @@
+.card-contact-email, .card-contact-name {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.card-contact-email .icon, .card-contact-name .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr repeat(3, -webkit-min-content);
+  grid-template-rows: 1fr repeat(3, min-content);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.card-contact-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-contact-image img {
+  width: 100%;
+}
+.card-contact-name {
+  margin: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.card-contact-title {
+  margin: 0;
+}
+.card-contact-email {
+  margin: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-contact {
+  grid-gap: 5px;
+  padding: 40px 25px 25px;
+  border: 1px solid #dbdee6;
+  border-top: 2px solid #336BE6;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #FFFFFF;
+  background-image: linear-gradient(to bottom, #f3f5f8 70px, transparent 70px);
+}
+.card-contact {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6429;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #082B73;
+}
+.card-contact-image {
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+.card-contact-name {
+  text-align: center;
+  font-size: 18px;
+}
+.card-contact-name {
+  font-weight: bold;
+  font-style: normal;
+  color: #091C44;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.card-contact-name .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.card-contact-name .icon svg {
+  fill: #091C44;
+}
+.card-contact-name:hover, .card-contact-name.is-hover, .card-contact-name:focus, .card-contact-name.is-focus {
+  color: #5387F7;
+}
+.card-contact-name:hover .icon svg, .card-contact-name.is-hover .icon svg, .card-contact-name:focus .icon svg, .card-contact-name.is-focus .icon svg {
+  fill: #5387F7;
+}
+.card-contact-name:active, .card-contact-name.is-active {
+  color: #5387F7;
+}
+.card-contact-name:active .icon svg, .card-contact-name.is-active .icon svg {
+  fill: #5387F7;
+}
+.card-contact-name.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.card-contact-name.-popular:hover, .card-contact-name.-popular.is-hover, .card-contact-name.-popular:focus, .card-contact-name.-popular.is-focus {
+  color: #336BE6;
+}
+.card-contact-name.-popular:active, .card-contact-name.-popular.is-active {
+  color: #336BE6;
+}
+.card-contact-name.-underline {
+  text-decoration: underline;
+}
+.card-contact-title {
+  text-align: center;
+}
+.card-contact-email {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+}
+.card-contact-email {
+  font-weight: bold;
+  font-style: normal;
+  color: #336BE6;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.card-contact-email .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.card-contact-email .icon svg {
+  fill: #336BE6;
+}
+.card-contact-email:hover, .card-contact-email.is-hover, .card-contact-email:focus, .card-contact-email.is-focus {
+  color: #004990;
+}
+.card-contact-email:hover .icon svg, .card-contact-email.is-hover .icon svg, .card-contact-email:focus .icon svg, .card-contact-email.is-focus .icon svg {
+  fill: #004990;
+}
+.card-contact-email:active, .card-contact-email.is-active {
+  color: #004990;
+}
+.card-contact-email:active .icon svg, .card-contact-email.is-active .icon svg {
+  fill: #004990;
+}
+.card-contact-email.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.card-contact-email.-popular:hover, .card-contact-email.-popular.is-hover, .card-contact-email.-popular:focus, .card-contact-email.-popular.is-focus {
+  color: #336BE6;
+}
+.card-contact-email.-popular:active, .card-contact-email.-popular.is-active {
+  color: #336BE6;
+}
+.card-contact-email.-underline {
+  text-decoration: underline;
+}

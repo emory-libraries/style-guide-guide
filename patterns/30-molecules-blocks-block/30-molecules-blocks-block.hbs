@@ -1,0 +1,12 @@
+<div class="block{{#if image.overhang}} -overhang-{{image.overhang}}{{/if}}{{#if image.stretch}} -stretch-{{image.stretch}}{{/if}}{{#if shadow}} -shadow-{{shadow}}{{/if}}{{#if theme}} -{{theme}}{{/if}}{{#if flipped}} -flipped{{/if}}">
+  <div class="block-content">
+    <span class="block-heading">{{heading}}</span>
+    <p class="block-text">{{#if markdown}}{{{markdown text}}}{{else}}{{text}}{{/if}}</p>
+    <div class="block-action button-group">
+      {{#each buttons}}{{> atoms-button-link}}{{/each}}
+    </div>
+  </div>
+  <div class="block-image">
+    {{#with image}}{{> atoms-image decorative=true}}{{/with}}
+  </div>
+</div>

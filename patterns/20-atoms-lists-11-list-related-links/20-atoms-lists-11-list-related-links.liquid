@@ -1,0 +1,6 @@
+{% raw %}<ul class="list -links">
+  {{#each links}}
+  <li class="list-item">{{#if data }}{{> atoms-link label=data}}{{else}}{{> atoms-link }}{{/if}}</li>
+  {{/each}}
+</ul>
+{% endraw %}

@@ -1,0 +1,17 @@
+{
+  "image": {
+    "src": "//source.unsplash.com/PkbZahEG2Ng"
+  },
+  "heading": "Trying to find your way around?",
+  "text": "View our library maps and spaces to help you navigate through all of our libraries and get what you need to find.",
+  "buttons": [
+    {
+      "label": "Download Map Guide",
+      "href": ""
+    },
+    {
+      "label": "View All Maps and Spaces",
+      "href": ""
+    }
+  ]
+}

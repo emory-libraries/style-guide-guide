@@ -1,0 +1,14 @@
+{% raw %}<li class="{{default class 'utility-list-item'}}{{#if image}} has-image{{/if}}{{#if context}} has-context{{/if}}">
+  {{#if image}}
+  <div class="{{combine (default class 'utility-list-item') '-image'}}">
+    {{#with image }}{{> atoms-image}}{{/with}}
+  </div>
+  {{/if}}
+  {{#if context}}<span class="{{combine (default class 'utility-list-item') '-context'}}">{{context}}</span>{{/if}}
+  {{#if link}}
+  {{#with link}}{{> atoms-link label=../title classes=(combine (default class 'utility-list-item') '-title')}}{{/with}}
+  {{else}}
+  <span class="{{combine (default class 'utility-list-item') '-title'}}">{{title}}</span>
+  {{/if}}
+</li>
+{% endraw %}

@@ -1,0 +1,5 @@
+<div class="input-group">
+  {{#each options as |option|}}
+  {{> atoms-input-checkbox group=../group id=(default id (combine ../group '-' (plus @index 1))) }}
+  {{/each}}
+</div>

@@ -1,0 +1,173 @@
+.card-library-aid-title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.card-library-aid-title .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-library-aid-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-library-aid-icon .icon {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.card-library-aid-icon svg {
+  width: 100% !important;
+}
+.card-library-aid-context {
+  margin: 0;
+}
+.card-library-aid-title {
+  margin: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.card-library-aid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr repeat(2, -webkit-min-content);
+  grid-template-rows: 1fr repeat(2, min-content);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.card-library-aid {
+  grid-gap: 5px;
+  padding: 40px 25px 25px;
+  border: 1px solid #dbdee6;
+  border-top: 2px solid #336BE6;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #FFFFFF;
+  background-image: linear-gradient(to bottom, #f3f5f8 70px, transparent 70px);
+}
+.card-library-aid-icon {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 4px solid #FFFFFF;
+  background-color: #5387F7;
+}
+.card-library-aid-icon svg {
+  fill: #FFFFFF;
+  height: 75%;
+}
+.card-library-aid-context {
+  font-size: 12px;
+  text-align: center;
+}
+.card-library-aid-context {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6667;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #082B73;
+}
+.card-library-aid-title {
+  text-align: center;
+}
+.card-library-aid-title {
+  font-family: "Cardo", serif;
+  font-size: 26px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #605858;
+}
+.card-library-aid-title {
+  font-weight: normal;
+  font-style: normal;
+  color: #082B73;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.card-library-aid-title .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.card-library-aid-title .icon svg {
+  fill: #082B73;
+}
+.card-library-aid-title:hover, .card-library-aid-title.is-hover, .card-library-aid-title:focus, .card-library-aid-title.is-focus {
+  color: #336BE6;
+}
+.card-library-aid-title:hover .icon svg, .card-library-aid-title.is-hover .icon svg, .card-library-aid-title:focus .icon svg, .card-library-aid-title.is-focus .icon svg {
+  fill: #336BE6;
+}
+.card-library-aid-title:active, .card-library-aid-title.is-active {
+  color: #336BE6;
+}
+.card-library-aid-title:active .icon svg, .card-library-aid-title.is-active .icon svg {
+  fill: #336BE6;
+}
+.card-library-aid-title.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.card-library-aid-title.-popular:hover, .card-library-aid-title.-popular.is-hover, .card-library-aid-title.-popular:focus, .card-library-aid-title.-popular.is-focus {
+  color: #336BE6;
+}
+.card-library-aid-title.-popular:active, .card-library-aid-title.-popular.is-active {
+  color: #336BE6;
+}
+.card-library-aid-title.-underline {
+  text-decoration: underline;
+}

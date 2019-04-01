@@ -1,0 +1,10 @@
+{% raw %}<div class="feature{{#if theme}} -{{theme}}{{/if}}{{#if description}} has-description{{/if}}">
+  <div class="feature-image{{#if image.align.x}} -align-x-{{image.align.x}}{{/if}}{{#if image.align.y}} -align-y-{{image.align.y}}{{/if}}">{{#with image}}{{> atoms-image}}{{/with}}</div>
+  <span class="feature-context">{{context}}</span>
+  <h4 class="feature-heading">{{ellipsis (sanitize heading) 150}}</h4>
+  {{#if description}}<p class="feature-description">{{ellipsis (sanitize description) 200}}</p>{{/if}}
+  <div class="feature-action button-group">
+    {{#each buttons}}{{> atoms-button-link}}{{/each}}
+  </div>
+</div>
+{% endraw %}

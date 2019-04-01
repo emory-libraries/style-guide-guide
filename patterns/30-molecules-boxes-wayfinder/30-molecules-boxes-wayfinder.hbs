@@ -1,0 +1,8 @@
+<div class="wayfinder">
+  <div class="wayfinder-image{{#if image.align.x}} -align-x-{{image.align.x}}{{/if}}{{#if image.align.y}} -align-y-{{image.align.y}}{{/if}}">{{#with image}}{{> atoms-image}}{{/with}}</div>
+  <span class="wayfinder-heading">{{heading}}</span>
+  <h4 class="wayfinder-text">{{ellipsis (sanitize text) 150}}</h4>
+  <div class="wayfinder-action button-group">
+    {{#each buttons}}{{> atoms-button-link}}{{/each}}
+  </div>
+</div>

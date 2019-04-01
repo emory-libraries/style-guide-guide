@@ -1,0 +1,10 @@
+{
+  "mapId": "woodruff",
+  "name": "Robert W. Woodruff Library",
+  "coordinates": [33.79057010185258,-84.32292222976685],
+  "zoom": 18,
+  "size": {
+    "fixed": true,
+    "height": "500px"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Back to Menu",
+  "icon": {
+    "id": "material-chevron_left",
+    "position": "left"
+  },
+  "for": "nav-menu--search"
+}

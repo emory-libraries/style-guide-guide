@@ -1,0 +1,48 @@
+{
+  "id": "small-search",
+  "form": true,
+  "services": [
+    {
+      "label": "Library Catalog",
+      "placeholder": "Search the Emory Library Catalog",
+      "id": "catalog",
+      "src": "http://discovere.emory.edu/primo_library/libweb/action/dlSearch.do?institution=EMORY&vid=discovere&query=any,contains,:query&libsearch=woodruff",
+      "default": true
+    },
+    {
+      "label": "Databases",
+      "placeholder": "Search for a Database",
+      "id": "databases",
+      "src": "https://guides.main.library.emory.edu/az.php?q=:query"
+    },
+    {
+      "label": "eJournals",
+      "placeholder": "Search Journal Titles",
+      "id": "ejournals",
+      "src": "http://emory-primoprod.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do?institution=01EMORY&vid=discovere&loc=local%2Cscope%3A%28AZ01EMORY%29&fn=goAlmaAz&almaAzSearch=true&vl(freeText0)=:query&libsearch=woodruff"
+    },
+    {
+      "label": "Research & Course Guides",
+      "placeholder": "Search Research & Course Guides",
+      "id": "guides",
+      "src": "http://guides.main.library.emory.edu/srch.php?q=:query&libsearch=woodruff"
+    },
+    {
+      "label": "Finding Aids",
+      "placeholder": "Search Manuscript and Archival Collections",
+      "id": "aids",
+      "src": "https://findingaids.library.emory.edu/search/?Submit=Search&keywords=:query&libsearch=woodruff"
+    },
+    {
+      "label": "This Site",
+      "placeholder": "Search this site on Google",
+      "id": "site",
+      "src": "https://www.google.com/search?q=:query%20site:web.library.emory.edu"
+    }
+  ],
+  "button": {
+    "icon": "material-search",
+    "label": "Search"
+  },
+  "processor": "/php/example-search.php"
+}

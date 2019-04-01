@@ -1,0 +1,34 @@
+{% raw %}{{#unless overflow}}
+{{> atoms-subnav-button-main viewall=true}}
+{{else}}
+<eul-subnav-viewall inline-template :defaults="{
+                                      isDisabled: {{default disabled false}},
+                                      isActive: {{default active false}},
+                                      isHover: {{default hover false}},
+                                      isFocus: {{default focus false}},
+                                      isDismissable: {{default dismissable false}},
+                                    }">
+
+  <label @click="click"
+         @keypress.enter="simclick"
+         @focus.native="isFocus = true"
+         @blur.native="isFocus = false"
+         @mouseover.native="isHover = true"
+         @mouseleave.native="isHover = false"
+         class="subnav-button -viewall has-overflow"
+         :class="{
+          'is-disabled': isDisabled,
+          'is-active': isActive,
+          'is-hover': isHover,
+          'is-focus': isFocus,
+          'is-dismissed': isDismissable && !isShowing
+         }"
+         :disabled="isDisabled"
+         for="{{overflow}}"
+         tabindex="0">
+    {{label}}
+  </label>
+
+</eul-subnav-viewall>
+{{/unless}}
+{% endraw %}

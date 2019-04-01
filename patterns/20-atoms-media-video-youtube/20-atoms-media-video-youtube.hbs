@@ -1,0 +1,5 @@
+<div class="video-frame">
+  <iframe src="https://www.youtube.com/embed/{{id}}" class="video{{#if aspect}} -ar-{{aspect}}{{/if}}{{#if width}} -w-{{width}}{{/if}}{{#if (and align (or (eq align 'left') (eq align 'right') (eq align 'center')))}} -{{align}}{{/if}}" allowfullscreen>
+    Watch this YouTube video at <a href="https://youtu.be/{{id}}" target="_blank">youtu.be/{{id}}</a>.
+  </iframe>
+</div>

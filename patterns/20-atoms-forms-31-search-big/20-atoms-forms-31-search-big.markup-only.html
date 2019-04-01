@@ -1,0 +1,287 @@
+<eul-search inline-template
+            :services="[{&quot;label&quot;:&quot;Library Catalog&quot;,&quot;placeholder&quot;:&quot;Search the Emory Library Catalog&quot;,&quot;id&quot;:&quot;catalog&quot;,&quot;src&quot;:&quot;http://discovere.emory.edu/primo_library/libweb/action/dlSearch.do?institution&#x3D;EMORY&amp;vid&#x3D;discovere&amp;query&#x3D;any,contains,:query&amp;libsearch&#x3D;woodruff&quot;,&quot;default&quot;:true},{&quot;label&quot;:&quot;Databases&quot;,&quot;placeholder&quot;:&quot;Search for a Database&quot;,&quot;id&quot;:&quot;databases&quot;,&quot;src&quot;:&quot;https://guides.main.library.emory.edu/az.php?q&#x3D;:query&quot;},{&quot;label&quot;:&quot;eJournals&quot;,&quot;placeholder&quot;:&quot;Search Journal Titles&quot;,&quot;id&quot;:&quot;ejournals&quot;,&quot;src&quot;:&quot;http://emory-primoprod.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do?institution&#x3D;01EMORY&amp;vid&#x3D;discovere&amp;loc&#x3D;local%2Cscope%3A%28AZ01EMORY%29&amp;fn&#x3D;goAlmaAz&amp;almaAzSearch&#x3D;true&amp;vl(freeText0)&#x3D;:query&amp;libsearch&#x3D;woodruff&quot;},{&quot;label&quot;:&quot;Research &amp; Course Guides&quot;,&quot;placeholder&quot;:&quot;Search Research &amp; Course Guides&quot;,&quot;id&quot;:&quot;guides&quot;,&quot;src&quot;:&quot;http://guides.main.library.emory.edu/srch.php?q&#x3D;:query&amp;libsearch&#x3D;woodruff&quot;},{&quot;label&quot;:&quot;Finding Aids&quot;,&quot;placeholder&quot;:&quot;Search Manuscript and Archival Collections&quot;,&quot;id&quot;:&quot;aids&quot;,&quot;src&quot;:&quot;https://findingaids.library.emory.edu/search/?Submit&#x3D;Search&amp;keywords&#x3D;:query&amp;libsearch&#x3D;woodruff&quot;},{&quot;label&quot;:&quot;This Site&quot;,&quot;placeholder&quot;:&quot;Search this site on Google&quot;,&quot;id&quot;:&quot;site&quot;,&quot;src&quot;:&quot;https://www.google.com/search?q&#x3D;:query%20site:web.library.emory.edu&quot;}]"
+            :param="':query'"
+            :defaults="{
+              button: {
+                isDisabled: true,
+                isActive: false,
+                isHover: false,
+                isFocus: false
+              },
+              input: {
+                isDisabled: false,
+                isHover: false,
+                isFocus: false
+              }
+            }">
+
+  <div class="search -big -contained">
+
+    <input type="search"
+           v-model="query"
+           autocomplete="off"
+           :placeholder="placeholder"
+           @input="button.isDisabled = !valid"
+           @focus.native="input.isFocus = true"
+           @blur.native="input.isFocus = false"
+           @mouseover.native="input.isHover = true"
+           @mouseleave.native="input.isHover = false"
+           class="input -search -big search-box"
+           :class="{
+            'is-disabled': input.isDisabled,
+            'is-hover': input.isHover,
+            'is-focus': input.isFocus,
+           }"
+           :disabled="input.isDisabled">
+
+    <a :href="href"
+       target="_self"
+       @click="validate"
+       @keypress.enter="validate"
+       @mousedown.native="button.isActive = true"
+       @mouseup.native="button.isActive = false"
+       @keydown.enter="button.isActive = true"
+       @keyup.enter="button.isActive = false"
+       @focus.native="button.isFocus = true"
+       @blur.native="button.isFocus = false"
+       @mouseover.native="button.isHover = true"
+       @mouseleave.native="button.isHover = false"
+       class="button search-button"
+       :class="{
+          'is-disabled': button.isDisabled,
+          'is-active': button.isActive,
+          'is-hover': button.isHover,
+          'is-focus': button.isFocus,
+        }"
+       :disabled="button.isDisabled">
+    </a>
+
+  </div>
+
+</eul-search>
+
+<noscript>
+
+  <div class="search -form -contained">
+
+    <input type="radio" name="big-search" id="big-search-catalog" class="search-toggle" checked>
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form is-default"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="Library Catalog">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search the Emory Library Catalog">
+        <input type="hidden"
+               name="service[id]"
+               value="catalog">
+        <input type="hidden"
+               name="service[src]"
+               value="http://discovere.emory.edu/primo_library/libweb/action/dlSearch.do?institution&#x3D;EMORY&amp;vid&#x3D;discovere&amp;query&#x3D;any,contains,:query&amp;libsearch&#x3D;woodruff">
+        <input type="hidden"
+               name="service[default]"
+               value="true">
+
+      <input type="search"
+             name="query"
+             placeholder="Search the Emory Library Catalog"
+             class="input -search -big search-box"
+             >
+
+      <input type="submit"
+             value=""
+             class="button search-button"
+             >
+
+    </form>
+
+
+    <input type="radio" name="big-search" id="big-search-databases" class="search-toggle">
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="Databases">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search for a Database">
+        <input type="hidden"
+               name="service[id]"
+               value="databases">
+        <input type="hidden"
+               name="service[src]"
+               value="https://guides.main.library.emory.edu/az.php?q&#x3D;:query">
+
+      <input type="search"
+             name="query"
+             placeholder="Search for a Database"
+             class="input -search -big search-box"
+             >
+
+      <input type="submit"
+             value=""
+             class="button search-button"
+             >
+
+    </form>
+
+
+    <input type="radio" name="big-search" id="big-search-ejournals" class="search-toggle">
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="eJournals">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search Journal Titles">
+        <input type="hidden"
+               name="service[id]"
+               value="ejournals">
+        <input type="hidden"
+               name="service[src]"
+               value="http://emory-primoprod.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do?institution&#x3D;01EMORY&amp;vid&#x3D;discovere&amp;loc&#x3D;local%2Cscope%3A%28AZ01EMORY%29&amp;fn&#x3D;goAlmaAz&amp;almaAzSearch&#x3D;true&amp;vl(freeText0)&#x3D;:query&amp;libsearch&#x3D;woodruff">
+
+      <input type="search"
+             name="query"
+             placeholder="Search Journal Titles"
+             class="input -search -big search-box"
+             >
+
+      <input type="submit"
+             value=""
+             class="button search-button"
+             >
+
+    </form>
+
+
+    <input type="radio" name="big-search" id="big-search-guides" class="search-toggle">
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="Research &amp; Course Guides">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search Research &amp; Course Guides">
+        <input type="hidden"
+               name="service[id]"
+               value="guides">
+        <input type="hidden"
+               name="service[src]"
+               value="http://guides.main.library.emory.edu/srch.php?q&#x3D;:query&amp;libsearch&#x3D;woodruff">
+
+      <input type="search"
+             name="query"
+             placeholder="Search Research &amp; Course Guides"
+             class="input -search -big search-box"
+             >
+
+      <input type="submit"
+             value=""
+             class="button search-button"
+             >
+
+    </form>
+
+
+    <input type="radio" name="big-search" id="big-search-aids" class="search-toggle">
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="Finding Aids">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search Manuscript and Archival Collections">
+        <input type="hidden"
+               name="service[id]"
+               value="aids">
+        <input type="hidden"
+               name="service[src]"
+               value="https://findingaids.library.emory.edu/search/?Submit&#x3D;Search&amp;keywords&#x3D;:query&amp;libsearch&#x3D;woodruff">
+
+      <input type="search"
+             name="query"
+             placeholder="Search Manuscript and Archival Collections"
+             class="input -search -big search-box"
+             >
+
+      <input type="submit"
+             value=""
+             class="button search-button"
+             >
+
+    </form>
+
+
+    <input type="radio" name="big-search" id="big-search-site" class="search-toggle">
+
+    <form action="/php/example-search.php"
+          method="GET"
+          class="search-form"
+          autocomplete="off">
+
+      <input type="hidden" name="param" value=":query">
+
+        <input type="hidden"
+               name="service[label]"
+               value="This Site">
+        <input type="hidden"
+               name="service[placeholder]"
+               value="Search this site on Google">
+        <input type="hidden"
+               name="service[id]"
+               value="site">
+        <input type="hidden"
+               name="service[src]"
+               value="https://www.google.com/search?q&#x3D;:query%20site:web.library.emory.edu">
+
+      <input type="search"
+             name="query"
+             placeholder="Search this site on Google"
+             class="input -search -big search-box"
+             >
+
+      <input type="submit"
+             value=""
+             class="button search-button"
+             >
+
+    </form>
+
+  </div>
+
+</noscript>

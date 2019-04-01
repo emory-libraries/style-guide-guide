@@ -1,0 +1,27 @@
+<eul-button inline-template :defaults="{
+                              isDisabled: {{default disabled false}},
+                              isActive: {{default active false}},
+                              isHover: {{default hover false}},
+                              isFocus: {{default focus false}}
+                            }">
+
+  <button @click="click"
+          @keypress.enter="click"
+          @focus.native="isFocus = true"
+          @blur.native="isFocus = false"
+          @mouseover.native="isHover = true"
+          @mouseleave.native="isHover = false"
+          class="button{{#if hollow}} -hollow{{/if}}{{#if pill}} -pill{{/if}}{{#if uncapitalize}} -uncapitalize{{/if}}{{#if classes}} {{classes}}{{/if}}"
+          :class="{
+            'is-disabled': isDisabled,
+            'is-active': isActive,
+            'is-hover': isHover,
+            'is-focus': isFocus
+          }"
+          :disabled="isDisabled">
+    {{#if (or (and icon icon.id (eq icon.position 'left')) (and icon icon.id (not icon.position)))}}{{> tokens-icon id=icon.id classes='-left' }}{{/if}}
+    {{label}}
+    {{#if (and icon icon.id (eq icon.position 'right'))}}{{> tokens-icon id=icon.id classes='-right' }}{{/if}}
+  </button>
+
+</eul-button>

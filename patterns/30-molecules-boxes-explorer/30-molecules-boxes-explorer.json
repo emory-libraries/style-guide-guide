@@ -1,0 +1,29 @@
+{
+  "heading": "Popular Links",
+  "links": [
+    {
+      "href": "",
+      "label": "Get Help with Your Research"
+    },
+    {
+      "href": "",
+      "label": "Understand InterLibrary Loans"
+    },
+    {
+      "href": "",
+      "label": "Find a Study Space or Reserve a Room"
+    },
+    {
+      "href": "",
+      "label": "Access Course Reserves"
+    },
+    {
+      "href": "",
+      "label": "Guest Access"
+    },
+    {
+      "href": "",
+      "label": "Printing, Logging In, and Access"
+    }
+  ]
+}

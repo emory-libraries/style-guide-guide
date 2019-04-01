@@ -1,0 +1,67 @@
+<div>
+
+  <p><strong>Current Version: <code>{{pkg 'version'}}</code></strong></p>
+
+  <div class="pl-table">
+
+    <div class="pl-table-fixed">
+
+      <div class="pl-table-header">
+        <div class="pl-table-cell pl-table-heading pl-table-align-left">Pattern</div>
+      </div>
+
+      <div class="pl-table-body">
+        {{#each (patternStatus) as |pattern|}}
+        <div class="pl-table-cell pl-table-heading pl-table-align-left"><a href="{{pattern.src}}">{{pattern.title}}</a></div>
+        {{/each}}
+      </div>
+
+    </div>
+
+    <div class="pl-table-scrollable">
+
+      <div class="pl-table-scrollable-area">
+
+        <div class="pl-table-header">
+          <div class="pl-table-cell pl-table-heading pl-table-align-left">ID</div>
+          <div class="pl-table-cell pl-table-heading pl-table-align-left">Version</div>
+          <div class="pl-table-cell pl-table-heading pl-table-align-left">Status</div>
+          <div class="pl-table-cell pl-table-heading pl-table-align-center">JS</div>
+          <div class="pl-table-cell pl-table-heading pl-table-align-center">PHP</div>
+        </div>
+
+        <div class="pl-table-body">
+          {{#each (patternStatus) as |pattern|}}
+          <div class="pl-table-cell pl-table-align-left">
+            <code>{{pattern.plid}}</code>
+          </div>
+          <div class="pl-table-cell pl-table-align-left">
+            <code>{{pattern.version}}</code>
+          </div>
+          <div class="pl-table-cell pl-table-align-left">
+            <span class="sg-pattern-state {{pattern.status}}">{{pattern.status}}</span>
+          </div>
+          <div class="pl-table-cell pl-table-align-center">
+            {{#if pattern.js}}
+              <span class="pl-symbol pl-ui-true-bg">✔</span>
+            {{else}}
+              <span class="pl-ui-null">&ndash;</span>
+            {{/if}}
+          </div>
+          <div class="pl-table-cell pl-table-align-center">
+            {{#if pattern.php}}
+              <span class="pl-symbol pl-ui-true-bg">✔</span>
+            {{else}}
+              <span class="pl-ui-null">&ndash;</span>
+            {{/if}}
+          </div>
+          {{/each}}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,15 @@
+{
+  "badge": "Exhibition",
+  "date": "September 13, 2017 - Februrary 3, 2019",
+  "title": "Building Emory's African American Collections: Highlights from the Curatorial Career of Randall K. Burkett",
+  "image": {
+    "src": "//source.unsplash.com/ekBOf6sJYYo"
+  },
+  "buttons": [
+    {
+      "label": "Exhibition Details",
+      "href": "",
+      "hollow": true
+    }
+  ]
+}

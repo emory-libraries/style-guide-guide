@@ -1,0 +1,9 @@
+{
+  "href": "http://example.com",
+  "target": "_blank",
+  "label": "Take Me Away",
+  "icon": {
+    "id": "material-arrow_right",
+    "position": "right"
+  }
+}

@@ -1,0 +1,23 @@
+.callout {
+  display: block;
+}
+.callout :first-child {
+  margin-top: 0;
+}
+.callout :last-child {
+  margin-bottom: 0;
+}
+
+.callout {
+  background-color: #E7EAF1;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  margin-left: 16px;
+  margin-right: 16px;
+  -webkit-box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #E7EAF1;
+          box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #E7EAF1;
+}

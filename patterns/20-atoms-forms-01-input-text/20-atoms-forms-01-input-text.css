@@ -1,0 +1,422 @@
+.input {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  display: block;
+}
+[disabled].input, .is-disabled.input {
+  cursor: not-allowed;
+}
+.-date.input::-webkit-inner-spin-button, .-time.input::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+.-date.input::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: transparent;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 1;
+}
+.-select.-inline.input {
+  display: inline-block;
+}
+.-checkbox.input, .-radio.input {
+  display: inline-block;
+  padding: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.-checkbox.input + .input-label, .-radio.input + .input-label {
+  vertical-align: middle;
+}
+.-toggle.input {
+  display: none;
+}
+.input-label:not(.-inline) {
+  display: block;
+}
+.-inline.input-label {
+  display: inline-block;
+}
+.input-field {
+  display: grid;
+}
+.input-field:not(.-inline) {
+  grid-template-areas: "label" "field";
+  grid-template-columns: -webkit-min-content;
+  grid-template-columns: min-content;
+}
+.-inline.input-field {
+  grid-template-areas: "field label";
+  grid-template-columns: -webkit-min-content auto;
+  grid-template-columns: min-content auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.input-field .input {
+  margin-bottom: 0;
+  grid-area: field;
+}
+.input-field .input-label {
+  margin: 0;
+  grid-area: label;
+}
+.input-container {
+  display: grid;
+}
+.-row.input-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-rows: 1fr;
+}
+.-column.input-container {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+.-inline.input-container {
+  display: inline-grid;
+}
+.input-group {
+  display: block;
+}
+
+.input {
+  background-color: #FFFFFF;
+  border: 1px solid #B6BDCC;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 1px 2px 4px rgba(182, 189, 204, 0.5);
+          box-shadow: inset 1px 2px 4px rgba(182, 189, 204, 0.5);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  padding: 10px 20px;
+  margin-bottom: 2em;
+}
+.input, .input.-text {
+  border-color: #B6BDCC;
+}
+.input, .input.-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.input::-webkit-input-placeholder, .input.-text::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+.input::-webkit-input-placeholder, .input.-text::-webkit-input-placeholder {
+  font-family: "Cardo", serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6111;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.input:-ms-input-placeholder, .input.-text:-ms-input-placeholder {
+  opacity: 0.5;
+}
+.input:-ms-input-placeholder, .input.-text:-ms-input-placeholder {
+  font-family: "Cardo", serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6111;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.input::-ms-input-placeholder, .input.-text::-ms-input-placeholder {
+  opacity: 0.5;
+}
+.input::placeholder, .input.-text::placeholder {
+  opacity: 0.5;
+}
+.input::-webkit-input-placeholder, .input.-text::-webkit-input-placeholder {
+  font-family: "Cardo", serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6111;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.input::-ms-input-placeholder, .input.-text::-ms-input-placeholder {
+  font-family: "Cardo", serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6111;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.input::placeholder, .input.-text::placeholder {
+  font-family: "Cardo", serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6111;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.input:focus, .input.is-focused, .input.-text:focus, .input.-text.is-focused {
+  border-color: #5387F7;
+}
+.input.is-valid, .input.-text.is-valid {
+  border-color: #257611;
+}
+.input.is-invalid, .input.-text.is-invalid {
+  border-color: #B82216;
+}
+.input[disabled], .input.is-disabled, .input.-text[disabled], .input.-text.is-disabled {
+  opacity: 0.5;
+}
+.input.-date::-webkit-datetime-edit, .input.-time::-webkit-datetime-edit {
+  opacity: 0.5;
+}
+.input.-date::-webkit-datetime-edit, .input.-time::-webkit-datetime-edit {
+  font-family: "Cardo", serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6111;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.input.-date, .input.-time, .input.-select {
+  padding-right: 60px;
+  background-repeat: no-repeat;
+  background-size: auto 20px;
+  background-position: calc(100% - 20px) center;
+}
+.input.-search.-big::-webkit-input-placeholder {
+  font-family: "Cardo", serif;
+  font-size: 1.56em;
+  line-height: 1.5;
+}
+.input.-search.-big:-ms-input-placeholder {
+  font-family: "Cardo", serif;
+  font-size: 1.56em;
+  line-height: 1.5;
+}
+.input.-search.-big::-ms-input-placeholder {
+  font-family: "Cardo", serif;
+  font-size: 1.56em;
+  line-height: 1.5;
+}
+.input.-search.-big::placeholder {
+  font-family: "Cardo", serif;
+  font-size: 1.56em;
+  line-height: 1.5;
+}
+.input.-search.-small::-webkit-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.78em;
+  line-height: 1.7857;
+}
+.input.-search.-small:-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.78em;
+  line-height: 1.7857;
+}
+.input.-search.-small::-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.78em;
+  line-height: 1.7857;
+}
+.input.-search.-small::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.78em;
+  line-height: 1.7857;
+}
+.input.-date {
+  background-image: url(../icons/php/icon.php?id=material-calendar_today&color=5387F7&size[width]=20&size[height]=20);
+}
+.input.-date::-webkit-calendar-picker-indicator {
+  width: 40px;
+}
+.input.-time {
+  background-image: url(../icons/php/icon.php?id=material-access_time&color=5387F7&size[width]=20&size[height]=20);
+}
+.input.-select {
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background-image: url(../icons/php/icon.php?id=material-keyboard_arrow_down&color=5387F7&size[width]=20&size[height]=20);
+}
+.input.-select:not(:focus), .input.-select.is-closed, .input.-select.is-blurred {
+  background-color: #FFFFFF;
+}
+.input.-select:focus, .input.-select.is-open, .input.-select.is-focused {
+  background-color: #E7EAF1;
+}
+.input.-select.-inline {
+  margin-bottom: 0;
+  font: inherit;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: inherit;
+  overflow: auto;
+  border-radius: 0;
+  -o-border-image: linear-gradient(to right, #5387F7 calc(100% - (0px + 30px + 10px)), transparent calc(100% - (0px + 30px + 10px))) 1/0 0 1px 0;
+     border-image: linear-gradient(to right, #5387F7 calc(100% - (0px + 30px + 10px)), transparent calc(100% - (0px + 30px + 10px))) 1/0 0 1px 0;
+  padding-left: 0px;
+  padding-right: calc(0px + 30px + 10px);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-image: url(../icons/php/icon.php?id=material-keyboard_arrow_down&color=5387F7);
+  background-size: auto 30px;
+  background-position: calc(100% - 0px) center;
+}
+.input.-select.-inline option {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: normal;
+  line-height: normal;
+}
+.input.-checkbox:not(:checked) + .input-label, .input.-checkbox:not(.is-checked) + .input-label, .input.-radio:not(:checked) + .input-label, .input.-radio:not(.is-checked) + .input-label {
+  color: #605858;
+}
+.input.-checkbox:checked + .input-label, .input.-checkbox.is-checked + .input-label, .input.-radio:checked + .input-label, .input.-radio.is-checked + .input-label {
+  color: #082B73;
+}
+.input.-checkbox + .input-label, .input.-radio + .input-label {
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.input.-checkbox + .input-label, .input.-radio + .input-label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.input.-checkbox {
+  width: 15px;
+  height: 15px;
+  background-size: 12.5px 12.5px;
+  border-radius: 0;
+}
+.input.-checkbox:checked, .input.-checkbox.is-checked {
+  background-image: url(../icons/php/icon.php?id=material-check&color=5387F7&size[width]=20&size[height]=20);
+}
+.input.-radio {
+  width: 15px;
+  height: 15px;
+  background-size: 12.5px 12.5px;
+  border-radius: 100%;
+}
+.input.-radio:checked, .input.-radio.is-checked {
+  background-image: radial-gradient(circle at center, #5387F7 40%, transparent 45%);
+}
+.input-label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #091C44;
+}
+.input-label:not(.-inline) {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.input-label.-inline {
+  margin-left: 0.5em;
+}
+.input-label.is-focused {
+  color: #5387F7;
+}
+.input-label.is-valid {
+  color: #257611;
+}
+.input-label.is-invalid {
+  color: #B82216;
+}
+.input-field:not(.-inline) {
+  margin-bottom: 2em;
+  grid-gap: 1em;
+}
+.input-field.-inline {
+  margin-bottom: 1em;
+  grid-gap: 0.5em;
+}
+.input-field .input:not(.-checkbox):not(.-radio):not(.-select):focus + .input-label, .input-field .input:not(.-checkbox):not(.-radio):not(.-select).is-focused + .input-label,
+.input-field .input.-text:focus + .input-label,
+.input-field .input.-text.is-focused + .input-label {
+  color: #5387F7;
+}
+.input-field .input:not(.-checkbox):not(.-radio):not(.-select).is-valid + .input-label,
+.input-field .input.-text.is-valid + .input-label {
+  color: #257611;
+}
+.input-field .input:not(.-checkbox):not(.-radio):not(.-select).is-invalid + .input-label,
+.input-field .input.-text.is-invalid + .input-label {
+  color: #B82216;
+}
+.input-container {
+  margin-bottom: 2em;
+}
+.input-container .input {
+  margin-bottom: 0;
+}
+.input-container.-row {
+  --columns: 2;
+  --layout: repeat(var(--columns), auto);
+  --gap: 1em;
+  grid-template-columns: var(--layout);
+  grid-gap: var(--gap);
+}
+.input-container.-columns {
+  --rows: 2;
+  --layout: repeat(var(--rows), auto);
+  --gap: 1em;
+  grid-template-rows: var(--layout);
+  grid-gap: var(--gap);
+}
+.input-container.-grid {
+  --columns: 2;
+  --rows: 2;
+  --gap: 1em;
+  --layout-rows: repeat(var(--rows), auto);
+  --layout-columns: repeat(var(--columns), auto);
+  grid-template-columns: var(--layout-columns);
+  grid-template-rows: var(--layout-rows);
+  grid-gap: var(--gap);
+}
+.input-group {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}

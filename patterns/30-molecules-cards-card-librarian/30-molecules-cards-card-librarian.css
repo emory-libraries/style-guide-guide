@@ -1,0 +1,535 @@
+.card-librarian-name, .card-librarian-contact-links-item a,
+.card-librarian-contact-links-item .link, .card-librarian-contact-info-item a,
+.card-librarian-contact-info-item .link, .card-librarian-subjects-list-item a,
+.card-librarian-subjects-list-item .link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.card-librarian-name .icon, .card-librarian-contact-links-item a .icon,
+.card-librarian-contact-links-item .link .icon, .card-librarian-contact-info-item a .icon,
+.card-librarian-contact-info-item .link .icon, .card-librarian-subjects-list-item a .icon,
+.card-librarian-subjects-list-item .link .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-librarian {
+  display: grid;
+  grid-template-areas: "about";
+  grid-template-columns: 1fr;
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .card-librarian {
+    grid-template-areas: "about contact";
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 901px) {
+  .card-librarian {
+    grid-template-areas: "about subjects contact";
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+.card-librarian-subjects::before, .card-librarian-contact::before {
+  content: "";
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.card-librarian-about {
+  grid-area: about;
+  display: grid;
+  grid-template-areas: "image" "name" "title" "library";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr -webkit-min-content auto -webkit-min-content;
+  grid-template-rows: 1fr min-content auto min-content;
+}
+.card-librarian-subjects {
+  display: none;
+  grid-area: subjects;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.card-librarian-subjects-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-area: list;
+  grid-area: list;
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: auto;
+}
+.card-librarian-subjects-list-item {
+  display: block;
+}
+@media (min-width: 901px) {
+  .card-librarian-subjects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.card-librarian-contact {
+  display: none;
+  grid-area: contact;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.card-librarian-contact-info {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-area: info;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+}
+.card-librarian-contact-info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card-librarian-contact-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-area: links;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+}
+.card-librarian-contact-links-item {
+  display: block;
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .card-librarian-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (min-width: 901px) {
+  .card-librarian-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.card-librarian-image {
+  grid-area: image;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-librarian-image img {
+  width: 100%;
+}
+.card-librarian-name {
+  grid-area: name;
+  margin: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.card-librarian-title {
+  grid-area: title;
+  margin: 0;
+}
+.card-librarian-library {
+  grid-area: library;
+  margin: 0;
+}
+.card-librarian-context {
+  grid-area: context;
+  margin: 0;
+}
+
+.card-librarian {
+  padding: 25px;
+  grid-gap: 50px;
+  font-size: 12px;
+  border: 1px solid #dbdee6;
+  border-left: 2px solid #336BE6;
+}
+.card-librarian {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6429;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #082B73;
+}
+.card-librarian-about:not(:first-child)::before, .card-librarian-subjects:not(:first-child)::before, .card-librarian-contact:not(:first-child)::before {
+  left: -25px;
+  height: 100%;
+  width: 1px;
+  background-color: #dbdee6;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
+}
+.card-librarian-about {
+  grid-gap: 15px;
+}
+.card-librarian-subjects {
+  --columns: 2;
+}
+.card-librarian-subjects > *:not(:first-child) {
+  margin-top: 15px;
+}
+.card-librarian-subjects-list {
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-gap: 10px;
+}
+.card-librarian-subjects-list-item a,
+.card-librarian-subjects-list-item .link {
+  font-weight: normal;
+  font-style: normal;
+  color: #082B73;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.card-librarian-subjects-list-item a .icon,
+.card-librarian-subjects-list-item .link .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.card-librarian-subjects-list-item a .icon svg,
+.card-librarian-subjects-list-item .link .icon svg {
+  fill: #082B73;
+}
+.card-librarian-subjects-list-item a:hover, .card-librarian-subjects-list-item a.is-hover, .card-librarian-subjects-list-item a:focus, .card-librarian-subjects-list-item a.is-focus,
+.card-librarian-subjects-list-item .link:hover,
+.card-librarian-subjects-list-item .link.is-hover,
+.card-librarian-subjects-list-item .link:focus,
+.card-librarian-subjects-list-item .link.is-focus {
+  color: #5387F7;
+}
+.card-librarian-subjects-list-item a:hover .icon svg, .card-librarian-subjects-list-item a.is-hover .icon svg, .card-librarian-subjects-list-item a:focus .icon svg, .card-librarian-subjects-list-item a.is-focus .icon svg,
+.card-librarian-subjects-list-item .link:hover .icon svg,
+.card-librarian-subjects-list-item .link.is-hover .icon svg,
+.card-librarian-subjects-list-item .link:focus .icon svg,
+.card-librarian-subjects-list-item .link.is-focus .icon svg {
+  fill: #5387F7;
+}
+.card-librarian-subjects-list-item a:active, .card-librarian-subjects-list-item a.is-active,
+.card-librarian-subjects-list-item .link:active,
+.card-librarian-subjects-list-item .link.is-active {
+  color: #5387F7;
+}
+.card-librarian-subjects-list-item a:active .icon svg, .card-librarian-subjects-list-item a.is-active .icon svg,
+.card-librarian-subjects-list-item .link:active .icon svg,
+.card-librarian-subjects-list-item .link.is-active .icon svg {
+  fill: #5387F7;
+}
+.card-librarian-subjects-list-item a.-popular,
+.card-librarian-subjects-list-item .link.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.card-librarian-subjects-list-item a.-popular:hover, .card-librarian-subjects-list-item a.-popular.is-hover, .card-librarian-subjects-list-item a.-popular:focus, .card-librarian-subjects-list-item a.-popular.is-focus,
+.card-librarian-subjects-list-item .link.-popular:hover,
+.card-librarian-subjects-list-item .link.-popular.is-hover,
+.card-librarian-subjects-list-item .link.-popular:focus,
+.card-librarian-subjects-list-item .link.-popular.is-focus {
+  color: #336BE6;
+}
+.card-librarian-subjects-list-item a.-popular:active, .card-librarian-subjects-list-item a.-popular.is-active,
+.card-librarian-subjects-list-item .link.-popular:active,
+.card-librarian-subjects-list-item .link.-popular.is-active {
+  color: #336BE6;
+}
+.card-librarian-subjects-list-item a.-underline,
+.card-librarian-subjects-list-item .link.-underline {
+  text-decoration: underline;
+}
+.card-librarian-contact > *:not(:first-child) {
+  margin-top: 15px;
+}
+.card-librarian-contact > *:last-child {
+  margin-top: auto;
+}
+.card-librarian-contact-info {
+  grid-gap: 10px;
+}
+.card-librarian-contact-info-item a,
+.card-librarian-contact-info-item .link {
+  font-weight: normal;
+  font-style: normal;
+  color: #082B73;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.card-librarian-contact-info-item a .icon,
+.card-librarian-contact-info-item .link .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.card-librarian-contact-info-item a .icon svg,
+.card-librarian-contact-info-item .link .icon svg {
+  fill: #082B73;
+}
+.card-librarian-contact-info-item a:hover, .card-librarian-contact-info-item a.is-hover, .card-librarian-contact-info-item a:focus, .card-librarian-contact-info-item a.is-focus,
+.card-librarian-contact-info-item .link:hover,
+.card-librarian-contact-info-item .link.is-hover,
+.card-librarian-contact-info-item .link:focus,
+.card-librarian-contact-info-item .link.is-focus {
+  color: #5387F7;
+}
+.card-librarian-contact-info-item a:hover .icon svg, .card-librarian-contact-info-item a.is-hover .icon svg, .card-librarian-contact-info-item a:focus .icon svg, .card-librarian-contact-info-item a.is-focus .icon svg,
+.card-librarian-contact-info-item .link:hover .icon svg,
+.card-librarian-contact-info-item .link.is-hover .icon svg,
+.card-librarian-contact-info-item .link:focus .icon svg,
+.card-librarian-contact-info-item .link.is-focus .icon svg {
+  fill: #5387F7;
+}
+.card-librarian-contact-info-item a:active, .card-librarian-contact-info-item a.is-active,
+.card-librarian-contact-info-item .link:active,
+.card-librarian-contact-info-item .link.is-active {
+  color: #5387F7;
+}
+.card-librarian-contact-info-item a:active .icon svg, .card-librarian-contact-info-item a.is-active .icon svg,
+.card-librarian-contact-info-item .link:active .icon svg,
+.card-librarian-contact-info-item .link.is-active .icon svg {
+  fill: #5387F7;
+}
+.card-librarian-contact-info-item a.-popular,
+.card-librarian-contact-info-item .link.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.card-librarian-contact-info-item a.-popular:hover, .card-librarian-contact-info-item a.-popular.is-hover, .card-librarian-contact-info-item a.-popular:focus, .card-librarian-contact-info-item a.-popular.is-focus,
+.card-librarian-contact-info-item .link.-popular:hover,
+.card-librarian-contact-info-item .link.-popular.is-hover,
+.card-librarian-contact-info-item .link.-popular:focus,
+.card-librarian-contact-info-item .link.-popular.is-focus {
+  color: #336BE6;
+}
+.card-librarian-contact-info-item a.-popular:active, .card-librarian-contact-info-item a.-popular.is-active,
+.card-librarian-contact-info-item .link.-popular:active,
+.card-librarian-contact-info-item .link.-popular.is-active {
+  color: #336BE6;
+}
+.card-librarian-contact-info-item a.-underline,
+.card-librarian-contact-info-item .link.-underline {
+  text-decoration: underline;
+}
+.card-librarian-contact-info-item .icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+.card-librarian-contact-info-item svg {
+  fill: #082B73;
+}
+.card-librarian-contact-links {
+  grid-gap: 10px;
+}
+.card-librarian-contact-links-item a,
+.card-librarian-contact-links-item .link {
+  font-weight: bold;
+  font-style: normal;
+  color: #5387F7;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.card-librarian-contact-links-item a .icon,
+.card-librarian-contact-links-item .link .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.card-librarian-contact-links-item a .icon svg,
+.card-librarian-contact-links-item .link .icon svg {
+  fill: #5387F7;
+}
+.card-librarian-contact-links-item a:hover, .card-librarian-contact-links-item a.is-hover, .card-librarian-contact-links-item a:focus, .card-librarian-contact-links-item a.is-focus,
+.card-librarian-contact-links-item .link:hover,
+.card-librarian-contact-links-item .link.is-hover,
+.card-librarian-contact-links-item .link:focus,
+.card-librarian-contact-links-item .link.is-focus {
+  color: #004990;
+}
+.card-librarian-contact-links-item a:hover .icon svg, .card-librarian-contact-links-item a.is-hover .icon svg, .card-librarian-contact-links-item a:focus .icon svg, .card-librarian-contact-links-item a.is-focus .icon svg,
+.card-librarian-contact-links-item .link:hover .icon svg,
+.card-librarian-contact-links-item .link.is-hover .icon svg,
+.card-librarian-contact-links-item .link:focus .icon svg,
+.card-librarian-contact-links-item .link.is-focus .icon svg {
+  fill: #004990;
+}
+.card-librarian-contact-links-item a:active, .card-librarian-contact-links-item a.is-active,
+.card-librarian-contact-links-item .link:active,
+.card-librarian-contact-links-item .link.is-active {
+  color: #004990;
+}
+.card-librarian-contact-links-item a:active .icon svg, .card-librarian-contact-links-item a.is-active .icon svg,
+.card-librarian-contact-links-item .link:active .icon svg,
+.card-librarian-contact-links-item .link.is-active .icon svg {
+  fill: #004990;
+}
+.card-librarian-contact-links-item a.-popular,
+.card-librarian-contact-links-item .link.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.card-librarian-contact-links-item a.-popular:hover, .card-librarian-contact-links-item a.-popular.is-hover, .card-librarian-contact-links-item a.-popular:focus, .card-librarian-contact-links-item a.-popular.is-focus,
+.card-librarian-contact-links-item .link.-popular:hover,
+.card-librarian-contact-links-item .link.-popular.is-hover,
+.card-librarian-contact-links-item .link.-popular:focus,
+.card-librarian-contact-links-item .link.-popular.is-focus {
+  color: #336BE6;
+}
+.card-librarian-contact-links-item a.-popular:active, .card-librarian-contact-links-item a.-popular.is-active,
+.card-librarian-contact-links-item .link.-popular:active,
+.card-librarian-contact-links-item .link.-popular.is-active {
+  color: #336BE6;
+}
+.card-librarian-contact-links-item a.-underline,
+.card-librarian-contact-links-item .link.-underline {
+  text-decoration: underline;
+}
+.card-librarian-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+.card-librarian-name {
+  text-align: center;
+  font-size: 18px;
+}
+.card-librarian-name {
+  font-weight: bold;
+  font-style: normal;
+  color: #091C44;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.card-librarian-name .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.card-librarian-name .icon svg {
+  fill: #091C44;
+}
+.card-librarian-name:hover, .card-librarian-name.is-hover, .card-librarian-name:focus, .card-librarian-name.is-focus {
+  color: #5387F7;
+}
+.card-librarian-name:hover .icon svg, .card-librarian-name.is-hover .icon svg, .card-librarian-name:focus .icon svg, .card-librarian-name.is-focus .icon svg {
+  fill: #5387F7;
+}
+.card-librarian-name:active, .card-librarian-name.is-active {
+  color: #5387F7;
+}
+.card-librarian-name:active .icon svg, .card-librarian-name.is-active .icon svg {
+  fill: #5387F7;
+}
+.card-librarian-name.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.card-librarian-name.-popular:hover, .card-librarian-name.-popular.is-hover, .card-librarian-name.-popular:focus, .card-librarian-name.-popular.is-focus {
+  color: #336BE6;
+}
+.card-librarian-name.-popular:active, .card-librarian-name.-popular.is-active {
+  color: #336BE6;
+}
+.card-librarian-name.-underline {
+  text-decoration: underline;
+}
+.card-librarian-title {
+  font-style: italic !important;
+  text-align: center !important;
+}
+.card-librarian-title {
+  font-family: "Cardo", serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6111;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #091C44;
+}
+.card-librarian-library {
+  text-align: center;
+}
+.card-librarian-context {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6667;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #091C44;
+}

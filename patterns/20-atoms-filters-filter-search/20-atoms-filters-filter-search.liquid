@@ -1,0 +1,77 @@
+{% raw %}{{#if passthroughs}}
+  {{assign 'index' (passthrough index passthroughs)}}
+{{/if}}
+
+<eul-filter-search inline-template
+                   :index="{{JSONstringify index}}"
+                   :keys="{{default (JSONstringify keys) '[]'}}"
+                   :config="{{default (JSONstringify config) '{}'}}"
+                   :defaults="{
+                      button: {
+                        isDisabled: {{default button.disabled true}},
+                        isActive: {{default button.active false}},
+                        isHover: {{default button.hover false}},
+                        isFocus: {{default button.focus false}}
+                      },
+                      input: {
+                        isDisabled: {{default disabled false}},
+                        isHover: {{default hover false}},
+                        isFocus: {{default focus false}}
+                      }
+                   }">
+
+  <div class="search{{#if mode}} -{{mode}}{{/if}}{{#if (and layout (eq layout 'contained'))}} -contained{{/if}}">
+
+    <input type="search"
+           v-model="query"
+           autocomplete="{{#if autocomplete}}on{{else}}off{{/if}}"
+           placeholder="{{placeholder}}"
+           @input="button.isDisabled = !valid"
+           @focus.native="input.isFocus = true"
+           @blur.native="input.isFocus = false"
+           @mouseover.native="input.isHover = true"
+           @mouseleave.native="input.isHover = false"
+           @keypress.enter="search"
+           class="input -search{{#if mode}} -{{mode}}{{/if}} search-box"
+           :class="{
+            'is-disabled': input.isDisabled,
+            'is-hover': input.isHover,
+            'is-focus': input.isFocus,
+           }"
+           :disabled="input.isDisabled">
+
+    <button @click="search"
+            @mousedown.native="button.isActive = true"
+            @mouseup.native="button.isActive = false"
+            @keydown.native.enter="button.isActive = true"
+            @keyup.native.enter="button.isActive = false"
+            @focus.native="button.isFocus = true"
+            @blur.native="button.isFocus = false"
+            @mouseover.native="button.isHover = true"
+            @mouseleave.native="button.isHover = false"
+            class="button search-button"
+            :class="{
+              'is-disabled': button.isDisabled,
+              'is-active': button.isActive,
+              'is-hover': button.isHover,
+              'is-focus': button.isFocus,
+            }"
+            :disabled="button.isDisabled">
+      {{#unless (and layout (eq layout 'contained'))}}
+        {{#if button.icon }}{{> tokens-icon id=button.icon classes="-left" }}{{/if}}
+        {{button.label}}
+      {{/unless}}
+    </button>
+
+    <a @click="cancel"
+       @keypress.enter="cancel"
+       class="link -underline search-cancel"
+       v-show="fuzzy.searching.searched"
+       tabindex="0">
+      Cancel
+    </a>
+
+  </div>
+
+</eul-filter-search>
+{% endraw %}

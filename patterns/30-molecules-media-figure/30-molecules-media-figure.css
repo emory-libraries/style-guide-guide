@@ -1,0 +1,35 @@
+.figure {
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+.figure-image {
+  display: block;
+}
+.figure-caption {
+  display: block;
+  margin: 0;
+}
+
+.figure {
+  border-bottom: 1px solid #e6e8ec;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.figure-image {
+  width: 100%;
+}
+.figure-caption {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.figure-caption {
+  font-family: "Cardo", serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.5;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}

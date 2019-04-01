@@ -1,0 +1,8 @@
+{
+  "group": "radios",
+  "options": [
+    {"label": "Option A"},
+    {"label": "Option B"},
+    {"label": "Option C"}
+  ]
+}

@@ -1,0 +1,4 @@
+{% raw %}<div class="map-frame{{#if (and size size.fixed)}} -h-fixed{{/if}}"{{#if (and size (or size.width size.height))}} style="{{#if size.width}}--width: {{size.width}};{{/if}}{{#if size.height}}--height: {{size.height}};{{/if}}"{{/if}}>
+  <div class="map -image" style="background-image: url({{#if id}}/images/maps/screenshots/{{id}}.png{{else}}{{url}}{{/if}}); --scale: {{default scale '100%'}}"></div>
+</div>
+{% endraw %}

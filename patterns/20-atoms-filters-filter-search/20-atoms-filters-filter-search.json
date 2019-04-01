@@ -1,0 +1,126 @@
+{
+  "placeholder": "Search for a Service",
+  "layout": "contained",
+  "mode": "big",
+  "config": {
+    "scoring": true
+  },
+  "keys": [
+    "service",
+    "keywords"
+  ],
+  "index": [
+    {
+      "service": "Find a Quiet Study Area",
+      "category": "Spaces, Labs, and Workstations",
+      "keywords": [
+        "study area",
+        "quiet space"
+      ]
+    },
+    {
+      "service": "Find a Workstation or Application",
+      "category": "Spaces, Labs, and Workstations"
+    },
+    {
+      "service": "Locate a Graduate Study Lab",
+      "category": "Spaces, Labs, and Workstations"
+    },
+    {
+      "service": "Virtual Reality, 3D Printing and Scanning, New Technologies",
+      "category": "Spaces, Labs, and Workstations"
+    },
+    {
+      "service": "Post-Production, Web Development, and 3D Modeling",
+      "category": "Spaces, Labs, and Workstations"
+    },
+    {
+      "service": "Use the Audio/Video/Image Production Studio",
+      "category": "Spaces, Labs, and Workstations",
+      "keywords": [
+        "audio studio",
+        "video studio",
+        "image studio",
+        "production lab"
+      ]
+    },
+    {
+      "service": "Play Video Games",
+      "category": "Spaces, Labs, and Workstations"
+    },
+    {
+      "service": "Print, Copy, and Scan",
+      "category": "Spaces, Labs and Workstations",
+      "popular": true
+    },
+    {
+      "service": "Request a Purchase",
+      "category": "Requests and Submissions"
+    },
+    {
+      "service": "Reserve a Study or Presentation Room",
+      "category": "Requests and Submissions",
+      "popular": true
+    },
+    {
+      "service": "Apply for an Individual Study Room or Carrel (Faculty and Graduate Only)",
+      "category": "Requests and Submissions"
+    },
+
+    {
+      "service": "Submit an ILL Request (InterLibrary Lending)",
+      "category": "Requests and Submissions"
+    },
+    {
+      "service": "Connect to the Internet (On-Campus)",
+      "category": "Hardware and Technology"
+    },
+    {
+      "service": "Connect from Off Campus (VPNs and Proxies)",
+      "category": "Hardware and Technology"
+    },
+    {
+      "service": "Get Hardware or Software Support",
+      "category": "Hardware and Technology",
+      "keywords": [
+        "tech support",
+        "IT support"
+      ]
+    },
+    {
+      "service": "Repair Device or Computer",
+      "category": "Hardware and Technology",
+      "keywords": [
+        "broken device",
+        "broken computer"
+      ]
+    },
+    {
+      "service": "Access Course Reserves",
+      "category": "Assistance and Support",
+      "popular": true
+    },
+    {
+      "service": "Borrow Equipment or Gadgets",
+      "category": "Assistance and Support",
+      "popular": true
+    },
+    {
+      "service": "Request or Recall Materials",
+      "category": "Assistance and Support",
+      "popular": true
+    },
+    {
+      "service": "Research and Writing Assistance",
+      "category": "Assistance and Support",
+      "keywords": [
+        "help with writing",
+        "help with research"
+      ]
+    }
+  ],
+  "button": {
+    "label": "Search",
+    "icon": "material-search"
+  }
+}

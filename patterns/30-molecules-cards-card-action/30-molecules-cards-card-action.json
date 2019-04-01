@@ -1,0 +1,12 @@
+{
+  "text": "Need Help?",
+  "image": {
+    "src": "//source.unsplash.com/GX8KBbVmC6c"
+  },
+  "button": {
+    "type": "link",
+    "label": "Ask a Librarian",
+    "href": "",
+    "hollow": true
+  }
+}

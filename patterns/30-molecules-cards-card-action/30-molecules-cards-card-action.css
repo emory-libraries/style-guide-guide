@@ -1,0 +1,69 @@
+.card-action {
+  display: grid;
+  grid-template-areas: "image image" "text action";
+  grid-template-columns: 1fr auto;
+}
+.card-action-image {
+  grid-area: image;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+}
+.card-action-image img {
+  width: 100%;
+}
+.card-action-text {
+  grid-area: text;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card-action-action {
+  grid-area: action;
+}
+
+.card-action {
+  padding: 25px;
+  grid-gap: 25px;
+  min-height: 265px;
+  border: 1px solid #E7EAF1;
+  border-top: 4px solid #5387F7;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.08);
+  grid-template-rows: 190px auto;
+}
+.card-action-image {
+  height: calc(190px + 25px);
+  width: calc(100% + (25px * 2));
+  top: -25px;
+  left: -25px;
+  right: -25px;
+}
+.card-action-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6364;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #082B73;
+}

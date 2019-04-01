@@ -1,0 +1,106 @@
+{% raw %}{{#unless form}}
+<eul-search inline-template
+            :services="{{JSONstringify services}}"
+            :param="'{{default param ':query'}}'"
+            :defaults="{
+              button: {
+                isDisabled: {{default button.disabled true}},
+                isActive: {{default button.active false}},
+                isHover: {{default button.hover false}},
+                isFocus: {{default button.focus false}}
+              },
+              input: {
+                isDisabled: {{default disabled false}},
+                isHover: {{default hover false}},
+                isFocus: {{default focus false}}
+              }
+            }">
+
+  <div class="search{{#if mode}} -{{mode}}{{/if}}{{#if (and layout (eq layout 'contained'))}} -contained{{/if}}">
+
+    <input type="search"
+           v-model="query"
+           autocomplete="{{#if autocomplete}}on{{else}}off{{/if}}"
+           :placeholder="placeholder"
+           @input="button.isDisabled = !valid"
+           @focus.native="input.isFocus = true"
+           @blur.native="input.isFocus = false"
+           @mouseover.native="input.isHover = true"
+           @mouseleave.native="input.isHover = false"
+           class="input -search{{#if mode}} -{{mode}}{{/if}} search-box"
+           :class="{
+            'is-disabled': input.isDisabled,
+            'is-hover': input.isHover,
+            'is-focus': input.isFocus,
+           }"
+           :disabled="input.isDisabled">
+
+    <a :href="href"
+       target="{{default target '_self'}}"
+       @click="validate"
+       @keypress.enter="validate"
+       @mousedown.native="button.isActive = true"
+       @mouseup.native="button.isActive = false"
+       @keydown.enter="button.isActive = true"
+       @keyup.enter="button.isActive = false"
+       @focus.native="button.isFocus = true"
+       @blur.native="button.isFocus = false"
+       @mouseover.native="button.isHover = true"
+       @mouseleave.native="button.isHover = false"
+       class="button search-button"
+       :class="{
+          'is-disabled': button.isDisabled,
+          'is-active': button.isActive,
+          'is-hover': button.isHover,
+          'is-focus': button.isFocus,
+        }"
+       :disabled="button.isDisabled">
+      {{#unless (and layout (eq layout 'contained'))}}
+        {{#if button.icon }}{{> tokens-icon id=button.icon classes="-left" }}{{/if}}
+        {{button.label}}
+      {{/unless}}
+    </a>
+
+  </div>
+
+</eul-search>
+{{/unless}}
+
+{{#unless form}}<noscript>{{/unless}}
+
+  <div class="search -form{{#if (and layout (eq layout 'contained'))}} -contained{{/if}}">
+  {{#each services as |service|}}
+
+    <input type="radio" name="{{../id}}" id="{{../id}}-{{id}}" class="search-toggle"{{#if service.default}} checked{{/if}}>
+
+    <form action="{{../processor}}"
+          method="GET"
+          class="search-form{{#if service.default}} is-default{{/if}}"
+          autocomplete="{{#if ../autocomplete}}on{{else}}off{{/if}}">
+
+      <input type="hidden" name="param" value="{{default ../param ':query'}}">
+
+      {{#each service}}
+        <input type="hidden"
+               name="service[{{@key}}]"
+               value="{{.}}">
+      {{/each}}
+
+      <input type="search"
+             name="query"
+             placeholder="{{service.placeholder}}"
+             class="input -search{{#if ../mode}} -{{../mode}}{{/if}} search-box{{#if ../disabled}} is-disabled{{/if}}{{#if ../hover}} is-hover{{/if}}{{#if ../focus}} is-focus{{/if}}"
+             {{#if ../disabled}}disabled{{/if}}>
+
+      <input type="submit"
+             value="{{#unless (and ../layout (eq ../layout 'contained'))}}{{../button.label}}{{/unless}}"
+             class="button search-button{{#if ../button.disabled}} is-disabled{{/if}}{{#if ../button.active}} is-active{{/if}}{{#if ../button.hover}} is-hover{{/if}}{{#if ../button.focus}} is-focus{{/if}}"
+             {{#if ../button.disabled}}disabled{{/if}}>
+
+    </form>
+
+  {{/each}}
+  </div>
+
+{{#unless form}}</noscript>{{/unless}}
+{% endraw %}

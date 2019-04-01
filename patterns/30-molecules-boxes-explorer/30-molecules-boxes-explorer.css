@@ -1,0 +1,137 @@
+.explorer-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.explorer-link .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.explorer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "context" "heading" "list";
+  grid-template-rows: repeat(2, -webkit-min-content) 1fr;
+  grid-template-rows: repeat(2, min-content) 1fr;
+}
+.explorer-context {
+  display: block;
+  margin: 0;
+  grid-area: context;
+}
+.explorer-heading {
+  display: block;
+  margin: 0;
+  grid-area: heading;
+}
+.explorer-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  grid-area: list;
+}
+.explorer {
+  grid-gap: 10px;
+  padding: 30px;
+  background-color: #004990;
+  margin: 15px;
+  -webkit-box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #004990;
+          box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #004990;
+}
+.explorer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6429;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.explorer-context {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6667;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #E9BF55;
+}
+.explorer-heading {
+  font-weight: bold;
+}
+.explorer-heading {
+  font-family: "Cardo", serif;
+  font-size: 28px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #FFFFFF;
+}
+.explorer-list-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.explorer-link {
+  font-weight: normal;
+  font-style: normal;
+  color: #E7EAF1;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.explorer-link .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.explorer-link .icon svg {
+  fill: #E7EAF1;
+}
+.explorer-link:hover, .explorer-link.is-hover, .explorer-link:focus, .explorer-link.is-focus {
+  color: #FFFFFF;
+}
+.explorer-link:hover .icon svg, .explorer-link.is-hover .icon svg, .explorer-link:focus .icon svg, .explorer-link.is-focus .icon svg {
+  fill: #FFFFFF;
+}
+.explorer-link:active, .explorer-link.is-active {
+  color: #FFFFFF;
+}
+.explorer-link:active .icon svg, .explorer-link.is-active .icon svg {
+  fill: #FFFFFF;
+}
+.explorer-link.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.explorer-link.-popular:hover, .explorer-link.-popular.is-hover, .explorer-link.-popular:focus, .explorer-link.-popular.is-focus {
+  color: #336BE6;
+}
+.explorer-link.-popular:active, .explorer-link.-popular.is-active {
+  color: #336BE6;
+}
+.explorer-link.-underline {
+  text-decoration: underline;
+}

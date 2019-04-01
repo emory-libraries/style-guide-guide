@@ -1,0 +1,192 @@
+.card-multimedia-title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.card-multimedia-title .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-multimedia {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr repeat(3, -webkit-min-content);
+  grid-template-rows: 1fr repeat(3, min-content);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.card-multimedia-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-multimedia-icon .icon {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.card-multimedia-icon svg {
+  width: 100% !important;
+}
+.card-multimedia-context {
+  margin: 0;
+}
+.card-multimedia-title {
+  margin: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.card-multimedia-duration {
+  margin: 0;
+}
+
+.card-multimedia {
+  grid-gap: 15px;
+  padding: 40px 25px 80px;
+  border: 1px solid #dbdee6;
+  border-top: 2px solid #336BE6;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #FFFFFF;
+  background-image: linear-gradient(to bottom, #f3f5f8 70px, transparent 70px);
+}
+.card-multimedia-icon {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 4px solid #FFFFFF;
+  background-color: #5387F7;
+}
+.card-multimedia-icon svg {
+  fill: #FFFFFF;
+  height: 75%;
+}
+.card-multimedia-context {
+  font-size: 12px;
+  text-align: center;
+}
+.card-multimedia-context {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6667;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #082B73;
+}
+.card-multimedia-title {
+  text-align: center;
+  margin-top: 25px;
+}
+.card-multimedia-title {
+  font-family: "Cardo", serif;
+  font-size: 26px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #605858;
+}
+.card-multimedia-title {
+  font-weight: normal;
+  font-style: normal;
+  color: #082B73;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.card-multimedia-title .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.card-multimedia-title .icon svg {
+  fill: #082B73;
+}
+.card-multimedia-title:hover, .card-multimedia-title.is-hover, .card-multimedia-title:focus, .card-multimedia-title.is-focus {
+  color: #336BE6;
+}
+.card-multimedia-title:hover .icon svg, .card-multimedia-title.is-hover .icon svg, .card-multimedia-title:focus .icon svg, .card-multimedia-title.is-focus .icon svg {
+  fill: #336BE6;
+}
+.card-multimedia-title:active, .card-multimedia-title.is-active {
+  color: #336BE6;
+}
+.card-multimedia-title:active .icon svg, .card-multimedia-title.is-active .icon svg {
+  fill: #336BE6;
+}
+.card-multimedia-title.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.card-multimedia-title.-popular:hover, .card-multimedia-title.-popular.is-hover, .card-multimedia-title.-popular:focus, .card-multimedia-title.-popular.is-focus {
+  color: #336BE6;
+}
+.card-multimedia-title.-popular:active, .card-multimedia-title.-popular.is-active {
+  color: #336BE6;
+}
+.card-multimedia-title.-underline {
+  text-decoration: underline;
+}
+.card-multimedia-duration {
+  font-size: 12px;
+  text-align: center;
+}
+.card-multimedia-duration {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6667;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #605858;
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Video Collections",
+  "icon": "material-collections_bookmark",
+  "context": "Collection",
+  "items": [
+    {
+      "title": "Environmental Studies Film List",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Indian Movies",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Tibet-related Films and Videos at Emory",
+      "link": {
+        "href": ""
+      }
+    }
+  ]
+}

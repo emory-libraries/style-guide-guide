@@ -1,0 +1,138 @@
+.tab {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0.5em 2em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+.tab::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+}
+.tab::after {
+  content: "";
+  display: block;
+  top: 100%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translatey(-50%) translatex(-50%);
+          transform: translatey(-50%) translatex(-50%);
+  z-index: 1;
+}
+.tab-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+}
+.tab-menu::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+  right: 0;
+}
+.tab {
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.tab {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6667;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #605858;
+}
+.tab::before {
+  width: 1px;
+  height: 1em;
+}
+.tab + .tab::before {
+  background-color: rgba(96, 88, 88, 0.25);
+}
+.tab:hover, .tab:focus, .tab.is-hover, .tab.is-focus {
+  color: #336BE6;
+}
+.tab:active, .tab.is-active {
+  color: #082B73;
+}
+.tab:active::after, .tab.is-active::after {
+  width: 30px;
+  height: 30px;
+}
+.tab:active::after, .tab.is-active::after {
+  content: url("../icons/php/icon.php?id=material-arrow_drop_down&color=082B73&size[width]=30&size[height]=30");
+}
+.tab-menu::after {
+  height: 1px;
+}
+.tab-menu, .tab-menu.-light {
+  background-color: #FFFFFF;
+}
+.tab-menu::after, .tab-menu.-light::after {
+  background-color: rgba(182, 189, 204, 0.5);
+}
+.tab-menu .tab, .tab-menu.-light .tab {
+  color: #004990;
+}
+.tab-menu .tab:hover, .tab-menu .tab:focus, .tab-menu .tab.is-hover, .tab-menu .tab.is-focus, .tab-menu.-light .tab:hover, .tab-menu.-light .tab:focus, .tab-menu.-light .tab.is-hover, .tab-menu.-light .tab.is-focus {
+  color: #336BE6;
+}
+.tab-menu .tab:active, .tab-menu .tab.is-active, .tab-menu.-light .tab:active, .tab-menu.-light .tab.is-active {
+  color: #336BE6;
+}
+.tab-menu .tab:active::after, .tab-menu .tab.is-active::after, .tab-menu.-light .tab:active::after, .tab-menu.-light .tab.is-active::after {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
+  background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
+}
+.tab-menu .tab:active::after, .tab-menu .tab.is-active::after, .tab-menu.-light .tab:active::after, .tab-menu.-light .tab.is-active::after {
+  content: url("../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30");
+}
+.tab-menu .tab + .tab::before, .tab-menu.-light .tab + .tab::before {
+  background-color: rgba(182, 189, 204, 0.5);
+}
+.tab-menu.-dark {
+  background-color: #091C44;
+}
+.tab-menu.-dark::after {
+  background-color: rgba(231, 234, 241, 0.25);
+}
+.tab-menu.-dark .tab {
+  color: #FFFFFF;
+}
+.tab-menu.-dark .tab:hover, .tab-menu.-dark .tab:focus, .tab-menu.-dark .tab.is-hover, .tab-menu.-dark .tab.is-focus {
+  color: #B6BDCC;
+}
+.tab-menu.-dark .tab:active, .tab-menu.-dark .tab.is-active {
+  color: #E9BF55;
+}
+.tab-menu.-dark .tab:active::after, .tab-menu.-dark .tab.is-active::after {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #091C44), color-stop(55%, #091C44), color-stop(55%, transparent));
+  background-image: linear-gradient(to bottom, transparent 45%, #091C44 45%, #091C44 55%, transparent 55%);
+}
+.tab-menu.-dark .tab:active::after, .tab-menu.-dark .tab.is-active::after {
+  content: url("../icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30");
+}
+.tab-menu.-dark .tab + .tab::before {
+  background-color: rgba(231, 234, 241, 0.25);
+}

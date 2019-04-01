@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="">
+  <head>
+    <title></title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="">
+
+    <link rel="stylesheet" href="../../css/patternlab.css?1554131365337" media="all">
+    <link rel="stylesheet" href="../../css/style.css?1554131365337" media="all">
+
+    <!-- DO NOT REMOVE -->
+    <!-- never cache patterns -->
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1554131365337" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1554131365337" media="all" />
+
+
+  </head>
+  <body class="">
+
+<div class="map-frame -h-fixed" style="--height: 500px;">
+  <div class="map -image" style="background-image: url(/images/maps/screenshots/woodruff.png); --scale: 100%"></div>
+</div>
+
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<h2>Getting Started</h2>\n<p>Maps are used to show the location of a place. Maps can be a useful tool for helping users locate buildings, offices, libraries, events, and more both on-campus and off-campus.</p>\n<h6>EXPORT VIA GRUNT</h6>\n<pre><code>grunt export:atoms-map-image\n</code></pre>\n<h3>Description</h3>\n<p>The map image atom can be used to insert a still map image into another pattern. Maps images rely on a map ID that cooresponds to a given screenshot within our image library.</p>\n<h3>Best Practices</h3>\n<ul>\n<li>Only use one map per page to avoid visual clutter</li>\n<li>Resize maps accordingly to fit your use case</li>\n</ul>\n<h2>Schema</h2>\n<table>\n<thead>\n<tr>\n<th>Name</th>\n<th>Type</th>\n<th>Description</th>\n<th>Value(s)</th>\n<th>Default</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>id</td>\n<td><code>String</code></td>\n<td>The ID of the map image to display.</td>\n<td><code>business</code>, <code>health</code>, <code>law</code>, <code>music</code>, <code>oxford</code>, <code>rose</code>, <code>theology</code>, or <code>woodruff</code></td>\n<td></td>\n</tr>\n<tr>\n<td>url</td>\n<td><code>String</code></td>\n<td>An optional alternative to using <code>id</code>, the URL of the map image to display.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>scale</td>\n<td><code>Percentage</code></td>\n<td>The map image's zoom level, where <code>100%</code> is the default.</td>\n<td>&gt;=<code>100%</code></td>\n<td><code>100%</code></td>\n</tr>\n<tr>\n<td>size</td>\n<td><code>Object</code></td>\n<td>Some optional data about the map's size.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>size.fixed</td>\n<td><code>Boolean</code></td>\n<td>Whether the map's height should be fixed instead of using a percentage of its width.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>size.width</td>\n<td><code>Number</code></td>\n<td>The desired width of the map as a number with units.</td>\n<td></td>\n<td><code>100%</code></td>\n</tr>\n<tr>\n<td>size.height</td>\n<td><code>Number</code></td>\n<td>The desired height of the map, either as a percentage if not <code>size.fixed</code> or as a number with units.</td>\n<td></td>\n<td><code>25%</code></td>\n</tr>\n</tbody>\n</table>\n<h2>Classes</h2>\n<h3>Variations</h3>\n<table>\n<thead>\n<tr>\n<th>Class</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>-h-fixed</code></td>\n<td>Inidicates that map's the height is fixed rather than a percentage of its width, applied to the <code>.map-frame</code>.</td>\n</tr>\n<tr>\n<td><code>-image</code></td>\n<td>Inidicates that map is an image.</td>\n</tr>\n</tbody>\n</table>\n","patternBreadcrumb":{"patternType":"atoms","patternSubtype":"media"},"patternExtension":"hbs","patternName":"Map Image","patternPartial":"atoms-map-image","patternState":"review","patternEngineName":"handlebars","extraOutput":{"created":"03/04/2019","updated":"03/18/2019","js":false,"php":false}}
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+  
+  var scriptLoader = {
+    
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+    
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1554131365337">
+  (function() {
+    if (self != top) {
+      var cb = '1554131365337';
+      var js = [];
+      if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+        js.push('styleguide/bower_components/classList.min.js');
+      }
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+<script id="pl-js-insert-1554131365337">
+  (function() {
+    if (self != top) {
+      var cb = '1554131365337';
+      var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
+      scriptLoader.run(js,cb,'pl-js-insert');
+    }
+  })();
+</script>
+
+
+  <script src="../../js/bundle.js?1554131365337"></script>
+  <script src="../../js/pattern-library.js?1554131365337"></script>
+
+  </body>
+</html>

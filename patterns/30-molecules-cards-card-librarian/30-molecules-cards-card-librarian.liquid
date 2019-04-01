@@ -1,0 +1,42 @@
+{% raw %}<div class="card-librarian">
+  <div class="card-librarian-about">
+    <div class="card-librarian-image">{{#with image}}{{> atoms-image src=(default src (combine '/images/avatars/placeholder.' (default ../gender 'male') '.jpg')) alt=../name}}{{/with}}</div>
+    {{#with link}}{{> atoms-link label=../name classes="card-librarian-name"}}{{/with}}
+    <span class="card-librarian-title">{{title}}</span>
+    <span class="card-librarian-library">{{library}}</span>
+  </div>
+  <div class="card-librarian-subjects">
+    <span class="card-librarian-context">Subject Areas</span>
+    <ul class="card-librarian-subjects-list">
+      {{#each subjects as |subject|}}
+      <li class="card-librarian-subjects-list-item">{{subject}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="card-librarian-contact">
+    <span class="card-librarian-context">Contact</span>
+    <ul class="card-librarian-contact-info">
+      <li class="card-librarian-contact-info-item">
+        {{> tokens-icon id='material-phone'}}
+        {{> atoms-link href=(combine 'tel:+' phone) label=(formatPhone phone '000-000-0000')}}
+      </li>
+      <li class="card-librarian-contact-info-item">
+        {{> tokens-icon id='material-email'}}
+        {{> atoms-link href=(combine 'mailto:' email) label=email}}
+      </li>
+    </ul>
+    <ul class="card-librarian-contact-links">
+      {{#if cv}}
+      <li class="card-librarian-contact-links-item">
+        {{#with cv}}{{> atoms-link label='Download CV'}}{{/with}}
+      </li>
+      {{/if}}
+      {{#if guides}}
+      <li class="card-librarian-contact-links-item">
+        {{#with guides}}{{> atoms-link label='View Research Guides'}}{{/with}}
+      </li>
+      {{/if}}
+    </ul>
+  </div>
+</div>
+{% endraw %}

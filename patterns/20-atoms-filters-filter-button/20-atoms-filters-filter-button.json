@@ -1,0 +1,371 @@
+{
+  "heading": "Show me:",
+  "config": {
+    "scoring": true
+  },
+  "index": [
+    {
+      "category": [
+        "Searching for Specific Items",
+        "Printing, Loggin In, and Access"
+      ],
+      "title": "Access Library Resources",
+      "popular": false
+    },
+    {
+      "category": [
+        "Searching for Specific Items",
+        "Questions about Books",
+        "Finding Source Materials"
+      ],
+      "title": "Find a Book",
+      "popular": true
+    },
+    {
+      "category": [
+        "Searching for Specific Items",
+        "Questions about Articles",
+        "Finding Source Materials"
+      ],
+      "title": "Find an Article in Full Text",
+      "popular": false
+    },
+    {
+      "category": [
+        "Searching for Specific Items",
+        "Finding Source Materials"
+      ],
+      "title": "Find a Journal",
+      "popular": false
+    },
+    {
+      "category": [
+        "Searching for Specific Items",
+        "Questions about Books",
+        "Finding Source Materials"
+      ],
+      "title": "Find a Textbook",
+      "popular": false
+    },
+    {
+      "category": [
+        "Searching for Specific Items",
+        "Finding Source Materials"
+      ],
+      "title": "Find a Video",
+      "popular": false
+    },
+    {
+      "category": [
+        "Searching for Specific Items",
+        "Finding Source Materials"
+      ],
+      "title": "Find Course Reserve Material",
+      "popular": false
+    },
+    {
+      "category": [
+        "Searching for Specific Items",
+        "Citing and Using Sources"
+      ],
+      "title": "Understand Citations",
+      "popular": true
+    },
+    {
+      "category": [
+        "Searching for Specific Items",
+        "Finding Source Materials"
+      ],
+      "title": "Find Journals by Subject",
+      "popular": false
+    },
+    {
+      "category": [
+        "Searching for Specific Items",
+        "Printing, Logging In, and Access"
+      ],
+      "title": "Access an Item in Storage",
+      "popular": false
+    },
+    {
+      "category": [
+        "Searching for Specific Items",
+        "Evaluating Sources"
+      ],
+      "title": "Print or Non-Internet Source Requirements",
+      "popular": false
+    },
+    {
+      "category": [
+        "Questions about Articles",
+        "Finding Source Materials"
+      ],
+      "title": "Find Peer-Reviewed Articles",
+      "popular": true
+    },
+    {
+      "category": [
+        "Questions about Articles",
+        "Finding Source Materials"
+      ],
+      "title": "Find Newspaper Articles",
+      "popular": false
+    },
+    {
+      "category": [
+        "Questions about Articles",
+        "Evaluating Sources"
+      ],
+      "title": "Determine if an Article is Scholarly",
+      "popular": false
+    },
+    {
+      "category": "Questions about Articles",
+      "title": "Find a Call Number in the Library",
+      "popular": true
+    },
+    {
+      "category": "Questions about Articles",
+      "title": "Access Articles that Require Payment",
+      "popular": false
+    },
+    {
+      "category": "Questions about Books",
+      "title": "Find Books on a Topic",
+      "popular": false
+    },
+    {
+      "category": "Questions about Books",
+      "title": "Find Books in the Stacks",
+      "popular": false
+    },
+    {
+      "category": [
+        "Questions about Books",
+        "Evaluating Sources"
+      ],
+      "title": "Determining if a Book is Scholarly",
+      "popular": false
+    },
+    {
+      "category": "Questions about Books",
+      "title": "Finding e-Books",
+      "popular": false
+    },
+    {
+      "category": "Questions about Books",
+      "title": "Access a Book that is Already Checked Out",
+      "popular": false
+    },
+    {
+      "category": "Questions about Books",
+      "title": "Check Out Library Materials",
+      "popular": true
+    },
+    {
+      "category": "Questions about Books",
+      "title": "Renew Library Materials",
+      "popular": true
+    },
+    {
+      "category": "Printing, Logging In, and Access",
+      "title": "Resolve Print Issues",
+      "popular": true
+    },
+    {
+      "category": "Printing, Logging In, and Access",
+      "title": "Access the Library as an Alumni",
+      "popular": false
+    },
+    {
+      "category": "Printing, Logging In, and Access",
+      "title": "Access the Library as a Visitor",
+      "popular": false
+    },
+    {
+      "category": "Printing, Logging In, and Access",
+      "title": "Log in to Learning Commons Computers",
+      "popular": false
+    },
+    {
+      "category": "Printing, Logging In, and Access",
+      "title": "Report Problems with Library Resources",
+      "popular": false
+    },
+    {
+      "category": "Citing and Using Sources",
+      "title": "Citing Sources in APA Format",
+      "popular": true
+    },
+    {
+      "category": "Citing and Using Sources",
+      "title": "Citing Sources in MLA Format",
+      "popular": false
+    },
+    {
+      "category": "Citing and Using Sources",
+      "title": "Citing Sources in Chicago Format",
+      "popular": false
+    },
+    {
+      "category": "Citing and Using Sources",
+      "title": "Writing References for a Paper",
+      "popular": false
+    },
+    {
+      "category": "Citing and Using Sources",
+      "title": "Quoting and Paraphrasing Sources",
+      "popular": false
+    },
+    {
+      "category": "Citing and Using Sources",
+      "title": "Avoiding Plagiarism",
+      "popular": true
+    },
+    {
+      "category": "Citing and Using Sources",
+      "title": "Generating Citations Using Tools",
+      "popular": false
+    },
+    {
+      "category": "Citing and Using Sources",
+      "title": "Organizing Sources for Research Papers",
+      "popular": false
+    },
+    {
+      "category": "Evaluating Sources",
+      "title": "Find Sources Related to a Topic",
+      "popular": false
+    },
+    {
+      "category": "Evaluating Sources",
+      "title": "Evaluating Sources for Relevancy",
+      "popular": false
+    },
+    {
+      "category": "Evaluating Sources",
+      "title": "Determine Scholarly and Peer-Reviewed Sources",
+      "popular": false
+    },
+    {
+      "category": "Evaluating Sources",
+      "title": "Understand Scholarly and Peer-Reviewed Sources",
+      "popular": false
+    },
+    {
+      "category": "Evaluating Sources",
+      "title": "Find Significant Works in a Field",
+      "popular": false
+    },
+    {
+      "category": "Evaluating Sources",
+      "title": "Determine if a Journal is Significant",
+      "popular": false
+    },
+    {
+      "category": "Evaluating Sources",
+      "title": "Find Previous Citations of a Work",
+      "popular": false
+    },
+    {
+      "category": "Finding Source Materials",
+      "title": "Find Primary Sources",
+      "popular": false
+    },
+    {
+      "category": "Finding Source Materials",
+      "title": "Find Statistics and Data",
+      "popular": false
+    },
+    {
+      "category": "Finding Source Materials",
+      "title": "Find Company or Industry Information",
+      "popular": false
+    },
+    {
+      "category": "Finding Source Materials",
+      "title": "Find a Thesis or Dissertation",
+      "popular": true
+    },
+    {
+      "category": "Finding Source Materials",
+      "title": "Request a Library Resource",
+      "popular": true
+    },
+    {
+      "category": "Finding Source Materials",
+      "title": "Find Non-English Source Materials",
+      "popular": false
+    },
+    {
+      "category": "Finding Source Materials",
+      "title": "Find a Map",
+      "popular": false
+    },
+    {
+      "category": "Finding Source Materials",
+      "title": "Understand Available Source Materials",
+      "popular": false
+    },
+    {
+      "category": "Finding Source Materials",
+      "title": "Find a Subject Librarian",
+      "popular": false
+    }
+  ],
+  "buttons": [
+    {
+      "label": "Popular Aids",
+      "filter": {
+        "popular": true
+      },
+      "selected": true
+    },
+    {
+      "label": "All Aids",
+      "filter": false
+    },
+    {
+      "label": "Searching for Specific Items",
+      "filter": {
+        "category": "Searching for Specific Items"
+      }
+    },
+    {
+      "label": "Questions about Articles",
+      "filter": {
+        "category": "Questions about Articles"
+      }
+    },
+    {
+      "label": "Questions about Books",
+      "filter": {
+        "category": "Questions about Books"
+      }
+    },
+    {
+      "label": "Printing, Logging In, and Access",
+      "filter": {
+        "category": "Printing, Logging In, and Access"
+      }
+    },
+    {
+      "label": "Finding Source Materials",
+      "filter": {
+        "category": "Finding Source Materials"
+      }
+    },
+    {
+      "label": "Evaluating Sourcess",
+      "filter": {
+        "category": "Evaluating Sources"
+      }
+    },
+    {
+      "label": "Citing and Using Sources",
+      "filter": {
+        "category": "Citing and Using Sources"
+      }
+    }
+  ]
+}

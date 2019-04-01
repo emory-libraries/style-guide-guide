@@ -1,0 +1,16 @@
+{
+  "label": "eJournals",
+  "alias": "Academic Journals",
+  "options": [
+    {
+      "label": "About"
+    },
+    {
+      "label": "Access",
+      "icon": {
+        "id": "material-open_in_new",
+        "position": "right"
+      }
+    }
+  ]
+}

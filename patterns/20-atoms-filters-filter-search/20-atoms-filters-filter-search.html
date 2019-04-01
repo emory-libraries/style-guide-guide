@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="">
+  <head>
+    <title></title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="">
+
+    <link rel="stylesheet" href="../../css/patternlab.css?1554131365337" media="all">
+    <link rel="stylesheet" href="../../css/style.css?1554131365337" media="all">
+
+    <!-- DO NOT REMOVE -->
+    <!-- never cache patterns -->
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1554131365337" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1554131365337" media="all" />
+
+
+  </head>
+  <body class="">
+
+
+<eul-filter-search inline-template
+                   :index="[{&quot;service&quot;:&quot;Find a Quiet Study Area&quot;,&quot;category&quot;:&quot;Spaces, Labs, and Workstations&quot;,&quot;keywords&quot;:[&quot;study area&quot;,&quot;quiet space&quot;]},{&quot;service&quot;:&quot;Find a Workstation or Application&quot;,&quot;category&quot;:&quot;Spaces, Labs, and Workstations&quot;},{&quot;service&quot;:&quot;Locate a Graduate Study Lab&quot;,&quot;category&quot;:&quot;Spaces, Labs, and Workstations&quot;},{&quot;service&quot;:&quot;Virtual Reality, 3D Printing and Scanning, New Technologies&quot;,&quot;category&quot;:&quot;Spaces, Labs, and Workstations&quot;},{&quot;service&quot;:&quot;Post-Production, Web Development, and 3D Modeling&quot;,&quot;category&quot;:&quot;Spaces, Labs, and Workstations&quot;},{&quot;service&quot;:&quot;Use the Audio/Video/Image Production Studio&quot;,&quot;category&quot;:&quot;Spaces, Labs, and Workstations&quot;,&quot;keywords&quot;:[&quot;audio studio&quot;,&quot;video studio&quot;,&quot;image studio&quot;,&quot;production lab&quot;]},{&quot;service&quot;:&quot;Play Video Games&quot;,&quot;category&quot;:&quot;Spaces, Labs, and Workstations&quot;},{&quot;service&quot;:&quot;Print, Copy, and Scan&quot;,&quot;category&quot;:&quot;Spaces, Labs and Workstations&quot;,&quot;popular&quot;:true},{&quot;service&quot;:&quot;Request a Purchase&quot;,&quot;category&quot;:&quot;Requests and Submissions&quot;},{&quot;service&quot;:&quot;Reserve a Study or Presentation Room&quot;,&quot;category&quot;:&quot;Requests and Submissions&quot;,&quot;popular&quot;:true},{&quot;service&quot;:&quot;Apply for an Individual Study Room or Carrel (Faculty and Graduate Only)&quot;,&quot;category&quot;:&quot;Requests and Submissions&quot;},{&quot;service&quot;:&quot;Submit an ILL Request (InterLibrary Lending)&quot;,&quot;category&quot;:&quot;Requests and Submissions&quot;},{&quot;service&quot;:&quot;Connect to the Internet (On-Campus)&quot;,&quot;category&quot;:&quot;Hardware and Technology&quot;},{&quot;service&quot;:&quot;Connect from Off Campus (VPNs and Proxies)&quot;,&quot;category&quot;:&quot;Hardware and Technology&quot;},{&quot;service&quot;:&quot;Get Hardware or Software Support&quot;,&quot;category&quot;:&quot;Hardware and Technology&quot;,&quot;keywords&quot;:[&quot;tech support&quot;,&quot;IT support&quot;]},{&quot;service&quot;:&quot;Repair Device or Computer&quot;,&quot;category&quot;:&quot;Hardware and Technology&quot;,&quot;keywords&quot;:[&quot;broken device&quot;,&quot;broken computer&quot;]},{&quot;service&quot;:&quot;Access Course Reserves&quot;,&quot;category&quot;:&quot;Assistance and Support&quot;,&quot;popular&quot;:true},{&quot;service&quot;:&quot;Borrow Equipment or Gadgets&quot;,&quot;category&quot;:&quot;Assistance and Support&quot;,&quot;popular&quot;:true},{&quot;service&quot;:&quot;Request or Recall Materials&quot;,&quot;category&quot;:&quot;Assistance and Support&quot;,&quot;popular&quot;:true},{&quot;service&quot;:&quot;Research and Writing Assistance&quot;,&quot;category&quot;:&quot;Assistance and Support&quot;,&quot;keywords&quot;:[&quot;help with writing&quot;,&quot;help with research&quot;]}]"
+                   :keys="[&quot;service&quot;,&quot;keywords&quot;]"
+                   :config="{&quot;scoring&quot;:true}"
+                   :defaults="{
+                      button: {
+                        isDisabled: true,
+                        isActive: false,
+                        isHover: false,
+                        isFocus: false
+                      },
+                      input: {
+                        isDisabled: false,
+                        isHover: false,
+                        isFocus: false
+                      }
+                   }">
+
+  <div class="search -big -contained">
+
+    <input type="search"
+           v-model="query"
+           autocomplete="off"
+           placeholder="Search for a Service"
+           @input="button.isDisabled = !valid"
+           @focus.native="input.isFocus = true"
+           @blur.native="input.isFocus = false"
+           @mouseover.native="input.isHover = true"
+           @mouseleave.native="input.isHover = false"
+           @keypress.enter="search"
+           class="input -search -big search-box"
+           :class="{
+            'is-disabled': input.isDisabled,
+            'is-hover': input.isHover,
+            'is-focus': input.isFocus,
+           }"
+           :disabled="input.isDisabled">
+
+    <button @click="search"
+            @mousedown.native="button.isActive = true"
+            @mouseup.native="button.isActive = false"
+            @keydown.native.enter="button.isActive = true"
+            @keyup.native.enter="button.isActive = false"
+            @focus.native="button.isFocus = true"
+            @blur.native="button.isFocus = false"
+            @mouseover.native="button.isHover = true"
+            @mouseleave.native="button.isHover = false"
+            class="button search-button"
+            :class="{
+              'is-disabled': button.isDisabled,
+              'is-active': button.isActive,
+              'is-hover': button.isHover,
+              'is-focus': button.isFocus,
+            }"
+            :disabled="button.isDisabled">
+    </button>
+
+    <a @click="cancel"
+       @keypress.enter="cancel"
+       class="link -underline search-cancel"
+       v-show="fuzzy.searching.searched"
+       tabindex="0">
+      Cancel
+    </a>
+
+  </div>
+
+</eul-filter-search>
+
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"tokens-icon","lineagePath":"../../patterns/10-tokens-10-globals-icon/10-tokens-10-globals-icon.html","lineageState":"review"}],"lineage":[{"lineagePattern":"tokens-icon","lineagePath":"../../patterns/10-tokens-10-globals-icon/10-tokens-10-globals-icon.html","lineageState":"review"}],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":true,"patternDesc":"<h2>Getting Started</h2>\n<p>Filters are used to help users easily sift through information or content in order to pinpoint something they're looking for. Search filters enable users to filter information and content using words and phrases.</p>\n<h6>EXPORT VIA GRUNT</h6>\n<pre><code>grunt export:atoms-filter-search\n</code></pre>\n<h3>Description</h3>\n<p>The filter search atom allows you to include a search filter within another pattern. The search filter accepts some index data, which may or may not map to some on-page content, and filters through the data based on a user-provided query. This search filter is as a <a href=\"https://vuejs.org\">Vue.js</a> component and, therefore, requires that JavaScript be enabled.</p>\n<h3>Best Practices</h3>\n<ul>\n<li>Only use search filters as a way to enhance a page or some content\n<ul>\n<li>This requires JavaScript and will not work otherwise unless a <code>&lt;noscript&gt;</code> fallback is given.</li>\n</ul>\n</li>\n</ul>\n<h2>Schema</h2>\n<table>\n<thead>\n<tr>\n<th>Name</th>\n<th>Type</th>\n<th>Description</th>\n<th>Value(s)</th>\n<th>Default</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>index</td>\n<td><code>Array</code></td>\n<td>A set of index items to be used when filtering, ideally mapping to on-page elements that can be shown and/or hidden automagically.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>config</td>\n<td><code>Object</code></td>\n<td>An optional set of configurations used to customize the way the filtering utility should work.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>keys</td>\n<td><code>Array</code></td>\n<td>An optional set of keys that can be found within the index that should be used to limit the fields that are filtering.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>mode</td>\n<td><code>String</code></td>\n<td>Optionally indicates the search box's size mode.</td>\n<td><code>big</code> or <code>small</code></td>\n<td></td>\n</tr>\n<tr>\n<td>layout</td>\n<td><code>String</code></td>\n<td>Optionally indicates the search box and search button's layout arrangement.</td>\n<td><code>contained</code></td>\n<td></td>\n</tr>\n<tr>\n<td>autocomplete</td>\n<td><code>Boolean</code></td>\n<td>Indicates whether autocomplete should be enabled for the search box.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>disabled</td>\n<td><code>Boolean</code></td>\n<td>Sets the search box's state to <strong>disabled</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>hover</td>\n<td><code>Boolean</code></td>\n<td>Sets the search box's state to <strong>hovered</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>focus</td>\n<td><code>Boolean</code></td>\n<td>Sets the search box's state to <strong>focused</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>button</td>\n<td><code>Object</code></td>\n<td>Some search button settings.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>button.label</td>\n<td><code>String</code></td>\n<td>The label to be displayed on the search button, only applicable when <code>layout</code> is not set to <code>contained</code>.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>button.icon</td>\n<td><code>String</code></td>\n<td>An optional icon ID to be displayed on the search button, only applicable when <code>layout</code> is not set to <code>contained</code>.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>button.disabled</td>\n<td><code>Boolean</code></td>\n<td>Sets the search button's state to <strong>disabled</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>button.active</td>\n<td><code>Boolean</code></td>\n<td>Sets the search button's state to <strong>active</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>button.hover</td>\n<td><code>Boolean</code></td>\n<td>Sets the search button's state to <strong>hovered</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>button.focus</td>\n<td><code>Boolean</code></td>\n<td>Sets the search button's state to <strong>focused</strong>.</td>\n<td><code>true</code> or <code>false</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td>passthroughs</td>\n<td><code>Object</code></td>\n<td>An optional set of data transformations to be applied to each <code>index</code> item, where <em>keys</em> indicate the key that the transformed value will be assigned to within the <code>index</code> item and <em>values</em> consists of a set of tranformations to be applied.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>passthroughs.<code>key</code></td>\n<td><code>Object</code></td>\n<td>Some transformations that should be applied to some target data within each <code>index</code> item, where <em>keys</em> indicate the Handlebars helper method to be used during transformation and <em>values</em> consists of a set of arguments to be passed to the helper.</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>passthroughs.<code>key</code>.<code>helper</code></td>\n<td><code>Array</code></td>\n<td>Some arguments to be passed to the Handlebars helper method, where keys from each <code>index</code> item can be bound as an argument using the syntax <code>:key</code>, i.e. arguments for a <code>date</code> transformation may look like <code>[':date', 'YYYY']</code>.</td>\n<td></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n<h2>Classes</h2>\n<h3>Variations</h3>\n<table>\n<thead>\n<tr>\n<th>Class</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>-contained</code></td>\n<td>Indicates that the search button should be inside the search box and uses an icon by default instead of a label.</td>\n</tr>\n<tr>\n<td><code>-big</code></td>\n<td>Indicates that the search box should use a big layout.</td>\n</tr>\n<tr>\n<td><code>-small</code></td>\n<td>Indicates that the search box should use a small layout.</td>\n</tr>\n</tbody>\n</table>\n<h3>State</h3>\n<table>\n<thead>\n<tr>\n<th>Class</th>\n<th></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>is-disabled</code></td>\n<td>Indicates that a search box (<code>search-box</code>) and/or search button (<code>search-button</code>) is <strong>disabled</strong>.</td>\n</tr>\n<tr>\n<td><code>is-hover</code></td>\n<td>Indicates that a search box (<code>search-box</code>) and/or search button (<code>search-button</code>) is <strong>hovered</strong>.</td>\n</tr>\n<tr>\n<td><code>is-focus</code></td>\n<td>Indicates that a search box (<code>search-box</code>) and/or search button (<code>search-button</code>) is <strong>focused</strong>.</td>\n</tr>\n<tr>\n<td><code>is-active</code></td>\n<td>Indicates that a search button (<code>search-button</code>) is <strong>active</strong>.</td>\n</tr>\n</tbody>\n</table>\n","patternBreadcrumb":{"patternType":"atoms","patternSubtype":"filters"},"patternExtension":"hbs","patternName":"Filter Search","patternPartial":"atoms-filter-search","patternState":"review","patternEngineName":"handlebars","extraOutput":{"created":"03/04/2019","updated":"03/18/2019","js":true,"php":false}}
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+  
+  var scriptLoader = {
+    
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+    
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1554131365337">
+  (function() {
+    if (self != top) {
+      var cb = '1554131365337';
+      var js = [];
+      if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+        js.push('styleguide/bower_components/classList.min.js');
+      }
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+<script id="pl-js-insert-1554131365337">
+  (function() {
+    if (self != top) {
+      var cb = '1554131365337';
+      var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
+      scriptLoader.run(js,cb,'pl-js-insert');
+    }
+  })();
+</script>
+
+
+  <script src="../../js/bundle.js?1554131365337"></script>
+  <script src="../../js/pattern-library.js?1554131365337"></script>
+
+  </body>
+</html>

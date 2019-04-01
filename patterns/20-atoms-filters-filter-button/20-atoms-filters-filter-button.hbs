@@ -1,0 +1,61 @@
+{{#if passthroughs}}
+  {{assign 'index' (passthrough index passthroughs)}}
+{{/if}}
+
+<eul-filter-button inline-template
+                   :index="{{JSONstringify index}}"
+                   :config="{{default (JSONstringify config) '{}'}}"
+                   :defaults="{
+                      selected: {{default (indexOf buttons (lookup (filterWhere buttons 'selected' true) 0)) 0}},
+                      buttons: [
+                        {{#each buttons as |button|}}
+                        {
+                          isActive: {{default button.active false}},
+                          isFocus: {{default button.focus false}},
+                          isHover: {{default button.hover false}},
+                          isDisabled: {{default button.disabled false}},
+                          filter: {{JSONstringify button.filter}},
+                          index: {{@index}}
+                        }{{#unless @last}},{{/unless}}
+                        {{/each}}
+                      ]
+                    }">
+
+  <div>
+
+    {{#if heading}}
+      {{#if (and heading.level heading.heading)}}
+        {{>tokens-heading level=heading.level heading=heading.heading}}
+      {{else}}
+        {{>tokens-heading level=3 heading=heading}}
+      {{/if}}
+    {{/if}}
+
+    <div class="button-group">
+
+      {{#each buttons as |button|}}
+
+      <button class="button -pill -uncapitalize"
+              @click="selected = {{@index}}; filter()"
+              @keypress.enter="selected = {{@index}}; filter()"
+              @focus.native="buttons[{{@index}}].isFocus = true"
+              @blur.native="buttons[{{@index}}].isFocus = false"
+              @mouseenter.native="buttons[{{@index}}].isHover = true"
+              @mouseleave.native="buttons[{{@index}}].isHover = false"
+              :class="{
+                '-hollow': selected != {{@index}},
+                'is-active': buttons[{{@index}}].isActive,
+                'is-focus': buttons[{{@index}}].isFocus,
+                'is-hover': buttons[{{@index}}].isHover,
+                'is-disabled': buttons[{{@index}}].isDisabled,
+              }"
+              :disabled="buttons[{{@index}}].isDisabled">
+        {{button.label}}
+      </button>
+
+      {{/each}}
+    </div>
+
+  </div>
+
+</eul-filter-button>

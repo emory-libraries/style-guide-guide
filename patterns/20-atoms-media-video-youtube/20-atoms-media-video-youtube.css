@@ -1,0 +1,100 @@
+.video {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+.video-frame {
+  display: block;
+  overflow: hidden;
+}
+
+.video-frame {
+  --aspect-ratio: 0.5625;
+  padding-top: calc(var(--aspect-ratio) * 100%);
+}
+.video-frame.-ar-standard {
+  --aspect-ratio: 0.75;
+}
+.video-frame.-ar-hd {
+  --aspect-ratio: 0.5625;
+}
+.video-frame.-ar-wide {
+  --aspect-ratio: 0.5405405405;
+}
+.video-frame.-ar-golden {
+  --aspect-ratio: 0.6180469716;
+}
+.video-frame.-ar-square {
+  --aspect-ratio: 1;
+}
+.video-frame.-ar-academy {
+  --aspect-ratio: 0.7272727273;
+}
+.video-frame.-ar-imax {
+  --aspect-ratio: 0.6993006993;
+}
+.video-frame.-ar-4k {
+  --aspect-ratio: 0.5263157895;
+}
+.video-frame.-ar-silver {
+  --aspect-ratio: 0.4142502071;
+}
+.video-frame.-ar-ultrawide {
+  --aspect-ratio: 0.2777777778;
+}
+.video-frame.-w-quarter {
+  width: 25%;
+  padding-top: calc(var(--aspect-ratio) * 0.25 * 100%);
+}
+.video-frame.-w-third {
+  width: 33.333%;
+  padding-top: calc(var(--aspect-ratio) * 0.33333 * 100%);
+}
+.video-frame.-w-half {
+  width: 50%;
+  padding-top: calc(var(--aspect-ratio) * 0.5 * 100%);
+}
+.video-frame.-w-two-third {
+  width: 66.667%;
+  padding-top: calc(var(--aspect-ratio) * 0.66667 * 100%);
+}
+.video-frame.-w-three-quarter {
+  width: 75%;
+  padding-top: calc(var(--aspect-ratio) * 0.75 * 100%);
+}
+.video-frame.-w-full {
+  width: 100%;
+  padding-top: calc(var(--aspect-ratio) * 1 * 100%);
+}
+.video-frame.-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.video-frame.-left {
+  float: left;
+  margin-right: 1em;
+}
+.video-frame.-right {
+  float: right;
+  margin-left: 1em;
+}
+.video-frame.-left, .video-frame.-right {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.video-frame.-left::after::after, .video-frame.-right::after::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.video-frame.-left:last-child, .video-frame.-right:last-child {
+  margin-bottom: 0;
+}
+.video-frame.-left:first-child, .video-frame.-right:first-child {
+  margin-top: 0;
+}

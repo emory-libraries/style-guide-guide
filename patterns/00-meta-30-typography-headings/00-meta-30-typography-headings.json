@@ -1,0 +1,56 @@
+{
+  "headings": [
+    {
+      "name": "Heading 1",
+      "class": ".heading.-h1",
+      "level": 1,
+      "heading": "Sample Heading",
+      "alternate": false
+    },
+    {
+      "name": "Heading 1 Alternate",
+      "class": ".heading.-h1-alt",
+      "level": 1,
+      "heading": "Sample Heading",
+      "alternate": true
+    },
+    {
+      "name": "Heading 2",
+      "class": ".heading.-h2",
+      "level": 2,
+      "heading": "Sample Heading"
+    },
+    {
+      "name": "Heading 3",
+      "class": ".heading.-h3",
+      "level": 3,
+      "heading": "Sample Heading"
+    },
+    {
+      "name": "Heading 4",
+      "class": ".heading.-h4",
+      "level": 4,
+      "heading": "Sample Heading"
+    },
+    {
+      "name": "Heading 5",
+      "class": ".heading.-h5",
+      "level": 5,
+      "heading": "Sample Heading",
+      "alternate": false
+    },
+    {
+      "name": "Heading 5 Alternate",
+      "class": ".heading.-h5-alt",
+      "level": 5,
+      "heading": "Sample Heading",
+      "alternate": true
+    },
+    {
+      "name": "Heading 6",
+      "class": ".heading.-h6",
+      "level": 6,
+      "heading": "Sample Heading"
+    }
+  ]
+}
