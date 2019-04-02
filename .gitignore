@@ -5,3 +5,5 @@ _site
 .bundle
 jekyll
 .DS_Store
+secret.json
+node_modules
