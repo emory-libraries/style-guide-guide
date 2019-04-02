@@ -16,25 +16,25 @@ Prior to installation, ensure that all prerequisites have been met. Then, to ins
 
 1. Download and unzip the compressed package, or clone the repo using:
 
-```
-git clone https://github.com/emory-libraries/style-guide-guide
-```
+  ```
+  git clone https://github.com/emory-libraries/style-guide-guide
+  ```
 
 2. Then `cd` to your project's folder in a terminal, and install all depdencies:
 
-```
-bundle install && npm install
-```
+  ```
+  bundle install && npm install
+  ```
 
 3. Initialize the dependencies and start the Jekyll server:
 
-```
-bundle exec jekyll serve
-```
-or
-```
-grunt dev
-```
+  ```
+  bundle exec jekyll serve
+  ```
+  or
+  ```
+  grunt dev
+  ```
 
 > The Jekyll server will build the static site and watch for changes. To view the style guide and see live changes, visit `http://127.0.0.1:4000/` in your browser.
 
