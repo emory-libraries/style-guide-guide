@@ -45,9 +45,9 @@ You can either use Bundler and Jekyll's CLI or Grunt to generate the static site
 
 ### Using Bundler and Jekyll
 
-- `bundle exec jekyll serve` - Builds the style guide and starts a live server at `http://127.0.0.1:4000/`, then watches for changes made to the source files.
+- `bundle exec jekyll serve --config _config.development.yml` - Builds the style guide and starts a live server at `http://127.0.0.1:4000/`, then watches for changes made to the source files.
 
-- `bundle exec jekyll build` - Builds the style guide and outputs it to a `_site` directory
+- `bundle exec jekyll build --config _config.production.yml` - Builds the style guide and outputs it to a `_site` directory
 
 ### Using Grunt
 

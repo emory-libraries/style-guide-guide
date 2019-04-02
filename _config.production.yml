@@ -1,12 +1,10 @@
 # Site settings
 title: Emory Libraries Style Guide
-email: brad@bradfrost.com
+email: lauren.hamel@emory.edu
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+  A style guide for Emory Libraries
+baseurl: "/styleguide" # the subpath of your site, e.g. /blog
+url: "http://template.library.emory.edu" # the base hostname & protocol for your site
 github_username:  emory-libraries
 
 exclude: [_includes/patterns]

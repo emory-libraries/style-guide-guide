@@ -10,7 +10,7 @@ module.exports = (grunt) => {
     environments: {
       production: {
         options: {
-          current_symlink: 'index',
+          current_symlink: 'index.html',
           release_root: 'versions',
           local_path: '_site',
           tag: '<%= pkg.version %>',
@@ -36,7 +36,10 @@ module.exports = (grunt) => {
     // Run the `serve` Jekyll command.
     grunt.util.spawn({
       cmd: '~/.rbenv/shims/bundle',
-      args: ['exec', 'jekyll', 'serve'],
+      args: [
+        'exec', 'jekyll', 'serve',
+        '--config', '_config.development.yml'
+      ],
       opts: {
         stdio: 'inherit',
         shell: true
@@ -52,7 +55,10 @@ module.exports = (grunt) => {
     // Run the `build` Jekyll command.
     grunt.util.spawn({
       cmd: '~/.rbenv/shims/bundle',
-      args: ['exec', 'jekyll', 'build'],
+      args: [
+        'exec', 'jekyll', 'build',
+        '--config', '_config.production.yml'
+      ],
       opts: {
         stdio: 'inherit',
         shell: true
