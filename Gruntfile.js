@@ -10,7 +10,7 @@ module.exports = (grunt) => {
     environments: {
       production: {
         options: {
-          current_symlink: 'current',
+          current_symlink: 'index',
           release_root: 'versions',
           local_path: '_site',
           tag: '<%= pkg.version %>',
