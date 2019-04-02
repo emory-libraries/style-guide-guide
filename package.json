@@ -1,7 +1,7 @@
 {
   "title": "Emory Libraries Style Guide",
   "name": "style-guide-guide",
-  "version": "1.0.0",
+  "version": "1.0.0-dev.0",
   "description": "A style guide for Emory Libraries",
   "scripts": {},
   "repository": {
@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/emory-libraries/style-guide-guide/issues"
   },
-  "homepage": "https://github.com/emory-libraries/style-guide-guide#readme"
+  "homepage": "https://github.com/emory-libraries/style-guide-guide#readme",
+  "main": "index.js",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-ssh-deploy": "^0.4.1",
+    "load-grunt-tasks": "^4.0.0"
+  }
 }
