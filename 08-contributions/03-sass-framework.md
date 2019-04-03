@@ -15,5 +15,5 @@ The Emory Libraries' Sass Framework provides a set of baseline styles and additi
 [Visit the Repo][repo]{:.c-btn}
 
 
-[sassdocs]: http://template.library.emory.edu/styleguide/sassdocs/
+[sassdocs]: http://template.library.emory.edu/styleguide/sassdocs/current
 [repo]: https://github.com/emory-libraries/template-sass

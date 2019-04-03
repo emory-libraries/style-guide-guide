@@ -9,5 +9,5 @@ The Emory Libraries website redesign is currently underway, so while we're happy
 
 
 [Style Guide]: http://template.library.emory.edu/styleguide/
-[Pattern Library]: http://template.library.emory.edu/styleguide/patternlibrary
-[SassDocs]: http://template.library.emory.edu/styleguide/sassdocs
+[Pattern Library]: http://template.library.emory.edu/styleguide/patternlibrary/current
+[SassDocs]: http://template.library.emory.edu/styleguide/sassdocs/current
