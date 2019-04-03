@@ -7,18 +7,20 @@ module.exports = (grunt) => {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     secret: grunt.file.readJSON('secret.json'),
-    environments: {
+    sftp: {
       production: {
+        files: {
+          './': grunt.file.expand(['_site/**'])
+        },
         options: {
-          current_symlink: 'index.html',
-          release_root: 'versions',
-          local_path: '_site',
-          tag: '<%= pkg.version %>',
-          deploy_path: '<%= secret.production.path %>',
+          path: '<%= secret.production.path %>',
           host: '<%= secret.production.host %>',
           username: '<%= secret.production.username %>',
           password: '<%= secret.production.password %>',
-          port: '<%= secret.production.port %>'
+          port: '<%= secret.production.port %>',
+          showProgress: true,
+          createDirectories: true,
+          srcBasePath: '_site/'
         }
       }
     }
@@ -68,7 +70,7 @@ module.exports = (grunt) => {
   });
   grunt.registerTask('deploy', [
     'dist', 
-    'ssh_deploy:production'
+    'sftp:production'
   ]);
   grunt.registerTask('default', ['dev']);
   

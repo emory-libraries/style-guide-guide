@@ -7,7 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://localhost:4000" # the base hostname & protocol for your site
 github_username:  emory-libraries
 
-exclude: [_includes/patterns]
+exclude: ["_includes/patterns", "README.md", "LICENSE.md", "Gemfile", "Gemfile.lock", "node_modules/"]
 
 # Build settings
 markdown: kramdown
