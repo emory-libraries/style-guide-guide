@@ -23,19 +23,36 @@ There are [several US laws](https://webaim.org/articles/laws/usa/) that apply to
 
 
 ## Reference Articles
-[WebAIM.org](https://webaim.org) contains a [series of approachable articles](https://webaim.org/articles/) on how to employ accessibility standards. Below are just a few that content producers and developers should read.
+[Web Accessibility in Mind (WebAIM)](https://webaim.org) contains a [series of approachable articles](https://webaim.org/articles/) on how to employ accessibility standards and best practices. Below are just a few that content producers and developers should read.
 
 ### For Content Producers
 - [Writing Clearly and Simply](https://webaim.org/techniques/writing/)
 - [Semantic Structure](https://webaim.org/techniques/semanticstructure/)
 -- [Using Headings for Content Structure](https://webaim.org/techniques/semanticstructure/#contentstructure)
 -- [Using Lists Correctly](https://webaim.org/techniques/semanticstructure/#lists)
-- [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screenreader/)
+- [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screenreader/#language)
 -- [Languages](https://webaim.org/techniques/screenreader/#language)
+-- [Content Linearization](https://webaim.org/techniques/screenreader/#linearization)
+-- [How Screen Readers Read Content](https://webaim.org/techniques/screenreader/#how)
+- [Links and Hypertext](https://webaim.org/techniques/hypertext/)
+-- [Screen Readers and Links](https://webaim.org/techniques/hypertext/#screen_readers)
 - [Creating Accessible (Data) Tables](https://webaim.org/techniques/tables/data)
 - [Alternative Text (for Images)](https://webaim.org/techniques/alttext/)
+- [Fonts](https://webaim.org/techniques/fonts/)
+-- [Real Text vs. Text within Graphics](https://webaim.org/techniques/fonts/#realvs)
+-- [Font Variations (Bold, Italics, and Capitalization)](https://webaim.org/techniques/fonts/#variations)
 - [Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
 
 ### For Developers
-Semantic Structure
-Designing for Screen Reader Compatibility
+- [Semantic Structure](https://webaim.org/techniques/semanticstructure/)
+- [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screenreader/#language)
+-- [Languages](https://webaim.org/techniques/screenreader/#language)
+-- [Content Linearization](https://webaim.org/techniques/screenreader/#linearization)
+-- [How Screen Readers Read Content](https://webaim.org/techniques/screenreader/#how)
+- [Accessibility of Rich Internet Applications (ARIA)](https://webaim.org/techniques/aria/)
+- [Keyboard Accessibility](https://webaim.org/techniques/keyboard/)
+- [Links and Hypertext](https://webaim.org/techniques/hypertext/)
+-- [Screen Readers and Links](https://webaim.org/techniques/hypertext/#screen_readers)
+- [Creating Accessible Forms](https://webaim.org/techniques/forms/)
+- [Text/Typographical Layout](https://webaim.org/techniques/textlayout/)
+
