@@ -45,6 +45,7 @@ There are [several US laws](https://webaim.org/articles/laws/usa/) that apply to
 
 ### For Developers
 - [Semantic Structure](https://webaim.org/techniques/semanticstructure/)
+- [Creating Accessible Tables](https://webaim.org/techniques/tables/)
 - [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screenreader/#language)
 -- [Languages](https://webaim.org/techniques/screenreader/#language)
 -- [Content Linearization](https://webaim.org/techniques/screenreader/#linearization)
