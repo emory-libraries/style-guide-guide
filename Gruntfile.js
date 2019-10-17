@@ -37,7 +37,7 @@ module.exports = (grunt) => {
     
     // Run the `serve` Jekyll command.
     grunt.util.spawn({
-      cmd: '~/.rbenv/shims/bundle',
+      cmd: 'bundle',
       args: [
         'exec', 'jekyll', 'serve',
         '--config', '_config.development.yml'
